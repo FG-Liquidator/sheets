@@ -1,17 +1,5 @@
 [
  {
-  "id": 777032,
-  "name": "KJs Needful Things (Harpers Auction House) 9/21",
-  "house": "KJs Needful Things",
-  "city": "Madison Heights, MI",
-  "closes": "2026-09-21T19:30:00",
-  "bp": "18%",
-  "lots": 496,
-  "valued": 59,
-  "lots_to_bid": 21,
-  "published": "2026-09-19T19:55+00:00"
- },
- {
   "id": 775147,
   "name": "Key Comics, Rare Vinyl, Hot Wheels Redlines, DVDs & BluRay",
   "house": "Back to the Past Collectibles",
@@ -22,5 +10,17 @@
   "valued": 92,
   "lots_to_bid": 14,
   "published": "2026-09-19T20:37+00:00"
+ },
+ {
+  "id": 777032,
+  "name": "KJs Needful Things (Harpers Auction House) 9/21",
+  "house": "KJs Needful Things",
+  "city": "Madison Heights, MI",
+  "closes": "2026-09-21T19:30:00",
+  "bp": "18%",
+  "lots": 496,
+  "valued": 59,
+  "lots_to_bid": 5,
+  "published": "2026-09-19T20:54+00:00"
  }
 ]

@@ -30,6 +30,7 @@ a:focus-visible, button:focus-visible { outline:2px solid var(--ours); outline-o
 h1,h2,h3,.lotno,.chip,.lbl,.count { font-family:"Barlow Condensed", "Arial Narrow", sans-serif }
 h1 { font-size:30px; font-weight:700; line-height:1.05; margin:0 0 6px; text-wrap:balance }
 .meta { color:var(--ink-2); font-size:15px; display:flex; flex-wrap:wrap; gap:6px 16px; margin:0 0 12px }
+.stamp { font-family:"Barlow Condensed", sans-serif; font-size:15px; color:var(--ours); margin:0 0 6px; letter-spacing:.02em }
 .strip { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); margin:0 0 8px }
 .strip div { background:var(--bg-2); padding:8px 10px }
 .strip .lbl { display:block; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3) }
@@ -85,19 +86,20 @@ details.logic { background:var(--bg-2); padding:10px 12px; margin:14px 0 0 }
 </style>
 </head><body><div class="wrap">
 <h1>KJs Needful Things (Harpers Auction House) 9/21</h1>
+<p class="stamp">Evaluated <b>Sat Sep 19, 3:53 PM</b> ET (51.6 h before close) &middot; lot data fetched Sat Sep 19, 4:54 PM &middot; bids and counts are as of that fetch</p>
 <p class="meta"><span>KJs Needful Things</span><span>Madison Heights, MI 48071</span><span>Closes 2026-09-21 19:30</span><span><a href="https://hibid.com/catalog/777032" target="_blank" rel="noopener">Catalog on HiBid</a></span></p>
 <div class="strip">
   <div><span class="lbl">Buyer's premium</span><span class="val">18%</span></div>
   <div><span class="lbl">Site</span><span class="val">pickup · 1.9 mi</span></div>
-  <div><span class="lbl">Lots to bid</span><span class="val">21<small> +13 volume</small></span></div>
+  <div><span class="lbl">Lots to bid</span><span class="val">5<small> +24 volume</small></span></div>
   <div><span class="lbl">Valued / total</span><span class="val">59 / 496</span></div>
   <div><span class="lbl">Silver · gold</span><span class="val">$66 · $4,370</span></div>
 </div>
-<p class="trip">Trip: 1.9 mi each way ≈ $21 (0.6 h incl. overhead, $30/h). Not included in the max hammers — decide per auction: P1–P3 lots: 16 · capital if you won them all at max: $1355 · profit at max, all won: $838 → net of trip $818. Each lot won at max is worth ~$52 against a $21 drive.</p>
+<p class="trip">Trip: 1.9 mi each way ≈ $21 (0.6 h incl. overhead, $30/h). Not included in the max hammers — decide per auction: P1–P3 lots: 5 · capital if you won them all at max: $995 · profit at max, all won: $665 → net of trip $644. Each lot won at max is worth ~$133 against a $21 drive.</p>
 <p class="trip">Pickup: Pickup days for this auction are Thursday September 24th from 10am-6pm and Friday September 25th from 8:30am-4:30pm.  Pickup location is 1100 E Mandoline Ave Suite 350, Madison Heights MI 48071.  We are located near the </p>
 
 <details class="logic">
-  <summary>Evaluation logic used for this sheet <span class="method">v2026-09-19.1</span></summary>
+  <summary>Evaluation logic used for this sheet <span class="method">v2026-09-19.2</span></summary>
   <div class="whybody">
     <p class="warn">No live eBay comps. Values are the agent&#x27;s estimates; every lot carries a derivation and a comps link to validate.</p>
     <h4>How the max hammer is computed</h4>
@@ -108,7 +110,9 @@ churn      = (list+pack minutes) x rate + materials
              + storage x months + value x capital_rate x months
 net        = value x (1 - fee - promoted) - fee_fixed,   per listing
 floor      : profit &gt;= min_roi x true_cost
-             min_roi = base_roi + roi_per_month x months_to_sell
+             min_roi = base_roi + roi_per_month x months_to_sell   (capital lots)
+             min_roi = volume_roi                                  (volume lots: landed cost at max
+             under volume_capital_max - the wage inside churn is the return, ROI is a buffer)
 max_hammer = (net_after_churn / (1+min_roi) - retrieval) / ((1+bp)(1+tax))
              capped at the capital ceiling
 floor_max  = melt x shop_payout / ((1+bp)(1+tax))
@@ -119,6 +123,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <div class="kv"><span>Applied floors</span><b>fast 35% &middot; medium 45% &middot; slow 70%</b></div>
     <div class="kv"><span>Capital ceiling per lot</span><b>$400</b></div>
     <div class="kv"><span>Default value basis</span><b>value_low</b> </div>
+    <div class="kv"><span>Volume rule</span><b>landed cost &le; $75 &rarr; 10% over wage instead of the ROI floor</b></div>
     <h4>Churn, per listing</h4>
     <div class="kv"><span>Your time</span><b>$30/h</b></div>
     <div class="kv"><span>List + pack, small item</span><b>8 + 5 min</b></div>
@@ -145,7 +150,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
 <nav><a href="#bid">Bid these</a><a href="#metal">Metal</a><a href="#volume">Volume</a><a href="#outbid">Past our max</a><a href="#personal">Personal</a><a href="#pass">Pass</a></nav>
 
 <section id="bid">
-  <h2>Bid these <span class="count">3</span></h2>
+  <h2>Bid these <span class="count">2</span></h2>
   <p class="blurb">Where the edge is. Our max is the hammer that still clears the ROI floor after buyer's premium, tax and churn.</p>
   
 <article class="lot pri-P1" id="lot-131">
@@ -161,7 +166,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <div class="num"><span class="lbl">Your max</span><span class="val">102</span></div>
     <div class="num"><span class="lbl">Current</span><span class="val">$51<small> &middot; 5 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$250 / $400 / $650</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$96<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$96<small> &middot; 45% ROI on top of wage</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">PHOTO: 1967 Ideal Captain Action in the &#x27;Free parachute&#x27; box (worn but present) + Batman costume set on 2nd torso. Boxed CA $200-400, Batman set $150-300 if complete (mask/cape/gloves/belt). Verify completeness at pickup; sell figure+box and Batman set as two listings.</p>
@@ -178,7 +183,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>med - the item is unmistakable and I am confident what a complete example sells for. The range is wide because completeness cannot be read from the listing photos, and mask/cape/gloves/belt is roughly a $150 swing. Verify at pickup.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Rule applied</span><b>capital &mdash; 45% ROI floor (medium)</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$310</b></div>
       </div>
     </details>
@@ -199,9 +204,9 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   <div class="nums">
     <div class="num ours"><span class="lbl">Our max</span><span class="val">$58</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">35</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$8<small> &middot; 3 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$22<small> &middot; 6 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$90 / $140 / $220</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$33<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$33<small> &middot; 45% ROI on top of wage</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">PHOTO: Stereo Realist f/3.5 (model 1041) with strap + Realist red-button slide viewer. Untested Realist $60-120, viewer $40-80. Two listings. Active 3D-camera niche.</p>
@@ -218,7 +223,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>med - identification is certain from the twin-lens body and the viewer&#x27;s distinctive red button. Untested is the risk: a seized shutter moves a Realist from ~$100 to ~$45. Web search on 2026-09-19 showed active asks of $80 and $150 for f/3.5 bodies, consistent with the estimate, but those are asking prices, not sold.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Rule applied</span><b>capital &mdash; 45% ROI floor (medium)</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$106</b></div>
       </div>
     </details>
@@ -228,50 +233,10 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Stereo+Realist+f3.5+camera&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-P3" id="lot-289">
-  <div class="head">
-    <span class="lotno">Lot 289</span>
-    <span class="chip pri">Bid if cheap</span>
-    
-    <span class="chip conf conf-med">med confidence</span>
-  </div>
-  <h3><a href="https://hibid.com/lot/321769052" target="_blank" rel="noopener">Collection Vintage Lever Filler Fountain Pens</a></h3>
-  <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$26</span></div>
-    <div class="num"><span class="lbl">Your max</span><span class="val">13</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$7<small> &middot; 2 bids</small></span></div>
-    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$40 / $70 / $120</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$15<small> &middot; 45% ROI</small></span></div>
-    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
-  </div>
-  <p class="notes">PHOTO: 11 vintage pens — lever-filler celluloids, a chased black hard rubber pen (if Waterman/Parker w/ 14k nib, $30-60 alone), gold-filled pencil. Sell as &#x27;restoration lot&#x27; $40-100, or pull the BCHR pen.</p>
-  
-  
-    <details class="why">
-      <summary>How this number was reached <span class="method">identified from photo</span></summary>
-      <div class="whybody">
-        <h4>What was reviewed</h4>
-        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>1 of 4 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>11 pens counted plus spare nibs; makers not legible</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
-        <h4>Value derivation</h4>
-        <p>Counted 11 pens in the photo: celluloid lever-fillers, one chased black hard rubber pen, a gold-filled propelling pencil, plus spare nibs. Priced as a &#x27;restoration lot&#x27;, which is how mixed vintage pens actually sell: $40-100 from the agent&#x27;s knowledge. H=120 assumes the black hard rubber pen is a Waterman or Parker with a 14k nib, which alone would be $30-60.</p>
-        <h4>Why med confidence</h4>
-        <p>med - the category is right and the count is from the photo, but no maker is legible at this resolution. The upside case rests entirely on an imprint I cannot read.</p>
-        
-        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
-        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$48</b></div>
-      </div>
-    </details>
-  <div class="links">
-    <a href="https://hibid.com/lot/321769052" target="_blank" rel="noopener">HiBid</a>
-    <a href="https://www.ebay.com/sch/i.html?_nkw=vintage+fountain+pen+lot+lever+filler&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
-    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=vintage+fountain+pen+lot+lever+filler&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
-  </div>
-</article>
 </section>
 
 <section id="metal">
-  <h2>Metal — capped at melt <span class="count">18</span></h2>
+  <h2>Metal — capped at melt <span class="count">3</span></h2>
   <p class="blurb">Floor = break-even hammer if you walked the metal into a shop today (no eBay, no profit). Never bid above it; expect to lose most of these to the room.</p>
   
 <article class="lot pri-P1" id="lot-6">
@@ -285,9 +250,9 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   <div class="nums">
     <div class="num ours"><span class="lbl">Our max</span><span class="val">$400</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">620</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$510<small> &middot; 38 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$520<small> &middot; 39 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$1,057 / $1,110 / $1,216</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$376<small> &middot; 75% ROI</small></span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$376<small> &middot; 75% ROI on top of wage</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">1898-S $5 Half Eagle, 0.2419 oz AGW = $1,057 melt at $4,370. Common date, circulated: sells melt+5%. Over the $400 capital ceiling — ceiling is the binding limit, not value.</p>
@@ -304,7 +269,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>med on value, low on grade - the AGW is exact and the date is common, so melt dominates. I have not examined the photo for AU/UNC detail, which would add a real premium above melt.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>35% (fast)</b></div>
+        <div class="kv"><span>Rule applied</span><b>capital &mdash; 35% ROI floor (fast)</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$876</b></div>
       </div>
     </details>
@@ -325,9 +290,9 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   <div class="nums">
     <div class="num ours"><span class="lbl">Our max</span><span class="val">$278</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">380</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$52<small> &middot; 28 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$60<small> &middot; 32 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$561 / $573 / $629</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$121<small> &middot; 35% ROI</small></span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$121<small> &middot; 35% ROI on top of wage</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">PHOTO: 11 cull Morgans (AG/G), 8.507 oz ASW = $561 melt at $66. Culls sell melt to melt+3% on eBay. 28 bids — this will run to melt.</p>
@@ -344,7 +309,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>med - the ASW is exact arithmetic and the count is from the photo, so the only judgement is that these are culls rather than collectible grades, which the photo supports. Spot is the live variable: a 10% silver move changes this by $56.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>35% (fast)</b></div>
+        <div class="kv"><span>Rule applied</span><b>capital &mdash; 35% ROI floor (fast)</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$471</b></div>
       </div>
     </details>
@@ -367,7 +332,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <div class="num"><span class="lbl">Your max</span><span class="val">60</span></div>
     <div class="num"><span class="lbl">Current</span><span class="val">$10<small> &middot; 6 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$140 / $190 / $260</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$39<small> &middot; 35% ROI</small></span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$39<small> &middot; 35% ROI on top of wage</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">PHOTO: blue agate cameo in 14k bezel+bail. Est 1.6g of 14k = 0.030 oz AGW = $131 melt at $4,370 (weigh at pickup — 2.5g would be $205). eBay sold $150-250 for this style. Gold makes this near capital-safe.</p>
@@ -384,7 +349,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>med - the style and the bezel are clear, but 1.6 g is an eyeball estimate and the gold is only the bezel and bail, not the stone. At 1.0 g the melt floor drops to $82; at 2.5 g it rises to $205. Confirm the 14k/585 stamp and weigh it at pickup - this single assumption moves the max hammer more than any other on the sheet.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>35% (fast)</b></div>
+        <div class="kv"><span>Rule applied</span><b>capital &mdash; 35% ROI floor (fast)</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$150</b></div>
       </div>
     </details>
@@ -394,20 +359,26 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=14k+gold+cameo+pendant+agate&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-P2" id="lot-8E">
+</section>
+
+<section id="volume">
+  <h2>Volume &mdash; store fillers <span class="count">24</span></h2>
+  <p class="blurb">Capital-light lots priced by the wage rule: the max is where the listing still pays your hourly rate (plus a small buffer), not a return on capital. Worth winning at their max to build eBay inventory; never worth chasing.</p>
+  
+<article class="lot pri-volume" id="lot-8E">
   <div class="head">
     <span class="lotno">Lot 8E</span>
-    <span class="chip pri">Bid</span>
+    <span class="chip pri">Volume</span>
     <span class="chip metal">floor $69</span>
     <span class="chip conf conf-med">med confidence</span>
   </div>
   <h3><a href="https://hibid.com/lot/321768690" target="_blank" rel="noopener">Lot Of (4) Franklin Half Dollars 90% Silver Coins</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$47</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$56</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">60</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$30<small> &middot; 7 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$51<small> &middot; 12 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$96 / $105 / $130</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$20<small> &middot; 35% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$14<small> &middot; $6 wage + $7</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">4 Franklin halves in slabs (photo). 1.447 oz ASW = $95 melt; slabbed common dates sell melt+5-15%.</p>
@@ -424,7 +395,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>med - the ASW is exact and the photo confirms four coins in holders; the grades on the labels are not legible, which is the only upside I cannot price.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>35% (fast)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$79</b></div>
       </div>
     </details>
@@ -434,60 +405,20 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Franklin+half+dollar+lot&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-P3" id="lot-268">
-  <div class="head">
-    <span class="lotno">Lot 268</span>
-    <span class="chip pri">Bid if cheap</span>
-    <span class="chip metal">floor $38</span>
-    <span class="chip conf conf-low">low confidence</span>
-  </div>
-  <h3><a href="https://hibid.com/lot/321769025" target="_blank" rel="noopener">Sterling Silver &amp; Gemstone Tennis Bracelets</a></h3>
-  <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$35</span></div>
-    <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$9<small> &middot; 5 bids</small></span></div>
-    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$60 / $90 / $130</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$20<small> &middot; 45% ROI</small></span></div>
-    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
-  </div>
-  <p class="notes">THREE gemstone tennis bracelets (~30g = $59 melt). $25-45 each on eBay; list individually.</p>
-  
-  
-    <details class="why">
-      <summary>How this number was reached <span class="method">sterling weight estimated by eye</span></summary>
-      <div class="whybody">
-        <h4>What was reviewed</h4>
-        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>3 bracelets counted</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
-        <h4>Value derivation</h4>
-        <p>Photo shows three gemstone tennis bracelets. Weight estimated by eye at roughly 30 g total for .925 = 30 x 0.925 / 31.1 = 0.89 ozt x $66 = $59 melt. eBay market for sterling gemstone tennis bracelets from the agent&#x27;s knowledge: $25-45 each, hence the part-out plan of three listings.</p>
-        <h4>Why low confidence</h4>
-        <p>low - the weight is eyeballed from a photo with no scale reference and could be off 40% either way; whether the stones are genuine or synthetic is also unreadable, which is the difference between $25 and $45 a bracelet.</p>
-        
-        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
-        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$65</b></div>
-      </div>
-    </details>
-  <div class="links">
-    <a href="https://hibid.com/lot/321769025" target="_blank" rel="noopener">HiBid</a>
-    <a href="https://www.ebay.com/sch/i.html?_nkw=sterling+silver+tennis+bracelet&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
-    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=sterling+silver+tennis+bracelet&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
-  </div>
-</article>
-<article class="lot pri-P3" id="lot-8EE">
+<article class="lot pri-volume" id="lot-8EE">
   <div class="head">
     <span class="lotno">Lot 8EE</span>
-    <span class="chip pri">Bid if cheap</span>
+    <span class="chip pri">Volume</span>
     <span class="chip metal">floor $37</span>
     <span class="chip conf conf-low">low confidence</span>
   </div>
   <h3><a href="https://hibid.com/lot/321768691" target="_blank" rel="noopener">1894-s Morgan Silver Dollar 90% Silver Coin</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$44</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$54</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">40</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$18<small> &middot; 5 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$30<small> &middot; 9 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$75 / $100 / $140</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$19<small> &middot; 35% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$13<small> &middot; $6 wage + $7</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">1894-S Morgan — better date. Photo VG-ish: $70-110 VG, $110-150 F. Melt $51. Numismatic, not melt.</p>
@@ -504,7 +435,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low on the numismatic leg - the premium depends on a grade I have not read from the photo, and on the 1894-S date being as scarce as I recall. The $51 melt floor is the reliable part.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>35% (fast)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$75</b></div>
       </div>
     </details>
@@ -514,100 +445,60 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=1894-S+Morgan+dollar&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-P3" id="lot-6A">
+<article class="lot pri-volume" id="lot-268">
   <div class="head">
-    <span class="lotno">Lot 6A</span>
-    <span class="chip pri">Bid if cheap</span>
-    <span class="chip metal">floor $18</span>
+    <span class="lotno">Lot 268</span>
+    <span class="chip pri">Volume</span>
+    <span class="chip metal">floor $38</span>
     <span class="chip conf conf-low">low confidence</span>
   </div>
-  <h3><a href="https://hibid.com/lot/321768680" target="_blank" rel="noopener">1824 Bust Half Dollar 90% Silver Coin</a></h3>
+  <h3><a href="https://hibid.com/lot/321769025" target="_blank" rel="noopener">Sterling Silver &amp; Gemstone Tennis Bracelets</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$33</span></div>
-    <div class="num"><span class="lbl">Your max</span><span class="val">55</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$9<small> &middot; 5 bids</small></span></div>
-    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$60 / $85 / $130</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$19<small> &middot; 45% ROI</small></span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$47</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$13<small> &middot; 7 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$60 / $90 / $130</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$12<small> &middot; $6 wage + $6</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
-  <p class="notes">1824 Capped Bust half, photo looks G-VG. Numismatic value $60-90 G-VG, $100+ in Fine; melt $26. Not a melt play — a coin play.</p>
+  <p class="notes">THREE gemstone tennis bracelets (~30g = $59 melt). $25-45 each on eBay; list individually.</p>
   
   
     <details class="why">
-      <summary>How this number was reached <span class="method">metal content x spot</span></summary>
+      <summary>How this number was reached <span class="method">sterling weight estimated by eye</span></summary>
       <div class="whybody">
         <h4>What was reviewed</h4>
-        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 coin, in a 2x2 flip; grade guessed G-VG from the thumbnail</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>3 bracelets counted</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
-        <p>1824 Capped Bust half: 0.3866 ozt x $66 = $26 melt. Value here is numismatic, not metal - agent&#x27;s recall for a common-date Bust half is $60-90 in G-VG, $100+ in Fine. Photo suggests G-VG.</p>
+        <p>Photo shows three gemstone tennis bracelets. Weight estimated by eye at roughly 30 g total for .925 = 30 x 0.925 / 31.1 = 0.89 ozt x $66 = $59 melt. eBay market for sterling gemstone tennis bracelets from the agent&#x27;s knowledge: $25-45 each, hence the part-out plan of three listings.</p>
         <h4>Why low confidence</h4>
-        <p>low - no melt cover to speak of ($26 against a $60-85 estimate), and the value rests on a grade read from a small photo. The most speculative coin on the sheet.</p>
+        <p>low - the weight is eyeballed from a photo with no scale reference and could be off 40% either way; whether the stones are genuine or synthetic is also unreadable, which is the difference between $25 and $45 a bracelet.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
-        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$61</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$65</b></div>
       </div>
     </details>
   <div class="links">
-    <a href="https://hibid.com/lot/321768680" target="_blank" rel="noopener">HiBid</a>
-    <a href="https://www.ebay.com/sch/i.html?_nkw=1824+capped+bust+half+dollar&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
-    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=1824+capped+bust+half+dollar&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    <a href="https://hibid.com/lot/321769025" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=sterling+silver+tennis+bracelet&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=sterling+silver+tennis+bracelet&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-P3" id="lot-8CC">
-  <div class="head">
-    <span class="lotno">Lot 8CC</span>
-    <span class="chip pri">Bid if cheap</span>
-    <span class="chip metal">floor $47</span>
-    <span class="chip conf conf-low">low confidence</span>
-  </div>
-  <h3><a href="https://hibid.com/lot/321768685" target="_blank" rel="noopener">2016-w American Silver Eagle Proof .999 Fine</a></h3>
-  <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$39</span></div>
-    <div class="num"><span class="lbl">Your max</span><span class="val">48</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$41<small> &middot; 11 bids</small></span></div>
-    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$80 / $90 / $105</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$17<small> &middot; 35% ROI</small></span></div>
-    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
-  </div>
-  <p class="notes">2016-W proof ASE, 30th anniversary edge lettering, box+COA in photo. $85-100.</p>
-  
-  
-    <details class="why">
-      <summary>How this number was reached <span class="method">metal content x spot</span></summary>
-      <div class="whybody">
-        <h4>What was reviewed</h4>
-        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>coin, box and COA visible</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
-        <h4>Value derivation</h4>
-        <p>2016-W proof American Silver Eagle: 1.0 ozt x $66 = $66 melt. Photo shows box and COA. 30th-anniversary edge lettering year; proof ASEs with box and COA carry $15-40 over melt in the agent&#x27;s recollection.</p>
-        <h4>Why low confidence</h4>
-        <p>low - melt exact, premium is recall. Confirm the box and COA are actually present at pickup; without them the premium mostly evaporates.</p>
-        
-        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>35% (fast)</b></div>
-        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$67</b></div>
-      </div>
-    </details>
-  <div class="links">
-    <a href="https://hibid.com/lot/321768685" target="_blank" rel="noopener">HiBid</a>
-    <a href="https://www.ebay.com/sch/i.html?_nkw=2016-W+proof+silver+eagle&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
-    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=2016-W+proof+silver+eagle&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
-  </div>
-</article>
-<article class="lot pri-P3" id="lot-8A">
+<article class="lot pri-volume" id="lot-8A">
   <div class="head">
     <span class="lotno">Lot 8A</span>
-    <span class="chip pri">Bid if cheap</span>
+    <span class="chip pri">Volume</span>
     <span class="chip metal">floor $47</span>
     <span class="chip conf conf-low">low confidence</span>
   </div>
   <h3><a href="https://hibid.com/lot/321768681" target="_blank" rel="noopener">2005 Panda 1oz .999 Fine Silver</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$37</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$45</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">42</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$41<small> &middot; 14 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$43<small> &middot; 16 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$70 / $85 / $100</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$16<small> &middot; 35% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$12<small> &middot; $6 wage + $6</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">2005 1oz Panda — pandas carry a premium over melt ($66): $75-95 in capsule.</p>
@@ -624,7 +515,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - premium over melt is recall; the melt leg is exact.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>35% (fast)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$63</b></div>
       </div>
     </details>
@@ -634,20 +525,20 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=2005+silver+panda+1+oz&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-P3" id="lot-8HH">
+<article class="lot pri-volume" id="lot-8HH">
   <div class="head">
     <span class="lotno">Lot 8HH</span>
-    <span class="chip pri">Bid if cheap</span>
+    <span class="chip pri">Volume</span>
     <span class="chip metal">floor $47</span>
     <span class="chip conf conf-high">high confidence</span>
   </div>
   <h3><a href="https://hibid.com/lot/321768697" target="_blank" rel="noopener">1984 1oz .999 Fine Silver American Prospector</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$30</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$37</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">42</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$31<small> &middot; 8 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$34<small> &middot; 10 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$66 / $72 / $80</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$13<small> &middot; 35% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$11<small> &middot; $6 wage + $5</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">1984 Prospector 1oz — generic vintage round, melt+5%.</p>
@@ -664,7 +555,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>high - generic silver, no numismatic component to get wrong; the only variable is spot.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>35% (fast)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$52</b></div>
       </div>
     </details>
@@ -674,140 +565,60 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=1984+prospector+silver+round&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-P3" id="lot-8FF">
+<article class="lot pri-volume" id="lot-289">
   <div class="head">
-    <span class="lotno">Lot 8FF</span>
-    <span class="chip pri">Bid if cheap</span>
-    <span class="chip metal">floor $37</span>
+    <span class="lotno">Lot 289</span>
+    <span class="chip pri">Volume</span>
+    
     <span class="chip conf conf-med">med confidence</span>
   </div>
-  <h3><a href="https://hibid.com/lot/321768693" target="_blank" rel="noopener">1934 Peace Dollar Money Clip</a></h3>
+  <h3><a href="https://hibid.com/lot/321769052" target="_blank" rel="noopener">Collection Vintage Lever Filler Fountain Pens</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$22</span></div>
-    <div class="num"><span class="lbl">Your max</span><span class="val">30</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$21<small> &middot; 10 bids</small></span></div>
-    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$52 / $60 / $75</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$12<small> &middot; 45% ROI</small></span></div>
-    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
-  </div>
-  <p class="notes">1934 Peace dollar in a money clip — the coin is usually soldered = cull. Melt $51 + clip novelty.</p>
-  
-  
-    <details class="why">
-      <summary>How this number was reached <span class="method">metal content x spot</span></summary>
-      <div class="whybody">
-        <h4>What was reviewed</h4>
-        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>coin in money clip</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
-        <h4>Value derivation</h4>
-        <p>1934 Peace dollar mounted in a money clip: 0.7734 ozt x $66 = $51 melt. Coins mounted in clips are usually soldered or bezel-damaged, so the coin is a cull: melt plus a small novelty premium for the clip.</p>
-        <h4>Why med confidence</h4>
-        <p>med - the &#x27;mounted means damaged&#x27; rule is reliable; if the coin turns out to be removable and undamaged, 1934 is a slightly better date and this is worth more.</p>
-        
-        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
-        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$40</b></div>
-      </div>
-    </details>
-  <div class="links">
-    <a href="https://hibid.com/lot/321768693" target="_blank" rel="noopener">HiBid</a>
-    <a href="https://www.ebay.com/sch/i.html?_nkw=peace+dollar+money+clip&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
-    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=peace+dollar+money+clip&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
-  </div>
-</article>
-<article class="lot pri-P3" id="lot-8F">
-  <div class="head">
-    <span class="lotno">Lot 8F</span>
-    <span class="chip pri">Bid if cheap</span>
-    <span class="chip metal">floor $37</span>
-    <span class="chip conf conf-high">high confidence</span>
-  </div>
-  <h3><a href="https://hibid.com/lot/321768692" target="_blank" rel="noopener">1880-o Morgan Silver Dollar 90% Silver</a></h3>
-  <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$24</span></div>
-    <div class="num"><span class="lbl">Your max</span><span class="val">32</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$20<small> &middot; 7 bids</small></span></div>
-    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$55 / $60 / $70</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$11<small> &middot; 35% ROI</small></span></div>
-    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
-  </div>
-  <p class="notes">1880-O Morgan, common, G-VG: melt ($51) + $5-10.</p>
-  
-  
-    <details class="why">
-      <summary>How this number was reached <span class="method">metal content x spot</span></summary>
-      <div class="whybody">
-        <h4>What was reviewed</h4>
-        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 coin</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
-        <h4>Value derivation</h4>
-        <p>1880-O Morgan: 0.7734 ozt x $66 = $51 melt. Common date, circulated: melt + $5-15.</p>
-        <h4>Why high confidence</h4>
-        <p>high - common-date circulated Morgans are effectively bullion; little judgement involved.</p>
-        
-        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>35% (fast)</b></div>
-        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$42</b></div>
-      </div>
-    </details>
-  <div class="links">
-    <a href="https://hibid.com/lot/321768692" target="_blank" rel="noopener">HiBid</a>
-    <a href="https://www.ebay.com/sch/i.html?_nkw=1880-O+Morgan+dollar&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
-    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=1880-O+Morgan+dollar&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
-  </div>
-</article>
-<article class="lot pri-P3" id="lot-8DD">
-  <div class="head">
-    <span class="lotno">Lot 8DD</span>
-    <span class="chip pri">Bid if cheap</span>
-    <span class="chip metal">floor $37</span>
-    <span class="chip conf conf-high">high confidence</span>
-  </div>
-  <h3><a href="https://hibid.com/lot/321768689" target="_blank" rel="noopener">1988 Olympic Proof Silver Dollar</a></h3>
-  <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$23</span></div>
-    <div class="num"><span class="lbl">Your max</span><span class="val">32</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$35</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">13</span></div>
     <div class="num"><span class="lbl">Current</span><span class="val">$9<small> &middot; 4 bids</small></span></div>
-    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$52 / $58 / $65</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$10<small> &middot; 35% ROI</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$40 / $70 / $120</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$11<small> &middot; $6 wage + $4</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
-  <p class="notes">1988-S Olympic proof $1 w/ box+COA: 0.7734 oz = $51 melt; sells melt+10%.</p>
+  <p class="notes">PHOTO: 11 vintage pens — lever-filler celluloids, a chased black hard rubber pen (if Waterman/Parker w/ 14k nib, $30-60 alone), gold-filled pencil. Sell as &#x27;restoration lot&#x27; $40-100, or pull the BCHR pen.</p>
   
   
     <details class="why">
-      <summary>How this number was reached <span class="method">metal content x spot</span></summary>
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
       <div class="whybody">
         <h4>What was reviewed</h4>
-        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>coin in box with COA visible</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>1 of 4 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>11 pens counted plus spare nibs; makers not legible</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
         <h4>Value derivation</h4>
-        <p>1988-S Olympic commemorative dollar: 26.73 g at 90% = 0.7734 ozt x $66 = $51 melt. Modern commems of this era carry no numismatic premium; they trade at melt + a few dollars for the box and COA.</p>
-        <h4>Why high confidence</h4>
-        <p>high - the &#x27;no premium&#x27; call is well established for 1980s commems; value is essentially the silver.</p>
+        <p>Counted 11 pens in the photo: celluloid lever-fillers, one chased black hard rubber pen, a gold-filled propelling pencil, plus spare nibs. Priced as a &#x27;restoration lot&#x27;, which is how mixed vintage pens actually sell: $40-100 from the agent&#x27;s knowledge. H=120 assumes the black hard rubber pen is a Waterman or Parker with a 14k nib, which alone would be $30-60.</p>
+        <h4>Why med confidence</h4>
+        <p>med - the category is right and the count is from the photo, but no maker is legible at this resolution. The upside case rests entirely on an imprint I cannot read.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>35% (fast)</b></div>
-        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$40</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$48</b></div>
       </div>
     </details>
   <div class="links">
-    <a href="https://hibid.com/lot/321768689" target="_blank" rel="noopener">HiBid</a>
-    <a href="https://www.ebay.com/sch/i.html?_nkw=1988+olympic+proof+silver+dollar&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
-    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=1988+olympic+proof+silver+dollar&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    <a href="https://hibid.com/lot/321769052" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=vintage+fountain+pen+lot+lever+filler&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=vintage+fountain+pen+lot+lever+filler&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-P4" id="lot-267">
+<article class="lot pri-volume" id="lot-267">
   <div class="head">
     <span class="lotno">Lot 267</span>
-    <span class="chip pri">Flyer</span>
+    <span class="chip pri">Volume</span>
     <span class="chip metal">floor $25</span>
     <span class="chip conf conf-low">low confidence</span>
   </div>
   <h3><a href="https://hibid.com/lot/321769024" target="_blank" rel="noopener">Vtg Sterling Silver Southwestern Jewelry</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$26</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$35</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$8<small> &middot; 4 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$10<small> &middot; 5 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$45 / $70 / $100</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$15<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$11<small> &middot; $6 wage + $4</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">SW turquoise set: earrings, ring, more (~20g = $39 melt). If Native-hallmarked, $80-150.</p>
@@ -824,7 +635,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - hallmark presence is the whole upside and cannot be read from the listing photo. Turn the pieces over at pickup.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$48</b></div>
       </div>
     </details>
@@ -834,20 +645,20 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=sterling+turquoise+southwestern+set&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-P4" id="lot-401">
+<article class="lot pri-volume" id="lot-401">
   <div class="head">
     <span class="lotno">Lot 401</span>
-    <span class="chip pri">Flyer</span>
+    <span class="chip pri">Volume</span>
     <span class="chip metal">floor $38</span>
     <span class="chip conf conf-low">low confidence</span>
   </div>
   <h3><a href="https://hibid.com/lot/321769315" target="_blank" rel="noopener">Vintage Sterling Silver Wavy Design Bracelets</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$26</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$35</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$7<small> &middot; 3 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$9<small> &middot; 5 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$59 / $70 / $100</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$15<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$11<small> &middot; $6 wage + $4</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">2-3 wavy sterling bangles (~30g = $59 melt). Modern, sells $20-35 each.</p>
@@ -864,7 +675,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - same eyeball-weight problem; bangles are hollow more often than they look, which would cut the melt floor sharply.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$48</b></div>
       </div>
     </details>
@@ -874,100 +685,20 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=sterling+silver+bangle+bracelet&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-P4" id="lot-402">
-  <div class="head">
-    <span class="lotno">Lot 402</span>
-    <span class="chip pri">Flyer</span>
-    <span class="chip metal">floor $31</span>
-    <span class="chip conf conf-low">low confidence</span>
-  </div>
-  <h3><a href="https://hibid.com/lot/321769316" target="_blank" rel="noopener">Vintage Sterling Silver Navajo Style Cuff Bracelet</a></h3>
-  <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$22</span></div>
-    <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$9<small> &middot; 3 bids</small></span></div>
-    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$49 / $60 / $90</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$12<small> &middot; 45% ROI</small></span></div>
-    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
-  </div>
-  <p class="notes">Navajo-style cuff #2 (~25g). Same logic as 393.</p>
-  
-  
-    <details class="why">
-      <summary>How this number was reached <span class="method">sterling weight estimated by eye</span></summary>
-      <div class="whybody">
-        <h4>What was reviewed</h4>
-        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 cuff</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
-        <h4>Value derivation</h4>
-        <p>Second Navajo-style cuff, same basis: 25 g estimated = $49 melt.</p>
-        <h4>Why low confidence</h4>
-        <p>low - same reasoning and same unverified hallmark as lot 393.</p>
-        
-        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
-        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$40</b></div>
-      </div>
-    </details>
-  <div class="links">
-    <a href="https://hibid.com/lot/321769316" target="_blank" rel="noopener">HiBid</a>
-    <a href="https://www.ebay.com/sch/i.html?_nkw=sterling+navajo+cuff+bracelet&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
-    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=sterling+navajo+cuff+bracelet&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
-  </div>
-</article>
-<article class="lot pri-P4" id="lot-393">
-  <div class="head">
-    <span class="lotno">Lot 393</span>
-    <span class="chip pri">Flyer</span>
-    <span class="chip metal">floor $31</span>
-    <span class="chip conf conf-low">low confidence</span>
-  </div>
-  <h3><a href="https://hibid.com/lot/321769305" target="_blank" rel="noopener">Vintage Sterling Silver Navajo Style Bracelet</a></h3>
-  <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$22</span></div>
-    <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$7<small> &middot; 2 bids</small></span></div>
-    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$49 / $60 / $90</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$12<small> &middot; 45% ROI</small></span></div>
-    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
-  </div>
-  <p class="notes">Navajo-style cuff (~25g = $49 melt). Hallmarked NA: $80-150; &#x27;style&#x27;: $40-60.</p>
-  
-  
-    <details class="why">
-      <summary>How this number was reached <span class="method">sterling weight estimated by eye</span></summary>
-      <div class="whybody">
-        <h4>What was reviewed</h4>
-        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 cuff</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
-        <h4>Value derivation</h4>
-        <p>Navajo-style cuff, estimated 25 g = 0.74 ozt x $66 = $49 melt. Unsigned: $40-60. Hallmarked: $80-150 (the H case).</p>
-        <h4>Why low confidence</h4>
-        <p>low - as above, hallmark unverified; heavy cuffs also vary a lot in actual silver weight.</p>
-        
-        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
-        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$40</b></div>
-      </div>
-    </details>
-  <div class="links">
-    <a href="https://hibid.com/lot/321769305" target="_blank" rel="noopener">HiBid</a>
-    <a href="https://www.ebay.com/sch/i.html?_nkw=sterling+navajo+cuff+bracelet&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
-    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=sterling+navajo+cuff+bracelet&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
-  </div>
-</article>
-<article class="lot pri-P4" id="lot-8BB">
+<article class="lot pri-volume" id="lot-8BB">
   <div class="head">
     <span class="lotno">Lot 8BB</span>
-    <span class="chip pri">Flyer</span>
+    <span class="chip pri">Volume</span>
     <span class="chip metal">floor $29</span>
     <span class="chip conf conf-low">low confidence</span>
   </div>
   <h3><a href="https://hibid.com/lot/321768683" target="_blank" rel="noopener">1995 Silver Premier Mint Set</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$27</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$33</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">45</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$20<small> &middot; 11 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$22<small> &middot; 13 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$55 / $65 / $80</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$12<small> &middot; 35% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$11<small> &middot; $6 wage + $4</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">1995-S Silver Premier proof set (5 coins, 1.34 oz ASW = $88 melt) in the deluxe box. 1995 is a better year; $90-120.</p>
@@ -984,7 +715,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - CORRECTED during this audit. The first pass recorded 1.34 ozt ASW, roughly double the truth, which inflated the melt floor from $41 to $88 and the max hammer with it. The set contains three silver coins, not a silver dollar.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>35% (fast)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$46</b></div>
       </div>
     </details>
@@ -994,12 +725,206 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=1995+silver+premier+proof+set&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-</section>
-
-<section id="volume">
-  <h2>Volume &mdash; store fillers <span class="count">13</span></h2>
-  <p class="blurb">Small, sound lots that clear the floor by only a few dollars each. Worth winning at their max to build eBay inventory; never worth chasing. Bid them all, expect to win some.</p>
+<article class="lot pri-volume" id="lot-8F">
+  <div class="head">
+    <span class="lotno">Lot 8F</span>
+    <span class="chip pri">Volume</span>
+    <span class="chip metal">floor $37</span>
+    <span class="chip conf conf-high">high confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/321768692" target="_blank" rel="noopener">1880-o Morgan Silver Dollar 90% Silver</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$30</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">32</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$28<small> &middot; 10 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$55 / $60 / $70</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$10<small> &middot; $6 wage + $4</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">1880-O Morgan, common, G-VG: melt ($51) + $5-10.</p>
   
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">metal content x spot</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 coin</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
+        <h4>Value derivation</h4>
+        <p>1880-O Morgan: 0.7734 ozt x $66 = $51 melt. Common date, circulated: melt + $5-15.</p>
+        <h4>Why high confidence</h4>
+        <p>high - common-date circulated Morgans are effectively bullion; little judgement involved.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$42</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/321768692" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=1880-O+Morgan+dollar&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=1880-O+Morgan+dollar&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-402">
+  <div class="head">
+    <span class="lotno">Lot 402</span>
+    <span class="chip pri">Volume</span>
+    <span class="chip metal">floor $31</span>
+    <span class="chip conf conf-low">low confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/321769316" target="_blank" rel="noopener">Vintage Sterling Silver Navajo Style Cuff Bracelet</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$29</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$11<small> &middot; 5 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$49 / $60 / $90</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$10<small> &middot; $6 wage + $4</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Navajo-style cuff #2 (~25g). Same logic as 393.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">sterling weight estimated by eye</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 cuff</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
+        <h4>Value derivation</h4>
+        <p>Second Navajo-style cuff, same basis: 25 g estimated = $49 melt.</p>
+        <h4>Why low confidence</h4>
+        <p>low - same reasoning and same unverified hallmark as lot 393.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$40</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/321769316" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=sterling+navajo+cuff+bracelet&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=sterling+navajo+cuff+bracelet&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-8FF">
+  <div class="head">
+    <span class="lotno">Lot 8FF</span>
+    <span class="chip pri">Volume</span>
+    <span class="chip metal">floor $37</span>
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/321768693" target="_blank" rel="noopener">1934 Peace Dollar Money Clip</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$29</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">30</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$23<small> &middot; 11 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$52 / $60 / $75</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$10<small> &middot; $6 wage + $4</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">1934 Peace dollar in a money clip — the coin is usually soldered = cull. Melt $51 + clip novelty.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">metal content x spot</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>coin in money clip</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
+        <h4>Value derivation</h4>
+        <p>1934 Peace dollar mounted in a money clip: 0.7734 ozt x $66 = $51 melt. Coins mounted in clips are usually soldered or bezel-damaged, so the coin is a cull: melt plus a small novelty premium for the clip.</p>
+        <h4>Why med confidence</h4>
+        <p>med - the &#x27;mounted means damaged&#x27; rule is reliable; if the coin turns out to be removable and undamaged, 1934 is a slightly better date and this is worth more.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$40</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/321768693" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=peace+dollar+money+clip&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=peace+dollar+money+clip&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-393">
+  <div class="head">
+    <span class="lotno">Lot 393</span>
+    <span class="chip pri">Volume</span>
+    <span class="chip metal">floor $31</span>
+    <span class="chip conf conf-low">low confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/321769305" target="_blank" rel="noopener">Vintage Sterling Silver Navajo Style Bracelet</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$29</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$7<small> &middot; 2 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$49 / $60 / $90</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$10<small> &middot; $6 wage + $4</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Navajo-style cuff (~25g = $49 melt). Hallmarked NA: $80-150; &#x27;style&#x27;: $40-60.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">sterling weight estimated by eye</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 cuff</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
+        <h4>Value derivation</h4>
+        <p>Navajo-style cuff, estimated 25 g = 0.74 ozt x $66 = $49 melt. Unsigned: $40-60. Hallmarked: $80-150 (the H case).</p>
+        <h4>Why low confidence</h4>
+        <p>low - as above, hallmark unverified; heavy cuffs also vary a lot in actual silver weight.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$40</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/321769305" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=sterling+navajo+cuff+bracelet&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=sterling+navajo+cuff+bracelet&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-8DD">
+  <div class="head">
+    <span class="lotno">Lot 8DD</span>
+    <span class="chip pri">Volume</span>
+    <span class="chip metal">floor $37</span>
+    <span class="chip conf conf-high">high confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/321768689" target="_blank" rel="noopener">1988 Olympic Proof Silver Dollar</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$29</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">32</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$17<small> &middot; 9 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$52 / $58 / $65</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$10<small> &middot; $6 wage + $4</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">1988-S Olympic proof $1 w/ box+COA: 0.7734 oz = $51 melt; sells melt+10%.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">metal content x spot</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>coin in box with COA visible</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
+        <h4>Value derivation</h4>
+        <p>1988-S Olympic commemorative dollar: 26.73 g at 90% = 0.7734 ozt x $66 = $51 melt. Modern commems of this era carry no numismatic premium; they trade at melt + a few dollars for the box and COA.</p>
+        <h4>Why high confidence</h4>
+        <p>high - the &#x27;no premium&#x27; call is well established for 1980s commems; value is essentially the silver.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$40</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/321768689" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=1988+olympic+proof+silver+dollar&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=1988+olympic+proof+silver+dollar&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
 <article class="lot pri-volume" id="lot-316">
   <div class="head">
     <span class="lotno">Lot 316</span>
@@ -1009,11 +934,11 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   </div>
   <h3><a href="https://hibid.com/lot/321769160" target="_blank" rel="noopener">Vintage Zeiss Ikon Symbolica 35mm Film Camera</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$13</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$17</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">13</span></div>
     <div class="num"><span class="lbl">Current</span><span class="val">$11<small> &middot; 2 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$40 / $65 / $100</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$7<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$9<small> &middot; $6 wage + $2</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">Zeiss Ikon Symbolica ($30-50) + Konica I rangefinder ($40-70), untested. Camera people buy as-is. At $11.</p>
@@ -1030,7 +955,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - no photo examined; untested vintage cameras vary enormously with shutter and lens condition.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$24</b></div>
       </div>
     </details>
@@ -1038,46 +963,6 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://hibid.com/lot/321769160" target="_blank" rel="noopener">HiBid</a>
     <a href="https://www.ebay.com/sch/i.html?_nkw=Zeiss+Ikon+Symbolica+camera&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Zeiss+Ikon+Symbolica+camera&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
-  </div>
-</article>
-<article class="lot pri-volume" id="lot-8D">
-  <div class="head">
-    <span class="lotno">Lot 8D</span>
-    <span class="chip pri">Volume</span>
-    <span class="chip metal">floor $9</span>
-    <span class="chip conf conf-low">low confidence</span>
-  </div>
-  <h3><a href="https://hibid.com/lot/321768688" target="_blank" rel="noopener">1876 Seated Liberty Silver Quarter 25c</a></h3>
-  <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$12</span></div>
-    <div class="num"><span class="lbl">Your max</span><span class="val">25</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$8<small> &middot; 4 bids</small></span></div>
-    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$30 / $38 / $55</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$7<small> &middot; 45% ROI</small></span></div>
-    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
-  </div>
-  <p class="notes">1876 Seated Liberty quarter, G-VG: $30-45. Melt $12.</p>
-  
-  
-    <details class="why">
-      <summary>How this number was reached <span class="method">metal content x spot</span></summary>
-      <div class="whybody">
-        <h4>What was reviewed</h4>
-        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 coin</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
-        <h4>Value derivation</h4>
-        <p>1876 Seated Liberty quarter: 0.1808 ozt x $66 = $12 melt. Numismatic value in G-VG from the agent&#x27;s recall: $30-45.</p>
-        <h4>Why low confidence</h4>
-        <p>low - thin melt cover and a grade-dependent estimate from a small photo.</p>
-        
-        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
-        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$22</b></div>
-      </div>
-    </details>
-  <div class="links">
-    <a href="https://hibid.com/lot/321768688" target="_blank" rel="noopener">HiBid</a>
-    <a href="https://www.ebay.com/sch/i.html?_nkw=1876+seated+liberty+quarter&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
-    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=1876+seated+liberty+quarter&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
 <article class="lot pri-volume" id="lot-8X">
@@ -1089,11 +974,11 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   </div>
   <h3><a href="https://hibid.com/lot/321768716" target="_blank" rel="noopener">1893 Columbian Exposition Half Dollar 90% Silver</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$9</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$12</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">22</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$7<small> &middot; 3 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$8<small> &middot; 4 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $32 / $45</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$5<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$8<small> &middot; $6 wage + $2</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">1893 Columbian half, common in AU: $25-40. Melt $24.</p>
@@ -1110,7 +995,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>med - the &#x27;extremely common&#x27; call is solid. Little upside, limited downside; melt is close to market.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$17</b></div>
       </div>
     </details>
@@ -1129,11 +1014,11 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   </div>
   <h3><a href="https://hibid.com/lot/321768951" target="_blank" rel="noopener">Tomytronic Pac-man Handheld 1980s Game</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$8</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$11</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">8</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$5<small> &middot; 1 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$7<small> &middot; 2 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$30 / $50 / $80</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$5<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$8<small> &middot; $6 wage + $1</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">Tomytronic Pac-Man tabletop (1981). Working $50-90, untested/as-is $30-50. Batteries + photo check. At $5/1 bid — overlooked.</p>
@@ -1150,7 +1035,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - no photo examined and no working statement. Vintage tabletop electronics are frequently dead, and working vs not is the whole range.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$16</b></div>
       </div>
     </details>
@@ -1169,11 +1054,11 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   </div>
   <h3><a href="https://hibid.com/lot/321769038" target="_blank" rel="noopener">Sterling Silver Statement Earrings</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$8</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$11</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
     <div class="num"><span class="lbl">Current</span><span class="val">$7<small> &middot; 3 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$30 / $45 / $70</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$5<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$8<small> &middot; $6 wage + $1</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">Green-stone statement earrings + a second pair/ring (~15g). Two listings.</p>
@@ -1190,7 +1075,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - eyeball weight; the green stones&#x27; identity (genuine vs paste) is unreadable.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$16</b></div>
       </div>
     </details>
@@ -1209,11 +1094,11 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   </div>
   <h3><a href="https://hibid.com/lot/321769296" target="_blank" rel="noopener">Vintage Sterling Silver Necklace Pendants</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$8</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$11</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$9<small> &middot; 3 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$12<small> &middot; 4 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$30 / $45 / $70</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$5<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$8<small> &middot; $6 wage + $1</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">3 pendants incl. a moonstone-style and a black onyx (~15g). Sell individually or as a lot.</p>
@@ -1230,7 +1115,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - eyeball weight, stones unverified.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$16</b></div>
       </div>
     </details>
@@ -1249,11 +1134,11 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   </div>
   <h3><a href="https://hibid.com/lot/321769326" target="_blank" rel="noopener">Sterling Silver Necklace Pendants</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$8</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$11</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$5<small> &middot; 1 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$12<small> &middot; 3 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$30 / $45 / $70</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$5<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$8<small> &middot; $6 wage + $1</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">Lapis-style pendant + 2 others (~15g).</p>
@@ -1270,7 +1155,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - eyeball weight, stones unverified.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$16</b></div>
       </div>
     </details>
@@ -1278,46 +1163,6 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://hibid.com/lot/321769326" target="_blank" rel="noopener">HiBid</a>
     <a href="https://www.ebay.com/sch/i.html?_nkw=sterling+silver+pendant+lapis&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=sterling+silver+pendant+lapis&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
-  </div>
-</article>
-<article class="lot pri-volume" id="lot-8U">
-  <div class="head">
-    <span class="lotno">Lot 8U</span>
-    <span class="chip pri">Volume</span>
-    
-    <span class="chip conf conf-low">low confidence</span>
-  </div>
-  <h3><a href="https://hibid.com/lot/321768713" target="_blank" rel="noopener">Limited Edition Gaming Token .999 Fine Silver</a></h3>
-  <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
-    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$5<small> &middot; 1 bids</small></span></div>
-    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $35 / $60</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$4<small> &middot; 45% ROI</small></span></div>
-    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
-  </div>
-  <p class="notes">&#x27;Limited edition gaming token .999 silver&#x27; — if 1oz, melt ~$32 plus collector premium if it&#x27;s a known game/casino series. At $5/1 bid: cheap melt if it&#x27;s a full ounce. Photo check.</p>
-  
-  
-    <details class="why">
-      <summary>How this number was reached <span class="method">metal content x spot</span></summary>
-      <div class="whybody">
-        <h4>What was reviewed</h4>
-        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div><div class="kv"><span>Note</span><b>Weight assumed 1 ozt - not observed</b></div>
-        <h4>Value derivation</h4>
-        <p>&#x27;Limited Edition Gaming Token .999 Fine Silver&#x27; - weight is not stated in the title and no photo was examined. Priced on the ASSUMPTION of 1 ozt, giving $66 melt, with the range widened downward in case it is a fractional token and upward for collector premium if it is a recognised casino or game series.</p>
-        <h4>Why low confidence</h4>
-        <p>low - the weight is an assumption, not an observation, and it is the entire value. If this is a 1/2 ozt token the melt is $33. Check the photo before bidding.</p>
-        
-        <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
-        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$11</b></div>
-      </div>
-    </details>
-  <div class="links">
-    <a href="https://hibid.com/lot/321768713" target="_blank" rel="noopener">HiBid</a>
-    <a href="https://www.ebay.com/sch/i.html?_nkw=Limited+Edition+Gaming+Token+.999+Fine+Silver&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
-    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Limited+Edition+Gaming+Token+.999+Fine+Silver&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
 <article class="lot pri-volume" id="lot-252">
@@ -1329,11 +1174,11 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   </div>
   <h3><a href="https://hibid.com/lot/321769006" target="_blank" rel="noopener">1992 Skybox Marvel Masterpieces Trading Cards</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$8</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">6</span></div>
     <div class="num"><span class="lbl">Current</span><span class="val">$5<small> &middot; 1 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $45 / $90</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$4<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$8<small> &middot; $6 wage + $1</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">1992 SkyBox Marvel Masterpieces — a complete 100-card base set is $30-60; the 5 Spectra-Etch chase cards are $10-30 each. 11 photos; check for Spectra-Etch. At $5.</p>
@@ -1350,7 +1195,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - whether the set is complete and whether any Spectra-Etch cards are present are both unchecked, and together they are the difference between $25 and $90.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$11</b></div>
       </div>
     </details>
@@ -1369,11 +1214,11 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   </div>
   <h3><a href="https://hibid.com/lot/321769022" target="_blank" rel="noopener">Vintage Sterling Silver &amp; Marcasite Earrings &amp;</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$8</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$6<small> &middot; 2 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$7<small> &middot; 3 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $35 / $50</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$4<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$8<small> &middot; $6 wage + $1</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">Marcasite earrings + filigree hearts (~10g = $20 melt). Vintage marcasite sells $25-45.</p>
@@ -1390,7 +1235,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - light pieces, so the melt floor is thin and the value is mostly style-driven.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$11</b></div>
       </div>
     </details>
@@ -1409,11 +1254,11 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   </div>
   <h3><a href="https://hibid.com/lot/321769026" target="_blank" rel="noopener">Sterling Silver Vibrant Swan Pendant Necklace</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$8</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$6<small> &middot; 2 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$8<small> &middot; 3 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $35 / $50</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$4<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$8<small> &middot; $6 wage + $1</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">Swan pendant + chain (~10g).</p>
@@ -1430,7 +1275,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - eyeball weight; chain may be plated rather than sterling, which would halve the metal.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$11</b></div>
       </div>
     </details>
@@ -1449,11 +1294,11 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   </div>
   <h3><a href="https://hibid.com/lot/321769023" target="_blank" rel="noopener">Vtg Sterling Silver Orchid Earrings &amp; Dangle</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$4</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$5</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$6<small> &middot; 2 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$7<small> &middot; 3 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$20 / $30 / $40</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$2<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$7<small> &middot; $6 wage + $1</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">Orchid + dangle earrings (~8g).</p>
@@ -1470,7 +1315,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - light, eyeball weight.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$7</b></div>
       </div>
     </details>
@@ -1480,50 +1325,10 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=sterling+orchid+earrings&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-volume" id="lot-406">
-  <div class="head">
-    <span class="lotno">Lot 406</span>
-    <span class="chip pri">Volume</span>
-    <span class="chip metal">floor $6</span>
-    <span class="chip conf conf-low">low confidence</span>
-  </div>
-  <h3><a href="https://hibid.com/lot/321769324" target="_blank" rel="noopener">Vintage Sterling Silver Usmc Rifle Expert Badge</a></h3>
-  <div class="nums">
-    <div class="num ours"><span class="lbl">Ceiling at melt</span><span class="val">$6</span><small class="sub">break-even at a metals buyer &mdash; no profit, capital-safe</small></div>
-    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$0<small> &middot; 0 bids</small></span></div>
-    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$15 / $25 / $40</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$1<small> &middot; 45% ROI</small></span></div>
-    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
-  </div>
-  <p class="notes">Sterling USMC rifle expert badge — militaria + sterling, $20-40. ZERO bids.</p>
-  
-  
-    <details class="why">
-      <summary>How this number was reached <span class="method">sterling weight estimated by eye</span></summary>
-      <div class="whybody">
-        <h4>What was reviewed</h4>
-        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
-        <h4>Value derivation</h4>
-        <p>Sterling USMC rifle expert badge, estimated 5 g = $10 melt. Sterling militaria insignia sells $20-40 to collectors.</p>
-        <h4>Why low confidence</h4>
-        <p>low - weight estimated on a small badge; the militaria premium depends on era and maker mark, unverified. Note it had zero bids at the time of the run.</p>
-        
-        <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
-        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$3</b></div>
-      </div>
-    </details>
-  <div class="links">
-    <a href="https://hibid.com/lot/321769324" target="_blank" rel="noopener">HiBid</a>
-    <a href="https://www.ebay.com/sch/i.html?_nkw=Vintage+Sterling+Silver+Usmc+Rifle+Expert+Badge&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
-    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Vintage+Sterling+Silver+Usmc+Rifle+Expert+Badge&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
-  </div>
-</article>
 </section>
 
 <section id="outbid">
-  <h2>Already past our max <span class="count">20</span></h2>
+  <h2>Already past our max <span class="count">25</span></h2>
   <p class="blurb">The room got there first. Listed so you can see what we passed on and why.</p>
   
 <article class="lot pri-outbid" id="lot-8K">
@@ -1537,9 +1342,9 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   <div class="nums">
     <div class="num ours"><span class="lbl">Our max</span><span class="val">$51</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$123<small> &middot; 19 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$138<small> &middot; 21 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$115 / $135 / $160</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$23<small> &middot; 35% ROI</small></span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$23<small> &middot; 35% ROI on top of wage</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">1992 1oz Panda — better year, $120-160 capsuled.</p>
@@ -1556,7 +1361,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - the melt leg is exact, but the size of the 1992 premium is recall, not a comp, and it depends on capsule condition and milk spots which I cannot assess. Validate this one before bidding.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>35% (fast)</b></div>
+        <div class="kv"><span>Rule applied</span><b>capital &mdash; 35% ROI floor (fast)</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$88</b></div>
       </div>
     </details>
@@ -1577,9 +1382,9 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   <div class="nums">
     <div class="num ours"><span class="lbl">Our max</span><span class="val">$48</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">65</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$51<small> &middot; 12 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$54<small> &middot; 13 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$90 / $110 / $140</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$22<small> &middot; 35% ROI</small></span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$22<small> &middot; 35% ROI on top of wage</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">1996 proof ASE — a scarcer proof year; $95-130 with box/COA (verify box at pickup).</p>
@@ -1596,7 +1401,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - the &#x27;scarcest year&#x27; claim is the whole thesis for the premium and it is from recall. If wrong, this is a $70 coin.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>35% (fast)</b></div>
+        <div class="kv"><span>Rule applied</span><b>capital &mdash; 35% ROI floor (fast)</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$84</b></div>
       </div>
     </details>
@@ -1604,6 +1409,86 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://hibid.com/lot/321768696" target="_blank" rel="noopener">HiBid</a>
     <a href="https://www.ebay.com/sch/i.html?_nkw=1996+proof+American+Silver+Eagle&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=1996+proof+American+Silver+Eagle&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-8CC">
+  <div class="head">
+    <span class="lotno">Lot 8CC</span>
+    <span class="chip pri">Past our max</span>
+    <span class="chip metal">floor $47</span>
+    <span class="chip conf conf-low">low confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/321768685" target="_blank" rel="noopener">2016-w American Silver Eagle Proof .999 Fine</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$48</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">48</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$58<small> &middot; 16 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$80 / $90 / $105</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$13<small> &middot; $6 wage + $6</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">2016-W proof ASE, 30th anniversary edge lettering, box+COA in photo. $85-100.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">metal content x spot</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>coin, box and COA visible</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
+        <h4>Value derivation</h4>
+        <p>2016-W proof American Silver Eagle: 1.0 ozt x $66 = $66 melt. Photo shows box and COA. 30th-anniversary edge lettering year; proof ASEs with box and COA carry $15-40 over melt in the agent&#x27;s recollection.</p>
+        <h4>Why low confidence</h4>
+        <p>low - melt exact, premium is recall. Confirm the box and COA are actually present at pickup; without them the premium mostly evaporates.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$67</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/321768685" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=2016-W+proof+silver+eagle&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=2016-W+proof+silver+eagle&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-6A">
+  <div class="head">
+    <span class="lotno">Lot 6A</span>
+    <span class="chip pri">Past our max</span>
+    <span class="chip metal">floor $18</span>
+    <span class="chip conf conf-low">low confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/321768680" target="_blank" rel="noopener">1824 Bust Half Dollar 90% Silver Coin</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$44</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">55</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$82<small> &middot; 11 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$60 / $85 / $130</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$12<small> &middot; $6 wage + $6</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">1824 Capped Bust half, photo looks G-VG. Numismatic value $60-90 G-VG, $100+ in Fine; melt $26. Not a melt play — a coin play.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">metal content x spot</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 coin, in a 2x2 flip; grade guessed G-VG from the thumbnail</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
+        <h4>Value derivation</h4>
+        <p>1824 Capped Bust half: 0.3866 ozt x $66 = $26 melt. Value here is numismatic, not metal - agent&#x27;s recall for a common-date Bust half is $60-90 in G-VG, $100+ in Fine. Photo suggests G-VG.</p>
+        <h4>Why low confidence</h4>
+        <p>low - no melt cover to speak of ($26 against a $60-85 estimate), and the value rests on a grade read from a small photo. The most speculative coin on the sheet.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$61</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/321768680" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=1824+capped+bust+half+dollar&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=1824+capped+bust+half+dollar&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
 <article class="lot pri-outbid" id="lot-156">
@@ -1615,11 +1500,11 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   </div>
   <h3><a href="https://hibid.com/lot/321768883" target="_blank" rel="noopener">Xbox One System, Remote, Nba 2k20 &amp; Grand Theft</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$34</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$42</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
     <div class="num"><span class="lbl">Current</span><span class="val">$62<small> &middot; 6 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$90 / $120 / $150</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$15<small> &middot; 35% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$16<small> &middot; $11 wage + $5</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">Xbox One (original or S?) + controller + NBA 2K20 + GTA V, powers on. Console $70-100, controller $20, games $5. At $62/6 bids, ~fully priced; only worth it under $50.</p>
@@ -1636,7 +1521,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>med - used consoles are a liquid, well-known market so the numbers are stable, but the title does not say whether it is an original, S or X, which is a $40 spread.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>35% (fast)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$60</b></div>
       </div>
     </details>
@@ -1655,11 +1540,11 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   </div>
   <h3><a href="https://hibid.com/lot/321768811" target="_blank" rel="noopener">Scalextric Batmobile &amp; Batman Inspired Slot Cars</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$13</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$17</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$31<small> &middot; 8 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$35<small> &middot; 10 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$40 / $60 / $90</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$7<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$9<small> &middot; $6 wage + $2</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">Scalextric Batmobile (C3xxx) is a sought-after release, $50-80 boxed; + Batman-inspired car. At $31/8 bids — contested.</p>
@@ -1676,7 +1561,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - &#x27;sought after&#x27; is recall, and which Batmobile release this is (there are several) changes the number materially.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$24</b></div>
       </div>
     </details>
@@ -1686,44 +1571,44 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Scalextric+Batmobile+%26+Batman+Inspired+Slot+Cars&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-outbid" id="lot-163">
+<article class="lot pri-outbid" id="lot-8D">
   <div class="head">
-    <span class="lotno">Lot 163</span>
+    <span class="lotno">Lot 8D</span>
     <span class="chip pri">Past our max</span>
-    
-    <span class="chip conf conf-med">med confidence</span>
+    <span class="chip metal">floor $9</span>
+    <span class="chip conf conf-low">low confidence</span>
   </div>
-  <h3><a href="https://hibid.com/lot/321768891" target="_blank" rel="noopener">Glowing Manganese Westmoreland Blue Hen On Nest</a></h3>
+  <h3><a href="https://hibid.com/lot/321768688" target="_blank" rel="noopener">1876 Seated Liberty Silver Quarter 25c</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
-    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$31<small> &middot; 19 bids</small></span></div>
-    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$30 / $45 / $70</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$5<small> &middot; 70% ROI</small></span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$16</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">25</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$25<small> &middot; 11 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$30 / $38 / $55</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$9<small> &middot; $6 wage + $2</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
-  <p class="notes">Westmoreland blue hen on nest (UV-reactive) $35-60. At $31/19 bids — the glow-glass crowd found it. No.</p>
+  <p class="notes">1876 Seated Liberty quarter, G-VG: $30-45. Melt $12.</p>
   
   
     <details class="why">
-      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
+      <summary>How this number was reached <span class="method">metal content x spot</span></summary>
       <div class="whybody">
         <h4>What was reviewed</h4>
-        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 coin</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
-        <p>Title only: Westmoreland manganese &#x27;blue hen on nest&#x27;, UV-reactive. Agent&#x27;s recall: $35-60 to the glow-glass collectors.</p>
-        <h4>Why med confidence</h4>
-        <p>med - a well-defined collectible with an active niche; note it already had 19 bids, meaning that niche has found it.</p>
+        <p>1876 Seated Liberty quarter: 0.1808 ozt x $66 = $12 melt. Numismatic value in G-VG from the agent&#x27;s recall: $30-45.</p>
+        <h4>Why low confidence</h4>
+        <p>low - thin melt cover and a grade-dependent estimate from a small photo.</p>
         
-        <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>70% (slow)</b></div>
-        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$13</b></div>
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$22</b></div>
       </div>
     </details>
   <div class="links">
-    <a href="https://hibid.com/lot/321768891" target="_blank" rel="noopener">HiBid</a>
-    <a href="https://www.ebay.com/sch/i.html?_nkw=Glowing+Manganese+Westmoreland+Blue+Hen+On+Nest&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
-    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Glowing+Manganese+Westmoreland+Blue+Hen+On+Nest&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    <a href="https://hibid.com/lot/321768688" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=1876+seated+liberty+quarter&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=1876+seated+liberty+quarter&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
 <article class="lot pri-outbid" id="lot-179">
@@ -1735,11 +1620,11 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   </div>
   <h3><a href="https://hibid.com/lot/321768912" target="_blank" rel="noopener">Wii System, Wiimote, Sensor, Wii Sports &amp; Cables</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$10</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$13</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$23<small> &middot; 3 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$26<small> &middot; 5 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$40 / $55 / $75</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$5<small> &middot; 35% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$13<small> &middot; $11 wage + $2</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">Wii + Wiimote + sensor + Wii Sports + cables. Complete-ish Wii sells $45-70. At $23/3 bids, some room.</p>
@@ -1756,7 +1641,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>med - stable commodity market; risk is cosmetic condition and whether it powers on, neither stated.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>35% (fast)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$18</b></div>
       </div>
     </details>
@@ -1766,23 +1651,23 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Wii+System%2C+Wiimote%2C+Sensor%2C+Wii+Sports+%26+Cables&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-outbid" id="lot-176">
+<article class="lot pri-outbid" id="lot-163">
   <div class="head">
-    <span class="lotno">Lot 176</span>
+    <span class="lotno">Lot 163</span>
     <span class="chip pri">Past our max</span>
     
-    <span class="chip conf conf-low">low confidence</span>
+    <span class="chip conf conf-med">med confidence</span>
   </div>
-  <h3><a href="https://hibid.com/lot/321768909" target="_blank" rel="noopener">Fenton Handpainted Glossy Black Bridesmaid Figure</a></h3>
+  <h3><a href="https://hibid.com/lot/321768891" target="_blank" rel="noopener">Glowing Manganese Westmoreland Blue Hen On Nest</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$4</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$9</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$6<small> &middot; 3 bids</small></span></div>
-    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $40 / $60</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$4<small> &middot; 70% ROI</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$31<small> &middot; 19 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$30 / $45 / $70</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$8<small> &middot; $6 wage + $1</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
-  <p class="notes">Fenton hand-painted Bridesmaid figurine, signed, boxed LE — $30-60 each; slow but boxed helps. At $6.</p>
+  <p class="notes">Westmoreland blue hen on nest (UV-reactive) $35-60. At $31/19 bids — the glow-glass crowd found it. No.</p>
   
   
     <details class="why">
@@ -1791,59 +1676,59 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <h4>What was reviewed</h4>
         <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
         <h4>Value derivation</h4>
-        <p>Title only: Fenton hand-painted Bridesmaid figurine, signed, with original box, limited edition. Agent&#x27;s recall: $30-60 each.</p>
-        <h4>Why low confidence</h4>
-        <p>low - Fenton has softened as a collecting category and my recall may lag the current market; slow mover, hence the 70% ROI floor applied.</p>
+        <p>Title only: Westmoreland manganese &#x27;blue hen on nest&#x27;, UV-reactive. Agent&#x27;s recall: $35-60 to the glow-glass collectors.</p>
+        <h4>Why med confidence</h4>
+        <p>med - a well-defined collectible with an active niche; note it already had 19 bids, meaning that niche has found it.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>70% (slow)</b></div>
-        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$9</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$13</b></div>
       </div>
     </details>
   <div class="links">
-    <a href="https://hibid.com/lot/321768909" target="_blank" rel="noopener">HiBid</a>
-    <a href="https://www.ebay.com/sch/i.html?_nkw=Fenton+Handpainted+Glossy+Black+Bridesmaid+Figure&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
-    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Fenton+Handpainted+Glossy+Black+Bridesmaid+Figure&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    <a href="https://hibid.com/lot/321768891" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=Glowing+Manganese+Westmoreland+Blue+Hen+On+Nest&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Glowing+Manganese+Westmoreland+Blue+Hen+On+Nest&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-outbid" id="lot-177">
+<article class="lot pri-outbid" id="lot-8U">
   <div class="head">
-    <span class="lotno">Lot 177</span>
+    <span class="lotno">Lot 8U</span>
     <span class="chip pri">Past our max</span>
     
     <span class="chip conf conf-low">low confidence</span>
   </div>
-  <h3><a href="https://hibid.com/lot/321768910" target="_blank" rel="noopener">Fenton Handpainted Fall Theme Bridesmaid Figure</a></h3>
+  <h3><a href="https://hibid.com/lot/321768713" target="_blank" rel="noopener">Limited Edition Gaming Token .999 Fine Silver</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$4</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$8</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$5<small> &middot; 1 bids</small></span></div>
-    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $40 / $60</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$4<small> &middot; 70% ROI</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$8<small> &middot; 2 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $35 / $60</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$8<small> &middot; $6 wage + $1</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
-  <p class="notes">Same as lot 176, fall theme. At $5.</p>
+  <p class="notes">&#x27;Limited edition gaming token .999 silver&#x27; — if 1oz, melt ~$32 plus collector premium if it&#x27;s a known game/casino series. At $5/1 bid: cheap melt if it&#x27;s a full ounce. Photo check.</p>
   
   
     <details class="why">
-      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
+      <summary>How this number was reached <span class="method">metal content x spot</span></summary>
       <div class="whybody">
         <h4>What was reviewed</h4>
-        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div><div class="kv"><span>Note</span><b>Weight assumed 1 ozt - not observed</b></div>
         <h4>Value derivation</h4>
-        <p>Same as lot 176, fall theme: signed and boxed Fenton Bridesmaid figurine.</p>
+        <p>&#x27;Limited Edition Gaming Token .999 Fine Silver&#x27; - weight is not stated in the title and no photo was examined. Priced on the ASSUMPTION of 1 ozt, giving $66 melt, with the range widened downward in case it is a fractional token and upward for collector premium if it is a recognised casino or game series.</p>
         <h4>Why low confidence</h4>
-        <p>low - same as lot 176.</p>
+        <p>low - the weight is an assumption, not an observation, and it is the entire value. If this is a 1/2 ozt token the melt is $33. Check the photo before bidding.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>70% (slow)</b></div>
-        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$9</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$11</b></div>
       </div>
     </details>
   <div class="links">
-    <a href="https://hibid.com/lot/321768910" target="_blank" rel="noopener">HiBid</a>
-    <a href="https://www.ebay.com/sch/i.html?_nkw=Fenton+Handpainted+Fall+Theme+Bridesmaid+Figure&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
-    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Fenton+Handpainted+Fall+Theme+Bridesmaid+Figure&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    <a href="https://hibid.com/lot/321768713" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=Limited+Edition+Gaming+Token+.999+Fine+Silver&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Limited+Edition+Gaming+Token+.999+Fine+Silver&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
 <article class="lot pri-outbid" id="lot-88">
@@ -1855,11 +1740,11 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   </div>
   <h3><a href="https://hibid.com/lot/321768801" target="_blank" rel="noopener">Scalextric Ford Gt Gte 1/32 Slot Cars</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$8</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$25<small> &middot; 2 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$31<small> &middot; 4 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $40 / $60</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$4<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$8<small> &middot; $6 wage + $1</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">Scalextric Ford GT GTE 1/32 boxed, untested. $25-45 each on eBay. At $25/2 bids — fully priced.</p>
@@ -1876,7 +1761,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - untested slot cars are common and the market is thin; no photo examined.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$11</b></div>
       </div>
     </details>
@@ -1895,11 +1780,11 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   </div>
   <h3><a href="https://hibid.com/lot/321769015" target="_blank" rel="noopener">Vintage Sterling Silver Parrot Brooch Pin</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$8</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$10<small> &middot; 3 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$12<small> &middot; 4 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $35 / $50</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$4<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$8<small> &middot; $6 wage + $1</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">Sterling parrot brooch (~8g = $16 melt). $25-45 if signed.</p>
@@ -1916,7 +1801,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - signature unverified, and 8 g is an eyeball estimate on a small object.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$11</b></div>
       </div>
     </details>
@@ -1935,11 +1820,11 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   </div>
   <h3><a href="https://hibid.com/lot/321769321" target="_blank" rel="noopener">Vintage Sterling Silver Abstract Ladies Ring</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$8</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$7<small> &middot; 3 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$8<small> &middot; 4 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $35 / $50</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$4<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$8<small> &middot; $6 wage + $1</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">Abstract ring w/ opal-look stone, size 8 (~6g).</p>
@@ -1956,7 +1841,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - small object, eyeball weight; stone unidentified.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$11</b></div>
       </div>
     </details>
@@ -1966,23 +1851,23 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=sterling+silver+ring+size+8&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-outbid" id="lot-361">
+<article class="lot pri-outbid" id="lot-176">
   <div class="head">
-    <span class="lotno">Lot 361</span>
+    <span class="lotno">Lot 176</span>
     <span class="chip pri">Past our max</span>
     
     <span class="chip conf conf-low">low confidence</span>
   </div>
-  <h3><a href="https://hibid.com/lot/321769264" target="_blank" rel="noopener">3 Nba Detroit Piston Card Lot Cade Cunningham,</a></h3>
+  <h3><a href="https://hibid.com/lot/321768909" target="_blank" rel="noopener">Fenton Handpainted Glossy Black Bridesmaid Figure</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$4</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$7<small> &middot; 3 bids</small></span></div>
-    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$20 / $40 / $80</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$2<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$8<small> &middot; 5 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $40 / $60</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$7<small> &middot; $6 wage + $1</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
-  <p class="notes">Pistons lot: Cade Cunningham, Tobias Harris /7, Isaiah Stewart auto /25. Low-numbered parallels + auto: $30-80 depending on the Cade card. At $7.</p>
+  <p class="notes">Fenton hand-painted Bridesmaid figurine, signed, boxed LE — $30-60 each; slow but boxed helps. At $6.</p>
   
   
     <details class="why">
@@ -1991,19 +1876,59 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <h4>What was reviewed</h4>
         <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
         <h4>Value derivation</h4>
-        <p>Title only: Cade Cunningham, Tobias Harris numbered /7, Isaiah Stewart auto /25. Low-numbered parallels plus an auto: agent&#x27;s recall $30-80 for the group, driven mostly by the Cade card.</p>
+        <p>Title only: Fenton hand-painted Bridesmaid figurine, signed, with original box, limited edition. Agent&#x27;s recall: $30-60 each.</p>
         <h4>Why low confidence</h4>
-        <p>low - which Cade parallel this is determines most of the value and the title does not say. Modern card market also moves faster than my knowledge.</p>
+        <p>low - Fenton has softened as a collecting category and my recall may lag the current market; slow mover, hence the 70% ROI floor applied.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
-        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$7</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$9</b></div>
       </div>
     </details>
   <div class="links">
-    <a href="https://hibid.com/lot/321769264" target="_blank" rel="noopener">HiBid</a>
-    <a href="https://www.ebay.com/sch/i.html?_nkw=3+Nba+Detroit+Piston+Card+Lot+Cade+Cunningham%2C&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
-    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=3+Nba+Detroit+Piston+Card+Lot+Cade+Cunningham%2C&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    <a href="https://hibid.com/lot/321768909" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=Fenton+Handpainted+Glossy+Black+Bridesmaid+Figure&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Fenton+Handpainted+Glossy+Black+Bridesmaid+Figure&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-177">
+  <div class="head">
+    <span class="lotno">Lot 177</span>
+    <span class="chip pri">Past our max</span>
+    
+    <span class="chip conf conf-low">low confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/321768910" target="_blank" rel="noopener">Fenton Handpainted Fall Theme Bridesmaid Figure</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$7<small> &middot; 3 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $40 / $60</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$7<small> &middot; $6 wage + $1</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Same as lot 176, fall theme. At $5.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Same as lot 176, fall theme: signed and boxed Fenton Bridesmaid figurine.</p>
+        <h4>Why low confidence</h4>
+        <p>low - same as lot 176.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_low</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$9</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/321768910" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=Fenton+Handpainted+Fall+Theme+Bridesmaid+Figure&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Fenton+Handpainted+Fall+Theme+Bridesmaid+Figure&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
 <article class="lot pri-outbid" id="lot-276">
@@ -2015,11 +1940,11 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   </div>
   <h3><a href="https://hibid.com/lot/321769035" target="_blank" rel="noopener">Brass, Kiss &amp; More Zippo Lighters</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$4</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$5</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$11<small> &middot; 4 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$13<small> &middot; 5 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$20 / $35 / $60</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$2<small> &middot; 35% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$7<small> &middot; $6 wage + $1</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">Zippo lot incl. a KISS Zippo (licensed, $20-40 alone) + brass. Zippos sell individually fast. At $11/4 bids.</p>
@@ -2036,7 +1961,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - count and condition unknown from the title; Zippo values swing hard on year stamp, which is unreadable here.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>35% (fast)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$8</b></div>
       </div>
     </details>
@@ -2046,23 +1971,23 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Brass%2C+Kiss+%26+More+Zippo+Lighters&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-outbid" id="lot-457">
+<article class="lot pri-outbid" id="lot-361">
   <div class="head">
-    <span class="lotno">Lot 457</span>
+    <span class="lotno">Lot 361</span>
     <span class="chip pri">Past our max</span>
     
     <span class="chip conf conf-low">low confidence</span>
   </div>
-  <h3><a href="https://hibid.com/lot/321769387" target="_blank" rel="noopener">W.t. Armstrong Flute In Case</a></h3>
+  <h3><a href="https://hibid.com/lot/321769264" target="_blank" rel="noopener">3 Nba Detroit Piston Card Lot Cade Cunningham,</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$2</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$5</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$12<small> &middot; 5 bids</small></span></div>
-    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$35 / $60 / $100</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$2<small> &middot; 70% ROI</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$7<small> &middot; 3 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$20 / $40 / $80</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$7<small> &middot; $6 wage + $1</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
-  <p class="notes">W.T. Armstrong flute in case — student model $40-90 as-is. At $12/5 bids.</p>
+  <p class="notes">Pistons lot: Cade Cunningham, Tobias Harris /7, Isaiah Stewart auto /25. Low-numbered parallels + auto: $30-80 depending on the Cade card. At $7.</p>
   
   
     <details class="why">
@@ -2071,19 +1996,19 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <h4>What was reviewed</h4>
         <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
         <h4>Value derivation</h4>
-        <p>Title only: W.T. Armstrong flute in case. Student flutes as-is: $40-90.</p>
+        <p>Title only: Cade Cunningham, Tobias Harris numbered /7, Isaiah Stewart auto /25. Low-numbered parallels plus an auto: agent&#x27;s recall $30-80 for the group, driven mostly by the Cade card.</p>
         <h4>Why low confidence</h4>
-        <p>low - condition and whether the pads are serviceable are unknown; these sell slowly.</p>
+        <p>low - which Cade parallel this is determines most of the value and the title does not say. Modern card market also moves faster than my knowledge.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>70% (slow)</b></div>
-        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$5</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$7</b></div>
       </div>
     </details>
   <div class="links">
-    <a href="https://hibid.com/lot/321769387" target="_blank" rel="noopener">HiBid</a>
-    <a href="https://www.ebay.com/sch/i.html?_nkw=W.t.+Armstrong+Flute+In+Case&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
-    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=W.t.+Armstrong+Flute+In+Case&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    <a href="https://hibid.com/lot/321769264" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=3+Nba+Detroit+Piston+Card+Lot+Cade+Cunningham%2C&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=3+Nba+Detroit+Piston+Card+Lot+Cade+Cunningham%2C&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
 <article class="lot pri-outbid" id="lot-106">
@@ -2095,11 +2020,11 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   </div>
   <h3><a href="https://hibid.com/lot/321768823" target="_blank" rel="noopener">Scalextric Digital 1/32 Scale Slot Car Racing Set</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$3</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$4</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
     <div class="num"><span class="lbl">Current</span><span class="val">$5<small> &middot; 2 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$60 / $100 / $160</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$2<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$23<small> &middot; $22 wage + $1</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">Scalextric Digital 1/32 set w/ 4 cars, 4 controllers, extra track. Digital sets $100-200 used if working; heavy/bulky to ship (L). At $5/2 bids — overlooked because it&#x27;s big. Local pickup resale or freight.</p>
@@ -2116,7 +2041,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - untested electronics plus a bulky item. Flagged size L: this is the one lot here that cannot go media mail, which is why its churn cost is high.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$6</b></div>
       </div>
     </details>
@@ -2124,6 +2049,46 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://hibid.com/lot/321768823" target="_blank" rel="noopener">HiBid</a>
     <a href="https://www.ebay.com/sch/i.html?_nkw=Scalextric+Digital+1%2F32+Scale+Slot+Car+Racing+Set&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Scalextric+Digital+1%2F32+Scale+Slot+Car+Racing+Set&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-457">
+  <div class="head">
+    <span class="lotno">Lot 457</span>
+    <span class="chip pri">Past our max</span>
+    
+    <span class="chip conf conf-low">low confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/321769387" target="_blank" rel="noopener">W.t. Armstrong Flute In Case</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$3</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$14<small> &middot; 8 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$35 / $60 / $100</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$11<small> &middot; $11 wage + $0</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">W.T. Armstrong flute in case — student model $40-90 as-is. At $12/5 bids.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Title only: W.T. Armstrong flute in case. Student flutes as-is: $40-90.</p>
+        <h4>Why low confidence</h4>
+        <p>low - condition and whether the pads are serviceable are unknown; these sell slowly.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_low</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$5</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/321769387" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=W.t.+Armstrong+Flute+In+Case&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=W.t.+Armstrong+Flute+In+Case&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
 <article class="lot pri-outbid" id="lot-245">
@@ -2135,11 +2100,11 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   </div>
   <h3><a href="https://hibid.com/lot/321768996" target="_blank" rel="noopener">1995 Fleer Ultra X-men Collection Trading Cards In</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$1</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$2</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
     <div class="num"><span class="lbl">Current</span><span class="val">$6<small> &middot; 3 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$15 / $30 / $60</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$1<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$7<small> &middot; $6 wage + $0</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">1995 Fleer Ultra X-Men in a Trapper Keeper — base set ~$20-40; Sinister Observations/Hunters&amp;Stalkers chase adds. At $6.</p>
@@ -2156,7 +2121,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - completeness unverified; junk-wax-era card sets are often partial.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$3</b></div>
       </div>
     </details>
@@ -2175,11 +2140,11 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   </div>
   <h3><a href="https://hibid.com/lot/321769259" target="_blank" rel="noopener">2023 Prizm Anthony Richardson Flashback Rookie N</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$1</span></div>
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$2</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$7<small> &middot; 3 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$8<small> &middot; 4 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$15 / $25 / $40</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$1<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$7<small> &middot; $6 wage + $0</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">2023 Prizm Anthony Richardson &#x27;Flashback&#x27; No Huddle PSA 10 — insert, not the base RC; $15-35. At $7.</p>
@@ -2196,7 +2161,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - modern graded card prices move fast with player performance and my knowledge has a cutoff. Check a sold search before bidding.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$3</b></div>
       </div>
     </details>
@@ -2204,6 +2169,46 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://hibid.com/lot/321769259" target="_blank" rel="noopener">HiBid</a>
     <a href="https://www.ebay.com/sch/i.html?_nkw=2023+Prizm+Anthony+Richardson+Flashback+Rookie+N&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=2023+Prizm+Anthony+Richardson+Flashback+Rookie+N&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-406">
+  <div class="head">
+    <span class="lotno">Lot 406</span>
+    <span class="chip pri">Past our max</span>
+    <span class="chip metal">floor $6</span>
+    <span class="chip conf conf-low">low confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/321769324" target="_blank" rel="noopener">Vintage Sterling Silver Usmc Rifle Expert Badge</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$2</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$6<small> &middot; 2 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$15 / $25 / $40</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$7<small> &middot; $6 wage + $0</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Sterling USMC rifle expert badge — militaria + sterling, $20-40. ZERO bids.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">sterling weight estimated by eye</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
+        <h4>Value derivation</h4>
+        <p>Sterling USMC rifle expert badge, estimated 5 g = $10 melt. Sterling militaria insignia sells $20-40 to collectors.</p>
+        <h4>Why low confidence</h4>
+        <p>low - weight estimated on a small badge; the militaria premium depends on era and maker mark, unverified. Note it had zero bids at the time of the run.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_low</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$3</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/321769324" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=Vintage+Sterling+Silver+Usmc+Rifle+Expert+Badge&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Vintage+Sterling+Silver+Usmc+Rifle+Expert+Badge&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
 <article class="lot pri-outbid" id="lot-453">
@@ -2217,9 +2222,9 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   <div class="nums">
     <div class="num ours"><span class="lbl">Our max</span><span class="val">$0</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$7<small> &middot; 3 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$11<small> &middot; 6 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$30 / $50 / $80</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$0<small> &middot; 70% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$11<small> &middot; $11 wage + $0</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">Student clarinet w/ case — $30-60 as-is for pads/overhaul. Slow. At $7.</p>
@@ -2236,7 +2241,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - maker is garbled in the listing title and I did not examine the photo; wood vs plastic body is a material difference.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>70% (slow)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$1</b></div>
       </div>
     </details>
@@ -2259,7 +2264,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
     <div class="num"><span class="lbl">Current</span><span class="val">$5<small> &middot; 1 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$12 / $20 / $40</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$0<small> &middot; 44% ROI</small></span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$7<small> &middot; $6 wage + $0</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">Hot Wheels/Matchbox loose diecast — $1/car unless redlines. Photo check for redlines. At $5.</p>
@@ -2276,7 +2281,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - count unknown, and the whole upside is whether any redlines are present, which needs the photos.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$1</b></div>
       </div>
     </details>
@@ -2297,9 +2302,9 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   <div class="nums">
     <div class="num ours"><span class="lbl">Ceiling at melt</span><span class="val">$5</span><small class="sub">break-even at a metals buyer &mdash; no profit, capital-safe</small></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$5<small> &middot; 1 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$6<small> &middot; 2 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$7 / $7 / $8</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$-3<small> &middot; 0% ROI</small></span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$-3<small> &middot; 0% ROI on top of wage</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">1/10 oz silver round; ~$5. Not worth a listing.</p>
@@ -2316,7 +2321,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>high - CORRECTED during this audit. The first pass estimated $4-8 from pre-update spot ($32), leaving value_low below melt, which is incoherent for bullion. Now computed from metal content.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>35% (fast)</b></div>
+        <div class="kv"><span>Rule applied</span><b>capital &mdash; 35% ROI floor (fast)</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$-3</b></div>
       </div>
     </details>
@@ -2343,9 +2348,9 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   <div class="nums">
     <div class="num ours"><span class="lbl">Our max</span><span class="val">$0</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">175</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$26<small> &middot; 4 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$46<small> &middot; 7 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$60 / $120 / $250</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$-16<small> &middot; 0% ROI</small></span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$-16<small> &middot; 0% ROI on top of wage</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">PERSONAL (Phil): 1977 Bally Lost World cabinet/playfield/backglass, no electronics. As a parts/restoration piece $100-300 locally; backglass alone can be $100+ if intact. Not a flip — a fall project. At $26/4 bids.</p>
@@ -2362,7 +2367,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>low - and it does not matter much: flagged PERSONAL, so it is excluded from the bid recommendations. This is Phil&#x27;s project, not a flip.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>70% (slow)</b></div>
+        <div class="kv"><span>Rule applied</span><b>capital &mdash; 70% ROI floor (slow)</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$-16</b></div>
       </div>
     </details>
@@ -2389,9 +2394,9 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   <div class="nums">
     <div class="num ours"><span class="lbl">Our max</span><span class="val">$0</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$6<small> &middot; 2 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$11<small> &middot; 3 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$10 / $18 / $30</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$-1<small> &middot; 0% ROI</small></span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$-1<small> &middot; 0% ROI on top of wage</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">PHOTO: ~150 modern XY / Sun&amp;Moon bulk (2014-19), a few reverse holos, no vintage. Bulk rate $10-20.</p>
@@ -2408,7 +2413,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>high - modern bulk is a commodity and the photo is clear enough to rule out vintage. The listing title says &#x27;Vintage&#x27;, which the photo contradicts; that discrepancy is the finding, not a risk.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Rule applied</span><b>capital &mdash; 45% ROI floor (medium)</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$-1</b></div>
       </div>
     </details>
@@ -2431,7 +2436,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
     <div class="num"><span class="lbl">Current</span><span class="val">$6<small> &middot; 2 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$10 / $20 / $40</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$-1<small> &middot; 0% ROI</small></span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$-1<small> &middot; 0% ROI on top of wage</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">&#x27;89 Hoops Jordan + Bird + more — junk-wax era, $10-25 unless a Jordan is mint.</p>
@@ -2448,7 +2453,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>med - the era&#x27;s abundance is certain; exact contents are not.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Rule applied</span><b>capital &mdash; 45% ROI floor (medium)</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$-1</b></div>
       </div>
     </details>
@@ -2471,7 +2476,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
     <div class="num"><span class="lbl">Current</span><span class="val">$6<small> &middot; 2 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$8 / $15 / $25</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$-2<small> &middot; 0% ROI</small></span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$-2<small> &middot; 0% ROI on top of wage</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">1989-90 Hoops Jordan #200 — very common, $8-20 raw. At $6/2 bids: no.</p>
@@ -2488,7 +2493,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>high - this card&#x27;s abundance is well established; the only variable is centring and corners, which would need grading to matter.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>35% (fast)</b></div>
+        <div class="kv"><span>Rule applied</span><b>capital &mdash; 35% ROI floor (fast)</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$-2</b></div>
       </div>
     </details>
@@ -2509,9 +2514,9 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
   <div class="nums">
     <div class="num ours"><span class="lbl">Our max</span><span class="val">$0</span></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$5<small> &middot; 1 bids</small></span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$6<small> &middot; 2 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $40 / $70</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$-3<small> &middot; 0% ROI</small></span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$-3<small> &middot; 0% ROI on top of wage</small></span></div>
     <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
   </div>
   <p class="notes">Bundy (Selmer) clarinet — the standard student horn, $30-60 as-is. At $5.</p>
@@ -2528,7 +2533,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
         <p>med - Bundy is a known quantity with a steady if unexciting market; the estimate is a narrow, reliable band.</p>
         
         <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>70% (slow)</b></div>
+        <div class="kv"><span>Rule applied</span><b>capital &mdash; 70% ROI floor (slow)</b></div>
         <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$-3</b></div>
       </div>
     </details>
