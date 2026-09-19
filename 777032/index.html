@@ -75,6 +75,10 @@ summary:hover { color:var(--link) }
 .kv { display:flex; justify-content:space-between; gap:16px; font-size:14px; padding:3px 0; border-bottom:1px dotted var(--line) }
 .kv span { color:var(--ink-3) } .kv b { font-weight:600; text-align:right }
 .warn { color:var(--conf-low) !important; font-weight:600 }
+.kv b.ok { color:var(--conf-high) } .kv b.no { color:var(--ink-3) }
+.num.ours .sub { display:block; font-size:12px; color:var(--ink-2); font-weight:400; margin-top:2px; font-family:"Source Sans 3", sans-serif }
+.strip .val small { font-size:13px; font-weight:400; color:var(--ink-3) }
+.pri-volume .chip.pri { background:var(--metal-bg); color:var(--metal) }
 details.logic { background:var(--bg-2); padding:10px 12px; margin:14px 0 0 }
 @media (max-width:480px) { .nums { grid-template-columns:repeat(2,1fr) } }
 @media (prefers-reduced-motion: no-preference) { nav a { transition:color .15s } }
@@ -85,11 +89,11 @@ details.logic { background:var(--bg-2); padding:10px 12px; margin:14px 0 0 }
 <div class="strip">
   <div><span class="lbl">Buyer's premium</span><span class="val">18%</span></div>
   <div><span class="lbl">Site</span><span class="val">pickup · 1.9 mi</span></div>
-  <div><span class="lbl">Lots to bid</span><span class="val">34</span></div>
+  <div><span class="lbl">Lots to bid</span><span class="val">21<small> +13 volume</small></span></div>
   <div><span class="lbl">Valued / total</span><span class="val">59 / 496</span></div>
   <div><span class="lbl">Silver · gold</span><span class="val">$66 · $4,370</span></div>
 </div>
-<p class="trip">Trip: 1.9 mi each way ≈ $21 (0.6 h incl. overhead, $30/h). Not included in the max hammers — decide per auction: P1–P3 lots: 17 · capital if you won them all at max: $1364 · profit at max, all won: $844 → net of trip $823. Each lot won at max is worth ~$50 against a $21 drive.</p>
+<p class="trip">Trip: 1.9 mi each way ≈ $21 (0.6 h incl. overhead, $30/h). Not included in the max hammers — decide per auction: P1–P3 lots: 16 · capital if you won them all at max: $1355 · profit at max, all won: $838 → net of trip $818. Each lot won at max is worth ~$52 against a $21 drive.</p>
 <p class="trip">Pickup: Pickup days for this auction are Thursday September 24th from 10am-6pm and Friday September 25th from 8:30am-4:30pm.  Pickup location is 1100 E Mandoline Ave Suite 350, Madison Heights MI 48071.  We are located near the </p>
 
 <details class="logic">
@@ -130,14 +134,18 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <div class="kv"><span>Shop payout assumed</span><b>silver 90% &middot; gold 95% &middot; sterling 80%</b></div>
     <h4>How the values were reached</h4>
     <div class="kv"><span>title only, from recall</span><b>22 lots</b></div><div class="kv"><span>metal content x spot</span><b>18 lots</b></div><div class="kv"><span>sterling weight estimated by eye</span><b>14 lots</b></div><div class="kv"><span>identified from photo</span><b>5 lots</b></div>
+    <h4>What the agent actually looked at</h4>
+    <div class="kv"><span>Full-size photos opened</span><b>6 lots</b></div>
+    <div class="kv"><span>Thumbnail only</span><b>29 lots</b></div>
+    <div class="kv"><span>Title and description only</span><b>24 lots</b></div>
     <h4>Criteria in force</h4>
     <div class="kv"><span>graded / certified collectibles</span><b>tier A &middot; S &middot; fast</b></div><div class="kv"><span>precious metal / bullion</span><b>tier A &middot; S &middot; fast</b></div><div class="kv"><span>media-mail-able: books, music, movies, games</span><b>tier A &middot; S &middot; fast</b></div><div class="kv"><span>raw coins, cards, comics, stamps</span><b>tier B &middot; S &middot; medium</b></div><div class="kv"><span>small collectibles that don&#x27;t spoil</span><b>tier B &middot; S &middot; medium</b></div><div class="kv"><span>branded tools and electronics</span><b>tier B &middot; M &middot; fast</b></div><div class="kv"><span>general antiques, art, decor — slow</span><b>tier C &middot; M &middot; slow</b></div><div class="kv"><span>bulky or perishable — skip</span><b>tier skip &middot; L &middot; slow</b></div>
   </div>
 </details>
-<nav><a href="#bid">Bid these</a><a href="#metal">Metal</a><a href="#outbid">Past our max</a><a href="#personal">Personal</a><a href="#pass">Pass</a></nav>
+<nav><a href="#bid">Bid these</a><a href="#metal">Metal</a><a href="#volume">Volume</a><a href="#outbid">Past our max</a><a href="#personal">Personal</a><a href="#pass">Pass</a></nav>
 
 <section id="bid">
-  <h2>Bid these <span class="count">7</span></h2>
+  <h2>Bid these <span class="count">3</span></h2>
   <p class="blurb">Where the edge is. Our max is the hammer that still clears the ROI floor after buyer's premium, tax and churn.</p>
   
 <article class="lot pri-P1" id="lot-131">
@@ -162,6 +170,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">identified from photo</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>1 of 5 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>2 units: Captain Action figure with box; Batman costume set on a second torso</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div><div class="kv"><span>Note</span><b>Remaining 4 photos not opened - completeness of the Batman set is what they would show</b></div>
         <h4>Value derivation</h4>
         <p>Identified from the lot photo: 1967 Ideal Captain Action figure in the &#x27;FREE 4 ft parachute&#x27; box, plus a Batman costume set on a second torso. Priced from the agent&#x27;s knowledge of that market: boxed CA figures $200-400 depending on box condition, Batman costume set $150-300 if complete. L=250 assumes the box is rough and the Batman set is missing pieces; M=400 assumes both largely complete; H=650 assumes a complete Batman set with mask, cape, gloves and belt. No live comp consulted.</p>
         <h4>Why med confidence</h4>
@@ -200,6 +210,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">identified from photo</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>1 of 3 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>2 units: Stereo Realist f/3.5 body with strap; red-button slide viewer</b></div><div class="kv"><span>Market data consulted</span><b>web search 2026-09-19: active asks $80 and $150 for f/3.5 bodies - asking prices, not sold</b></div>
         <h4>Value derivation</h4>
         <p>Identified from the photo: Stereo Realist f/3.5 (David White, model 1041) with leather strap, plus the Realist red-button stereo slide viewer. Priced separately because they list separately: untested Realist bodies $60-120, viewer $40-80, from the agent&#x27;s knowledge of the 3D-camera niche. L=90 is the sum of the low ends; H=220 assumes the shutter works on all speeds.</p>
         <h4>Why med confidence</h4>
@@ -238,6 +250,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">identified from photo</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>1 of 4 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>11 pens counted plus spare nibs; makers not legible</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
         <h4>Value derivation</h4>
         <p>Counted 11 pens in the photo: celluloid lever-fillers, one chased black hard rubber pen, a gold-filled propelling pencil, plus spare nibs. Priced as a &#x27;restoration lot&#x27;, which is how mixed vintage pens actually sell: $40-100 from the agent&#x27;s knowledge. H=120 assumes the black hard rubber pen is a Waterman or Parker with a 14k nib, which alone would be $30-60.</p>
         <h4>Why med confidence</h4>
@@ -254,162 +268,10 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=vintage+fountain+pen+lot+lever+filler&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-P4" id="lot-316">
-  <div class="head">
-    <span class="lotno">Lot 316</span>
-    <span class="chip pri">Flyer</span>
-    
-    <span class="chip conf conf-low">low confidence</span>
-  </div>
-  <h3><a href="https://hibid.com/lot/321769160" target="_blank" rel="noopener">Vintage Zeiss Ikon Symbolica 35mm Film Camera</a></h3>
-  <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$13</span></div>
-    <div class="num"><span class="lbl">Your max</span><span class="val">13</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$11<small> &middot; 2 bids</small></span></div>
-    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$40 / $65 / $100</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$7<small> &middot; 45% ROI</small></span></div>
-    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
-  </div>
-  <p class="notes">Zeiss Ikon Symbolica ($30-50) + Konica I rangefinder ($40-70), untested. Camera people buy as-is. At $11.</p>
-  
-  
-    <details class="why">
-      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
-      <div class="whybody">
-        <h4>Value derivation</h4>
-        <p>Title only: Zeiss Ikon Symbolica plus a Konica I rangefinder, both untested. Agent&#x27;s recall: Symbolica $30-50, Konica I $40-70.</p>
-        <h4>Why low confidence</h4>
-        <p>low - no photo examined; untested vintage cameras vary enormously with shutter and lens condition.</p>
-        
-        <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
-        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$24</b></div>
-      </div>
-    </details>
-  <div class="links">
-    <a href="https://hibid.com/lot/321769160" target="_blank" rel="noopener">HiBid</a>
-    <a href="https://www.ebay.com/sch/i.html?_nkw=Zeiss+Ikon+Symbolica+camera&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
-    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Zeiss+Ikon+Symbolica+camera&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
-  </div>
-</article>
-<article class="lot pri-P4" id="lot-208">
-  <div class="head">
-    <span class="lotno">Lot 208</span>
-    <span class="chip pri">Flyer</span>
-    
-    <span class="chip conf conf-low">low confidence</span>
-  </div>
-  <h3><a href="https://hibid.com/lot/321768951" target="_blank" rel="noopener">Tomytronic Pac-man Handheld 1980s Game</a></h3>
-  <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$8</span></div>
-    <div class="num"><span class="lbl">Your max</span><span class="val">8</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$5<small> &middot; 1 bids</small></span></div>
-    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$30 / $50 / $80</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$5<small> &middot; 45% ROI</small></span></div>
-    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
-  </div>
-  <p class="notes">Tomytronic Pac-Man tabletop (1981). Working $50-90, untested/as-is $30-50. Batteries + photo check. At $5/1 bid — overlooked.</p>
-  
-  
-    <details class="why">
-      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
-      <div class="whybody">
-        <h4>Value derivation</h4>
-        <p>Title only: Tomytronic Pac-Man tabletop, 1981. Agent&#x27;s recall: $50-90 working, $30-50 untested or as-is. Listing does not say it works, so L takes the as-is case.</p>
-        <h4>Why low confidence</h4>
-        <p>low - no photo examined and no working statement. Vintage tabletop electronics are frequently dead, and working vs not is the whole range.</p>
-        
-        <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
-        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$16</b></div>
-      </div>
-    </details>
-  <div class="links">
-    <a href="https://hibid.com/lot/321768951" target="_blank" rel="noopener">HiBid</a>
-    <a href="https://www.ebay.com/sch/i.html?_nkw=Tomytronic+Pac-Man&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
-    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Tomytronic+Pac-Man&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
-  </div>
-</article>
-<article class="lot pri-P4" id="lot-8U">
-  <div class="head">
-    <span class="lotno">Lot 8U</span>
-    <span class="chip pri">Flyer</span>
-    
-    <span class="chip conf conf-low">low confidence</span>
-  </div>
-  <h3><a href="https://hibid.com/lot/321768713" target="_blank" rel="noopener">Limited Edition Gaming Token .999 Fine Silver</a></h3>
-  <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
-    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$5<small> &middot; 1 bids</small></span></div>
-    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $35 / $60</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$4<small> &middot; 45% ROI</small></span></div>
-    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
-  </div>
-  <p class="notes">&#x27;Limited edition gaming token .999 silver&#x27; — if 1oz, melt ~$32 plus collector premium if it&#x27;s a known game/casino series. At $5/1 bid: cheap melt if it&#x27;s a full ounce. Photo check.</p>
-  
-  
-    <details class="why">
-      <summary>How this number was reached <span class="method">metal content x spot</span></summary>
-      <div class="whybody">
-        <h4>Value derivation</h4>
-        <p>&#x27;Limited Edition Gaming Token .999 Fine Silver&#x27; - weight is not stated in the title and no photo was examined. Priced on the ASSUMPTION of 1 ozt, giving $66 melt, with the range widened downward in case it is a fractional token and upward for collector premium if it is a recognised casino or game series.</p>
-        <h4>Why low confidence</h4>
-        <p>low - the weight is an assumption, not an observation, and it is the entire value. If this is a 1/2 ozt token the melt is $33. Check the photo before bidding.</p>
-        
-        <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
-        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$11</b></div>
-      </div>
-    </details>
-  <div class="links">
-    <a href="https://hibid.com/lot/321768713" target="_blank" rel="noopener">HiBid</a>
-    <a href="https://www.ebay.com/sch/i.html?_nkw=Limited+Edition+Gaming+Token+.999+Fine+Silver&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
-    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Limited+Edition+Gaming+Token+.999+Fine+Silver&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
-  </div>
-</article>
-<article class="lot pri-P4" id="lot-252">
-  <div class="head">
-    <span class="lotno">Lot 252</span>
-    <span class="chip pri">Flyer</span>
-    
-    <span class="chip conf conf-low">low confidence</span>
-  </div>
-  <h3><a href="https://hibid.com/lot/321769006" target="_blank" rel="noopener">1992 Skybox Marvel Masterpieces Trading Cards</a></h3>
-  <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
-    <div class="num"><span class="lbl">Your max</span><span class="val">6</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$5<small> &middot; 1 bids</small></span></div>
-    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $45 / $90</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$4<small> &middot; 45% ROI</small></span></div>
-    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
-  </div>
-  <p class="notes">1992 SkyBox Marvel Masterpieces — a complete 100-card base set is $30-60; the 5 Spectra-Etch chase cards are $10-30 each. 11 photos; check for Spectra-Etch. At $5.</p>
-  
-  
-    <details class="why">
-      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
-      <div class="whybody">
-        <h4>Value derivation</h4>
-        <p>Title only, 11 photos not examined: 1992 SkyBox Marvel Masterpieces. Agent&#x27;s recall: complete 100-card base set $30-60; the five Spectra-Etch chase cards are $10-30 each, which is the H case.</p>
-        <h4>Why low confidence</h4>
-        <p>low - whether the set is complete and whether any Spectra-Etch cards are present are both unchecked, and together they are the difference between $25 and $90.</p>
-        
-        <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
-        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$11</b></div>
-      </div>
-    </details>
-  <div class="links">
-    <a href="https://hibid.com/lot/321769006" target="_blank" rel="noopener">HiBid</a>
-    <a href="https://www.ebay.com/sch/i.html?_nkw=1992+Skybox+Marvel+Masterpieces+set&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
-    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=1992+Skybox+Marvel+Masterpieces+set&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
-  </div>
-</article>
 </section>
 
 <section id="metal">
-  <h2>Metal — capped at melt <span class="count">27</span></h2>
+  <h2>Metal — capped at melt <span class="count">18</span></h2>
   <p class="blurb">Floor = break-even hammer if you walked the metal into a shop today (no eBay, no profit). Never bid above it; expect to lose most of these to the room.</p>
   
 <article class="lot pri-P1" id="lot-6">
@@ -434,6 +296,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">metal content x spot</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 coin</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>1898-S Half Eagle: 0.2419 ozt AGW x $4,370 = $1,057 melt. Common date in circulated grade, so the coin trades at melt plus a small numismatic premium: M=melt+5%, H=melt+15%. Value is not the binding number here - the $400 per-lot capital ceiling is.</p>
         <h4>Why med confidence</h4>
@@ -472,6 +336,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">metal content x spot</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>1 of 2 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>11 Morgan dollars counted; several dates read (1880, 1890, 1896, 1902, 1921)</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>Photo shows 11 Morgan dollars, grades AG-G, several dark or damaged. Metal arithmetic: 11 x 0.7734 ozt ASW = 8.507 ozt x $66 spot = $561. Cull Morgans trade at melt to melt+3% on eBay, so L=melt, M=melt+2%, H=melt+12%. No numismatic premium applied - at this grade there is none.</p>
         <h4>Why med confidence</h4>
@@ -510,6 +376,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">identified from photo</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>1 of 5 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 unit: agate cameo in gold bezel with bail</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div><div class="kv"><span>Note</span><b>Weight estimated by eye; the 585/14k stamp was not visible in the photo opened</b></div>
         <h4>Value derivation</h4>
         <p>Identified from the photo: blue agate mother-and-child cameo in a yellow-gold bezel with bail, modern Italian style. Two independent legs: (1) metal floor - assume 1.6 g of 14k = 1.6 x 0.583 = 0.93 g fine = 0.030 ozt x $4,370 = $131 melt; (2) eBay market for this style of agate cameo pendant, $150-250. L=140 sits just above the metal floor, H=260 is the top of the style&#x27;s range.</p>
         <h4>Why med confidence</h4>
@@ -548,6 +416,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">metal content x spot</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>4 coins, all in slabs; labels not legible</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>4 Franklin halves: 4 x 0.36169 = 1.447 ozt x $66 = $95 melt. Photo shows them slabbed. Common-date slabbed Franklins sell melt to melt+15% unless the grade is high or they show full bell lines.</p>
         <h4>Why med confidence</h4>
@@ -586,6 +456,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">sterling weight estimated by eye</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>3 bracelets counted</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>Photo shows three gemstone tennis bracelets. Weight estimated by eye at roughly 30 g total for .925 = 30 x 0.925 / 31.1 = 0.89 ozt x $66 = $59 melt. eBay market for sterling gemstone tennis bracelets from the agent&#x27;s knowledge: $25-45 each, hence the part-out plan of three listings.</p>
         <h4>Why low confidence</h4>
@@ -624,6 +496,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">metal content x spot</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 coin; grade guessed VG from thumbnail</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>1894-S Morgan: 0.7734 ozt x $66 = $51 melt, but 1894-S is a better date. Agent&#x27;s recall: $70-110 in VG, $110-150 in Fine. L=75 takes the low end of VG; the melt floor at $51 limits the downside.</p>
         <h4>Why low confidence</h4>
@@ -662,6 +536,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">metal content x spot</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 coin, in a 2x2 flip; grade guessed G-VG from the thumbnail</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>1824 Capped Bust half: 0.3866 ozt x $66 = $26 melt. Value here is numismatic, not metal - agent&#x27;s recall for a common-date Bust half is $60-90 in G-VG, $100+ in Fine. Photo suggests G-VG.</p>
         <h4>Why low confidence</h4>
@@ -700,6 +576,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">metal content x spot</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>coin, box and COA visible</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>2016-W proof American Silver Eagle: 1.0 ozt x $66 = $66 melt. Photo shows box and COA. 30th-anniversary edge lettering year; proof ASEs with box and COA carry $15-40 over melt in the agent&#x27;s recollection.</p>
         <h4>Why low confidence</h4>
@@ -738,6 +616,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">metal content x spot</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 coin in capsule</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>2005 1 ozt Panda: 1.0 ozt x $66 = $66 melt, plus the standard Panda premium the agent recalls at $8-30 for a common year in capsule.</p>
         <h4>Why low confidence</h4>
@@ -776,6 +656,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">metal content x spot</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 round</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>1984 1 ozt .999 Prospector round: 1.0 ozt x $66 = $66 melt. Generic vintage private round, sells melt to melt+8%.</p>
         <h4>Why high confidence</h4>
@@ -814,6 +696,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">metal content x spot</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>coin in money clip</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>1934 Peace dollar mounted in a money clip: 0.7734 ozt x $66 = $51 melt. Coins mounted in clips are usually soldered or bezel-damaged, so the coin is a cull: melt plus a small novelty premium for the clip.</p>
         <h4>Why med confidence</h4>
@@ -852,6 +736,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">metal content x spot</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 coin</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>1880-O Morgan: 0.7734 ozt x $66 = $51 melt. Common date, circulated: melt + $5-15.</p>
         <h4>Why high confidence</h4>
@@ -890,6 +776,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">metal content x spot</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>coin in box with COA visible</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>1988-S Olympic commemorative dollar: 26.73 g at 90% = 0.7734 ozt x $66 = $51 melt. Modern commems of this era carry no numismatic premium; they trade at melt + a few dollars for the box and COA.</p>
         <h4>Why high confidence</h4>
@@ -904,44 +792,6 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://hibid.com/lot/321768689" target="_blank" rel="noopener">HiBid</a>
     <a href="https://www.ebay.com/sch/i.html?_nkw=1988+olympic+proof+silver+dollar&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=1988+olympic+proof+silver+dollar&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
-  </div>
-</article>
-<article class="lot pri-P3" id="lot-8X">
-  <div class="head">
-    <span class="lotno">Lot 8X</span>
-    <span class="chip pri">Bid if cheap</span>
-    <span class="chip metal">floor $17</span>
-    <span class="chip conf conf-med">med confidence</span>
-  </div>
-  <h3><a href="https://hibid.com/lot/321768716" target="_blank" rel="noopener">1893 Columbian Exposition Half Dollar 90% Silver</a></h3>
-  <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$9</span></div>
-    <div class="num"><span class="lbl">Your max</span><span class="val">22</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$7<small> &middot; 3 bids</small></span></div>
-    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $32 / $45</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$5<small> &middot; 45% ROI</small></span></div>
-    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
-  </div>
-  <p class="notes">1893 Columbian half, common in AU: $25-40. Melt $24.</p>
-  
-  
-    <details class="why">
-      <summary>How this number was reached <span class="method">metal content x spot</span></summary>
-      <div class="whybody">
-        <h4>Value derivation</h4>
-        <p>1893 Columbian Exposition half: 0.36169 ozt x $66 = $24 melt. The most common US commemorative, minted in the millions: agent&#x27;s recall $25-40 in AU.</p>
-        <h4>Why med confidence</h4>
-        <p>med - the &#x27;extremely common&#x27; call is solid. Little upside, limited downside; melt is close to market.</p>
-        
-        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
-        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$17</b></div>
-      </div>
-    </details>
-  <div class="links">
-    <a href="https://hibid.com/lot/321768716" target="_blank" rel="noopener">HiBid</a>
-    <a href="https://www.ebay.com/sch/i.html?_nkw=1893+Columbian+half+dollar&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
-    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=1893+Columbian+half+dollar&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
 <article class="lot pri-P4" id="lot-267">
@@ -966,6 +816,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">sterling weight estimated by eye</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>earrings, ring, and other pieces - not fully counted</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>Southwestern set - earrings, ring, more - estimated 20 g = 0.59 ozt x $66 = $39 melt. Unsigned &#x27;style&#x27; pieces sell $45-70; genuine Native American hallmarked work is $80-150, which is the H case.</p>
         <h4>Why low confidence</h4>
@@ -1004,6 +856,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">sterling weight estimated by eye</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>2-3 bangles, not confidently counted</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>Two or three wavy sterling bangles, estimated 30 g total = 0.89 ozt x $66 = $59 melt. Modern sterling bangles sell $20-35 each.</p>
         <h4>Why low confidence</h4>
@@ -1042,6 +896,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">sterling weight estimated by eye</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 cuff</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>Second Navajo-style cuff, same basis: 25 g estimated = $49 melt.</p>
         <h4>Why low confidence</h4>
@@ -1080,6 +936,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">sterling weight estimated by eye</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 cuff</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>Navajo-style cuff, estimated 25 g = 0.74 ozt x $66 = $49 melt. Unsigned: $40-60. Hallmarked: $80-150 (the H case).</p>
         <h4>Why low confidence</h4>
@@ -1118,6 +976,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">metal content x spot</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>set in deluxe case</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div><div class="kv"><span>Note</span><b>ASW corrected in audit from set composition, not from the photo</b></div>
         <h4>Value derivation</h4>
         <p>1995 Silver Premier proof set: silver dime 0.0723 + quarter 0.1808 + half 0.3617 = 0.6149 ozt x $66 = $41 melt. Agent&#x27;s recall for the 1995 Premier set in its deluxe case: $55-80.</p>
         <h4>Why low confidence</h4>
@@ -1134,10 +994,56 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=1995+silver+premier+proof+set&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-P4" id="lot-8D">
+</section>
+
+<section id="volume">
+  <h2>Volume &mdash; store fillers <span class="count">13</span></h2>
+  <p class="blurb">Small, sound lots that clear the floor by only a few dollars each. Worth winning at their max to build eBay inventory; never worth chasing. Bid them all, expect to win some.</p>
+  
+<article class="lot pri-volume" id="lot-316">
+  <div class="head">
+    <span class="lotno">Lot 316</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-low">low confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/321769160" target="_blank" rel="noopener">Vintage Zeiss Ikon Symbolica 35mm Film Camera</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$13</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">13</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$11<small> &middot; 2 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$40 / $65 / $100</span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$7<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Zeiss Ikon Symbolica ($30-50) + Konica I rangefinder ($40-70), untested. Camera people buy as-is. At $11.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>0 opened - 4 photos downloaded but never examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Title only: Zeiss Ikon Symbolica plus a Konica I rangefinder, both untested. Agent&#x27;s recall: Symbolica $30-50, Konica I $40-70.</p>
+        <h4>Why low confidence</h4>
+        <p>low - no photo examined; untested vintage cameras vary enormously with shutter and lens condition.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_low</b></div>
+        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$24</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/321769160" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=Zeiss+Ikon+Symbolica+camera&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Zeiss+Ikon+Symbolica+camera&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-8D">
   <div class="head">
     <span class="lotno">Lot 8D</span>
-    <span class="chip pri">Flyer</span>
+    <span class="chip pri">Volume</span>
     <span class="chip metal">floor $9</span>
     <span class="chip conf conf-low">low confidence</span>
   </div>
@@ -1156,6 +1062,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">metal content x spot</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 coin</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>1876 Seated Liberty quarter: 0.1808 ozt x $66 = $12 melt. Numismatic value in G-VG from the agent&#x27;s recall: $30-45.</p>
         <h4>Why low confidence</h4>
@@ -1172,10 +1080,90 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=1876+seated+liberty+quarter&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-P4" id="lot-278">
+<article class="lot pri-volume" id="lot-8X">
+  <div class="head">
+    <span class="lotno">Lot 8X</span>
+    <span class="chip pri">Volume</span>
+    <span class="chip metal">floor $17</span>
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/321768716" target="_blank" rel="noopener">1893 Columbian Exposition Half Dollar 90% Silver</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$9</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">22</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$7<small> &middot; 3 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $32 / $45</span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$5<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">1893 Columbian half, common in AU: $25-40. Melt $24.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">metal content x spot</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 coin</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
+        <h4>Value derivation</h4>
+        <p>1893 Columbian Exposition half: 0.36169 ozt x $66 = $24 melt. The most common US commemorative, minted in the millions: agent&#x27;s recall $25-40 in AU.</p>
+        <h4>Why med confidence</h4>
+        <p>med - the &#x27;extremely common&#x27; call is solid. Little upside, limited downside; melt is close to market.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$17</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/321768716" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=1893+Columbian+half+dollar&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=1893+Columbian+half+dollar&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-208">
+  <div class="head">
+    <span class="lotno">Lot 208</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-low">low confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/321768951" target="_blank" rel="noopener">Tomytronic Pac-man Handheld 1980s Game</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$8</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">8</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$5<small> &middot; 1 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$30 / $50 / $80</span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$5<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Tomytronic Pac-Man tabletop (1981). Working $50-90, untested/as-is $30-50. Batteries + photo check. At $5/1 bid — overlooked.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>0 opened - 3 photos downloaded but never examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Title only: Tomytronic Pac-Man tabletop, 1981. Agent&#x27;s recall: $50-90 working, $30-50 untested or as-is. Listing does not say it works, so L takes the as-is case.</p>
+        <h4>Why low confidence</h4>
+        <p>low - no photo examined and no working statement. Vintage tabletop electronics are frequently dead, and working vs not is the whole range.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_low</b></div>
+        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$16</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/321768951" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=Tomytronic+Pac-Man&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Tomytronic+Pac-Man&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-278">
   <div class="head">
     <span class="lotno">Lot 278</span>
-    <span class="chip pri">Flyer</span>
+    <span class="chip pri">Volume</span>
     <span class="chip metal">floor $19</span>
     <span class="chip conf conf-low">low confidence</span>
   </div>
@@ -1194,6 +1182,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">sterling weight estimated by eye</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>2 pairs earrings + possibly a ring</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>Statement earrings plus a second pair or ring, estimated 15 g = $29 melt. Vintage sterling earrings sell $30-45 a pair.</p>
         <h4>Why low confidence</h4>
@@ -1210,10 +1200,10 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=sterling+silver+earrings+vintage&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-P4" id="lot-386">
+<article class="lot pri-volume" id="lot-386">
   <div class="head">
     <span class="lotno">Lot 386</span>
-    <span class="chip pri">Flyer</span>
+    <span class="chip pri">Volume</span>
     <span class="chip metal">floor $19</span>
     <span class="chip conf conf-low">low confidence</span>
   </div>
@@ -1232,6 +1222,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">sterling weight estimated by eye</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>3 pendants counted</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>Three pendants including a moonstone-style and a black onyx, estimated 15 g = $29 melt; $30-45 as a lot or sold individually.</p>
         <h4>Why low confidence</h4>
@@ -1248,10 +1240,10 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=sterling+silver+pendant+vintage&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-P4" id="lot-408">
+<article class="lot pri-volume" id="lot-408">
   <div class="head">
     <span class="lotno">Lot 408</span>
-    <span class="chip pri">Flyer</span>
+    <span class="chip pri">Volume</span>
     <span class="chip metal">floor $19</span>
     <span class="chip conf conf-low">low confidence</span>
   </div>
@@ -1270,6 +1262,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">sterling weight estimated by eye</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>3 pendants</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>Lapis-style pendant plus two others, estimated 15 g = $29 melt.</p>
         <h4>Why low confidence</h4>
@@ -1286,10 +1280,90 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=sterling+silver+pendant+lapis&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-P4" id="lot-265">
+<article class="lot pri-volume" id="lot-8U">
+  <div class="head">
+    <span class="lotno">Lot 8U</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-low">low confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/321768713" target="_blank" rel="noopener">Limited Edition Gaming Token .999 Fine Silver</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$5<small> &middot; 1 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $35 / $60</span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$4<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">&#x27;Limited edition gaming token .999 silver&#x27; — if 1oz, melt ~$32 plus collector premium if it&#x27;s a known game/casino series. At $5/1 bid: cheap melt if it&#x27;s a full ounce. Photo check.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">metal content x spot</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div><div class="kv"><span>Note</span><b>Weight assumed 1 ozt - not observed</b></div>
+        <h4>Value derivation</h4>
+        <p>&#x27;Limited Edition Gaming Token .999 Fine Silver&#x27; - weight is not stated in the title and no photo was examined. Priced on the ASSUMPTION of 1 ozt, giving $66 melt, with the range widened downward in case it is a fractional token and upward for collector premium if it is a recognised casino or game series.</p>
+        <h4>Why low confidence</h4>
+        <p>low - the weight is an assumption, not an observation, and it is the entire value. If this is a 1/2 ozt token the melt is $33. Check the photo before bidding.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_low</b></div>
+        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$11</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/321768713" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=Limited+Edition+Gaming+Token+.999+Fine+Silver&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Limited+Edition+Gaming+Token+.999+Fine+Silver&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-252">
+  <div class="head">
+    <span class="lotno">Lot 252</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-low">low confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/321769006" target="_blank" rel="noopener">1992 Skybox Marvel Masterpieces Trading Cards</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">6</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$5<small> &middot; 1 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $45 / $90</span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$4<small> &middot; 45% ROI</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">1992 SkyBox Marvel Masterpieces — a complete 100-card base set is $30-60; the 5 Spectra-Etch chase cards are $10-30 each. 11 photos; check for Spectra-Etch. At $5.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>0 opened - 11 photos downloaded but never examined; those photos are where Spectra-Etch cards would show</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Title only, 11 photos not examined: 1992 SkyBox Marvel Masterpieces. Agent&#x27;s recall: complete 100-card base set $30-60; the five Spectra-Etch chase cards are $10-30 each, which is the H case.</p>
+        <h4>Why low confidence</h4>
+        <p>low - whether the set is complete and whether any Spectra-Etch cards are present are both unchecked, and together they are the difference between $25 and $90.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_low</b></div>
+        <div class="kv"><span>ROI floor applied</span><b>45% (medium)</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$11</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/321769006" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=1992+Skybox+Marvel+Masterpieces+set&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=1992+Skybox+Marvel+Masterpieces+set&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-265">
   <div class="head">
     <span class="lotno">Lot 265</span>
-    <span class="chip pri">Flyer</span>
+    <span class="chip pri">Volume</span>
     <span class="chip metal">floor $13</span>
     <span class="chip conf conf-low">low confidence</span>
   </div>
@@ -1308,6 +1382,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">sterling weight estimated by eye</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 pair earrings + hearts</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>Marcasite earrings and filigree hearts, estimated 10 g = $20 melt. Vintage marcasite sells $25-45.</p>
         <h4>Why low confidence</h4>
@@ -1324,10 +1400,10 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=sterling+marcasite+earrings&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-P4" id="lot-269">
+<article class="lot pri-volume" id="lot-269">
   <div class="head">
     <span class="lotno">Lot 269</span>
-    <span class="chip pri">Flyer</span>
+    <span class="chip pri">Volume</span>
     <span class="chip metal">floor $13</span>
     <span class="chip conf conf-low">low confidence</span>
   </div>
@@ -1346,6 +1422,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">sterling weight estimated by eye</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 pendant with chain</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>Swan pendant with chain, estimated 10 g = $20 melt.</p>
         <h4>Why low confidence</h4>
@@ -1362,10 +1440,10 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=sterling+swan+pendant+necklace&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-P4" id="lot-266">
+<article class="lot pri-volume" id="lot-266">
   <div class="head">
     <span class="lotno">Lot 266</span>
-    <span class="chip pri">Flyer</span>
+    <span class="chip pri">Volume</span>
     <span class="chip metal">floor $10</span>
     <span class="chip conf conf-low">low confidence</span>
   </div>
@@ -1384,6 +1462,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">sterling weight estimated by eye</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 pair earrings</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>Orchid earrings and dangle filigree, estimated 8 g = $16 melt.</p>
         <h4>Why low confidence</h4>
@@ -1400,16 +1480,16 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=sterling+orchid+earrings&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
-<article class="lot pri-P4" id="lot-406">
+<article class="lot pri-volume" id="lot-406">
   <div class="head">
     <span class="lotno">Lot 406</span>
-    <span class="chip pri">Flyer</span>
+    <span class="chip pri">Volume</span>
     <span class="chip metal">floor $6</span>
     <span class="chip conf conf-low">low confidence</span>
   </div>
   <h3><a href="https://hibid.com/lot/321769324" target="_blank" rel="noopener">Vintage Sterling Silver Usmc Rifle Expert Badge</a></h3>
   <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$1</span></div>
+    <div class="num ours"><span class="lbl">Ceiling at melt</span><span class="val">$6</span><small class="sub">break-even at a metals buyer &mdash; no profit, capital-safe</small></div>
     <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
     <div class="num"><span class="lbl">Current</span><span class="val">$0<small> &middot; 0 bids</small></span></div>
     <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$15 / $25 / $40</span></div>
@@ -1422,6 +1502,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">sterling weight estimated by eye</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>Sterling USMC rifle expert badge, estimated 5 g = $10 melt. Sterling militaria insignia sells $20-40 to collectors.</p>
         <h4>Why low confidence</h4>
@@ -1441,7 +1523,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
 </section>
 
 <section id="outbid">
-  <h2>Already past our max <span class="count">19</span></h2>
+  <h2>Already past our max <span class="count">20</span></h2>
   <p class="blurb">The room got there first. Listed so you can see what we passed on and why.</p>
   
 <article class="lot pri-outbid" id="lot-8K">
@@ -1466,6 +1548,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">metal content x spot</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 coin</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>1992 China 1 ozt Panda: 1.0 ozt x $66 = $66 melt. 1992 is a semi-key year in the Panda series, so the numismatic premium is real: the agent&#x27;s recall is $120-160 for the year in capsule, hence L=115, M=135, H=160.</p>
         <h4>Why low confidence</h4>
@@ -1504,6 +1588,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">metal content x spot</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 coin, box not visible in thumbnail</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>1996 proof American Silver Eagle: 1.0 ozt x $66 = $66 melt. 1996 is the scarcest proof year of the 1990s, which the agent recalls as $95-130 with box and COA.</p>
         <h4>Why low confidence</h4>
@@ -1542,6 +1628,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">title only, from recall</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
         <h4>Value derivation</h4>
         <p>Title only: Xbox One console, one controller, NBA 2K20 and GTA V, stated to power on. Priced from the agent&#x27;s knowledge of the used-console market: original/S console $70-100, controller $20, those two games $5 together.</p>
         <h4>Why med confidence</h4>
@@ -1580,6 +1668,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">title only, from recall</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
         <h4>Value derivation</h4>
         <p>Title only: Scalextric Batmobile plus a Batman-inspired car, boxed. The licensed Batmobile release is sought after: agent&#x27;s recall $50-80 boxed.</p>
         <h4>Why low confidence</h4>
@@ -1618,6 +1708,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">title only, from recall</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
         <h4>Value derivation</h4>
         <p>Title only: Westmoreland manganese &#x27;blue hen on nest&#x27;, UV-reactive. Agent&#x27;s recall: $35-60 to the glow-glass collectors.</p>
         <h4>Why med confidence</h4>
@@ -1656,6 +1748,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">title only, from recall</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
         <h4>Value derivation</h4>
         <p>Title only: Wii console, Wiimote, sensor bar, Wii Sports, cables. A complete-enough Wii bundle sells $45-70 in the agent&#x27;s recollection.</p>
         <h4>Why med confidence</h4>
@@ -1694,6 +1788,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">title only, from recall</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
         <h4>Value derivation</h4>
         <p>Title only: Fenton hand-painted Bridesmaid figurine, signed, with original box, limited edition. Agent&#x27;s recall: $30-60 each.</p>
         <h4>Why low confidence</h4>
@@ -1732,6 +1828,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">title only, from recall</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
         <h4>Value derivation</h4>
         <p>Same as lot 176, fall theme: signed and boxed Fenton Bridesmaid figurine.</p>
         <h4>Why low confidence</h4>
@@ -1770,6 +1868,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">title only, from recall</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
         <h4>Value derivation</h4>
         <p>Title only: Scalextric Ford GT GTE 1/32, boxed, untested. Agent&#x27;s recall: $25-45 boxed.</p>
         <h4>Why low confidence</h4>
@@ -1808,6 +1908,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">sterling weight estimated by eye</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 brooch</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>Sterling parrot brooch, estimated 8 g = $16 melt. Signed Mexican or Taxco brooches sell $25-45; unsigned closer to melt.</p>
         <h4>Why low confidence</h4>
@@ -1846,6 +1948,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">sterling weight estimated by eye</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 ring</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
         <h4>Value derivation</h4>
         <p>Abstract ladies ring, size 8, estimated 6 g = $12 melt. Sterling rings with a stone sell $25-40.</p>
         <h4>Why low confidence</h4>
@@ -1884,6 +1988,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">title only, from recall</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
         <h4>Value derivation</h4>
         <p>Title only: Cade Cunningham, Tobias Harris numbered /7, Isaiah Stewart auto /25. Low-numbered parallels plus an auto: agent&#x27;s recall $30-80 for the group, driven mostly by the Cade card.</p>
         <h4>Why low confidence</h4>
@@ -1922,6 +2028,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">title only, from recall</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
         <h4>Value derivation</h4>
         <p>Title only: brass and KISS Zippo lighters. A licensed KISS Zippo is $20-40 alone in the agent&#x27;s recollection; plain brass ones $10-20.</p>
         <h4>Why low confidence</h4>
@@ -1960,6 +2068,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">title only, from recall</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
         <h4>Value derivation</h4>
         <p>Title only: W.T. Armstrong flute in case. Student flutes as-is: $40-90.</p>
         <h4>Why low confidence</h4>
@@ -1998,6 +2108,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">title only, from recall</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
         <h4>Value derivation</h4>
         <p>Title only: Scalextric Digital 1/32 set, 4 cars, 4 controllers, extra track. Working digital sets $100-200 in the agent&#x27;s recollection; untested, so L=60.</p>
         <h4>Why low confidence</h4>
@@ -2036,6 +2148,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">title only, from recall</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
         <h4>Value derivation</h4>
         <p>Title only: 1995 Fleer Ultra X-Men in a Trapper Keeper. Base set recall $20-40, with chase subsets adding.</p>
         <h4>Why low confidence</h4>
@@ -2074,6 +2188,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">title only, from recall</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
         <h4>Value derivation</h4>
         <p>Title only: 2023 Prizm Anthony Richardson &#x27;Flashback&#x27; No Huddle, PSA 10. This is an insert parallel, not the base rookie: agent&#x27;s recall $15-35 graded.</p>
         <h4>Why low confidence</h4>
@@ -2112,6 +2228,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">title only, from recall</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
         <h4>Value derivation</h4>
         <p>Title only: &#x27;Hcouf&#x27; (likely Kohlert or similar student stencil) clarinet with case, case needs cleaning. Student clarinets as-is: $30-60 for parts or overhaul.</p>
         <h4>Why low confidence</h4>
@@ -2150,6 +2268,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">title only, from recall</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
         <h4>Value derivation</h4>
         <p>Title only: loose Hot Wheels, Matchbox and other diecast. Bulk loose diecast is roughly $1 a car; redlines would change that entirely.</p>
         <h4>Why low confidence</h4>
@@ -2164,6 +2284,46 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://hibid.com/lot/321768886" target="_blank" rel="noopener">HiBid</a>
     <a href="https://www.ebay.com/sch/i.html?_nkw=Hotwheels%2C+Matchbox+%26+More+Diecast+Cars&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Hotwheels%2C+Matchbox+%26+More+Diecast+Cars&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-8T">
+  <div class="head">
+    <span class="lotno">Lot 8T</span>
+    <span class="chip pri">Past our max</span>
+    <span class="chip metal">floor $5</span>
+    <span class="chip conf conf-high">high confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/321768712" target="_blank" rel="noopener">.999 Fine Silver 1/10th Troy Oz</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Ceiling at melt</span><span class="val">$5</span><small class="sub">break-even at a metals buyer &mdash; no profit, capital-safe</small></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$5<small> &middot; 1 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$7 / $7 / $8</span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$-3<small> &middot; 0% ROI</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">1/10 oz silver round; ~$5. Not worth a listing.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">metal content x spot</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>silver and gold spot fetched from web 2026-09-19</b></div>
+        <h4>Value derivation</h4>
+        <p>1/10 ozt .999 round: 0.1 ozt x $66 = $6.60 melt. Fractional generic silver sells at or slightly above melt.</p>
+        <h4>Why high confidence</h4>
+        <p>high - CORRECTED during this audit. The first pass estimated $4-8 from pre-update spot ($32), leaving value_low below melt, which is incoherent for bullion. Now computed from metal content.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_low</b></div>
+        <div class="kv"><span>ROI floor applied</span><b>35% (fast)</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$-3</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/321768712" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=.999+Fine+Silver+1%2F10th+Troy+Oz&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=.999+Fine+Silver+1%2F10th+Troy+Oz&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
 </section>
@@ -2194,6 +2354,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">title only, from recall</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>thumbnail only, from Phil&#x27;s HiBid screenshot (small, no zoom)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>cabinet with playfield; backglass visible</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div><div class="kv"><span>Note</span><b>Personal - not scored as a flip</b></div>
         <h4>Value derivation</h4>
         <p>Title and description: 1977 Bally &#x27;Lost World&#x27; - cabinet, playfield and backglass only, no electrical components, not working. Priced as a parts and restoration piece from the agent&#x27;s knowledge: $100-300 locally, with an intact backglass alone often $100+.</p>
         <h4>Why low confidence</h4>
@@ -2213,7 +2375,7 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
 </section>
 
 <section id="pass">
-  <h2>Pass <span class="count">5</span></h2>
+  <h2>Pass <span class="count">4</span></h2>
   <p class="blurb">Valued, but no hammer clears the floor.</p>
   
 <article class="lot pri-pass" id="lot-284">
@@ -2238,6 +2400,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">identified from photo</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>1 of 5 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>~150 cards estimated; era identified as XY / Sun &amp; Moon; no individual cards identified</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
         <h4>Value derivation</h4>
         <p>Photo shows roughly 150 modern Pokemon cards, XY through Sun &amp; Moon era (2014-2019), a few reverse holos, no vintage and no visible chase cards. Priced at the bulk rate the agent knows for modern commons, roughly $0.06-0.12 a card.</p>
         <h4>Why high confidence</h4>
@@ -2276,6 +2440,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">title only, from recall</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
         <h4>Value derivation</h4>
         <p>Title only: 1989 Hoops Jordan, Bird and others. Junk-wax era commons with a Jordan: $10-25 as a group.</p>
         <h4>Why med confidence</h4>
@@ -2314,6 +2480,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">title only, from recall</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
         <h4>Value derivation</h4>
         <p>Title only: 1989-90 Hoops Jordan #200. One of the most heavily printed cards of the junk-wax era: $8-20 raw.</p>
         <h4>Why high confidence</h4>
@@ -2352,6 +2520,8 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <details class="why">
       <summary>How this number was reached <span class="method">title only, from recall</span></summary>
       <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>&mdash;</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
         <h4>Value derivation</h4>
         <p>Title only: Selmer Bundy clarinet in case - the standard American student horn. As-is: $30-60.</p>
         <h4>Why med confidence</h4>
@@ -2366,44 +2536,6 @@ floor_max  = melt x shop_payout / ((1+bp)(1+tax))
     <a href="https://hibid.com/lot/321769379" target="_blank" rel="noopener">HiBid</a>
     <a href="https://www.ebay.com/sch/i.html?_nkw=Vintage+H.%26+A.+Selmer+Bundy+Clarinet+In+Case&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
     <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Vintage+H.%26+A.+Selmer+Bundy+Clarinet+In+Case&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
-  </div>
-</article>
-<article class="lot pri-pass" id="lot-8T">
-  <div class="head">
-    <span class="lotno">Lot 8T</span>
-    <span class="chip pri">Pass</span>
-    <span class="chip metal">floor $5</span>
-    <span class="chip conf conf-high">high confidence</span>
-  </div>
-  <h3><a href="https://hibid.com/lot/321768712" target="_blank" rel="noopener">.999 Fine Silver 1/10th Troy Oz</a></h3>
-  <div class="nums">
-    <div class="num ours"><span class="lbl">Our max</span><span class="val">$0</span></div>
-    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
-    <div class="num"><span class="lbl">Current</span><span class="val">$5<small> &middot; 1 bids</small></span></div>
-    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$7 / $7 / $8</span></div>
-    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$-3<small> &middot; 0% ROI</small></span></div>
-    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
-  </div>
-  <p class="notes">1/10 oz silver round; ~$5. Not worth a listing.</p>
-  
-  
-    <details class="why">
-      <summary>How this number was reached <span class="method">metal content x spot</span></summary>
-      <div class="whybody">
-        <h4>Value derivation</h4>
-        <p>1/10 ozt .999 round: 0.1 ozt x $66 = $6.60 melt. Fractional generic silver sells at or slightly above melt.</p>
-        <h4>Why high confidence</h4>
-        <p>high - CORRECTED during this audit. The first pass estimated $4-8 from pre-update spot ($32), leaving value_low below melt, which is incoherent for bullion. Now computed from metal content.</p>
-        
-        <div class="kv"><span>Bid basis</span><b>value_low</b></div>
-        <div class="kv"><span>ROI floor applied</span><b>35% (fast)</b></div>
-        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$-3</b></div>
-      </div>
-    </details>
-  <div class="links">
-    <a href="https://hibid.com/lot/321768712" target="_blank" rel="noopener">HiBid</a>
-    <a href="https://www.ebay.com/sch/i.html?_nkw=.999+Fine+Silver+1%2F10th+Troy+Oz&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
-    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=.999+Fine+Silver+1%2F10th+Troy+Oz&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
   </div>
 </article>
 </section>
