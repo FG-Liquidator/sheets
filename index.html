@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Auction sheets</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+:root { --bg:#F2F4F1; --bg-2:#E8ECE8; --ink:#1B211E; --ink-2:#4E5853; --ink-3:#7A847F; --line:#D3D9D4; --ours:#B4650C; --link:#1F6F52 }
+@media (prefers-color-scheme: dark) { :root { --bg:#161A18; --bg-2:#1F2521; --ink:#E6EAE6; --ink-2:#B3BBB5; --ink-3:#7F8985; --line:#2E3733; --ours:#E4A052; --link:#6FC29C } }
+* { box-sizing:border-box }
+body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.45 "Source Sans 3", system-ui, sans-serif; font-variant-numeric:tabular-nums }
+.wrap { max-width:860px; margin:0 auto; padding:20px 14px 60px }
+h1 { font-family:"Barlow Condensed", sans-serif; font-size:32px; font-weight:700; margin:0 0 4px }
+.sub { color:var(--ink-2); margin:0 0 18px }
+.row { display:grid; grid-template-columns:130px 1fr 70px 80px 50px; gap:10px; align-items:center; padding:12px 0; border-top:1px solid var(--line); color:inherit; text-decoration:none }
+.row:last-child { border-bottom:1px solid var(--line) }
+.row:hover .name { color:var(--link) }
+.when { font-family:"Barlow Condensed", sans-serif; font-weight:600; color:var(--ink-2) }
+.name { font-weight:600; font-size:18px; line-height:1.15 } .name small { display:block; font-weight:400; font-size:14px; color:var(--ink-2) }
+.n { text-align:right } .n b { display:block; font-family:"Barlow Condensed", sans-serif; font-size:22px; font-weight:700; color:var(--ours) } .n small { font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3) }
+@media (max-width:560px) { .row { grid-template-columns:1fr 60px 60px; } .when { grid-column:1 / -1; padding-bottom:0 } .n:last-child { display:none } }
+</style></head><body><div class="wrap">
+<h1>Auction sheets</h1>
+<p class="sub">HiBid auctions evaluated by lot-eval. Newest close first.</p>
+
+<a class="row" href="777032/">
+  <span class="when">2026-09-21 19:30</span>
+  <span class="name">KJs Needful Things (Harpers Auction House) 9/21<small>KJs Needful Things · Madison Heights, MI</small></span>
+  <span class="n"><b>33</b><small>to bid</small></span>
+  <span class="n"><b>59/496</b><small>valued</small></span>
+  <span class="n"><b>18%</b><small>BP</small></span>
+</a>
+</div></body></html>

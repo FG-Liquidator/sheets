@@ -1,0 +1,1705 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>KJs Needful Things (Harpers Auction House) 9/21</title>
+<meta name="description" content="Bid sheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+:root {
+  --bg:#F2F4F1; --bg-2:#E8ECE8; --ink:#1B211E; --ink-2:#4E5853; --ink-3:#7A847F; --line:#D3D9D4;
+  --ours:#B4650C; --ours-bg:#F6E8D6; --link:#1F6F52; --metal:#4A5B6B; --metal-bg:#E1E7EC;
+  --p1:#1F6F52; --p2:#3C7D63; --p3:#6E8A7C; --p4:#9AA69F; --out:#8A9490;
+  --conf-high:#1F6F52; --conf-med:#8A6D1F; --conf-low:#9E4A3B;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg:#161A18; --bg-2:#1F2521; --ink:#E6EAE6; --ink-2:#B3BBB5; --ink-3:#7F8985; --line:#2E3733;
+  --ours:#E4A052; --ours-bg:#33271A; --link:#6FC29C; --metal:#9FB2C2; --metal-bg:#25303A;
+  --p1:#6FC29C; --p2:#5FA986; --p3:#7F9C8E; --p4:#5F6C66; --out:#6A7570;
+  --conf-high:#6FC29C; --conf-med:#D6B25A; --conf-low:#E08A78;
+} }
+:root[data-theme="dark"] {
+  --bg:#161A18; --bg-2:#1F2521; --ink:#E6EAE6; --ink-2:#B3BBB5; --ink-3:#7F8985; --line:#2E3733;
+  --ours:#E4A052; --ours-bg:#33271A; --link:#6FC29C; --metal:#9FB2C2; --metal-bg:#25303A;
+  --p1:#6FC29C; --p2:#5FA986; --p3:#7F9C8E; --p4:#5F6C66; --out:#6A7570;
+  --conf-high:#6FC29C; --conf-med:#D6B25A; --conf-low:#E08A78;
+}
+* { box-sizing:border-box }
+body { background:var(--bg); color:var(--ink); font:16px/1.45 "Source Sans 3", "Segoe UI", system-ui, sans-serif; margin:0; font-variant-numeric:tabular-nums }
+a { color:var(--link) }
+a:focus-visible, button:focus-visible { outline:2px solid var(--ours); outline-offset:2px }
+.wrap { max-width:860px; margin:0 auto; padding:16px 14px 64px }
+h1,h2,h3,.lotno,.chip,.lbl,.count { font-family:"Barlow Condensed", "Arial Narrow", sans-serif }
+h1 { font-size:30px; font-weight:700; line-height:1.05; margin:0 0 6px; text-wrap:balance }
+.meta { color:var(--ink-2); font-size:15px; display:flex; flex-wrap:wrap; gap:6px 16px; margin:0 0 12px }
+.strip { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); margin:0 0 8px }
+.strip div { background:var(--bg-2); padding:8px 10px }
+.strip .lbl { display:block; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3) }
+.strip .val { font-size:20px; font-weight:600; font-family:"Barlow Condensed", sans-serif }
+.trip { font-size:14px; color:var(--ink-2); margin:8px 0 0 }
+nav { position:sticky; top:0; background:var(--bg); border-bottom:1px solid var(--line); display:flex; gap:14px; padding:10px 0; margin:12px 0 4px; overflow-x:auto; z-index:2 }
+nav a { font-family:"Barlow Condensed", sans-serif; font-weight:600; font-size:16px; text-decoration:none; color:var(--ink-2); white-space:nowrap }
+section { margin:22px 0 0 }
+h2 { font-size:24px; font-weight:600; margin:0 0 2px; display:flex; align-items:baseline; gap:8px }
+.count { font-size:15px; color:var(--ink-3); font-weight:500 }
+.blurb { margin:0 0 10px; color:var(--ink-2); font-size:15px; max-width:65ch }
+.lot { display:grid; grid-template-columns:112px 1fr; gap:12px; padding:12px 0; border-top:1px solid var(--line) }
+.thumb img, .noimg { width:112px; height:112px; object-fit:cover; background:var(--bg-2); display:block }
+.head { display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-bottom:2px }
+.lotno { font-weight:700; font-size:18px }
+.chip { font-size:12px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; padding:2px 7px; border-radius:2px; color:#fff; background:var(--out) }
+.pri-P1 .chip.pri { background:var(--p1) } .pri-P2 .chip.pri { background:var(--p2) } .pri-P3 .chip.pri { background:var(--p3) } .pri-P4 .chip.pri { background:var(--p4) }
+.chip.metal { background:var(--metal-bg); color:var(--metal) }
+.chip.conf { background:transparent; border:1px solid currentColor } .conf-high { color:var(--conf-high) } .conf-med { color:var(--conf-med) } .conf-low { color:var(--conf-low) }
+h3 { font-size:19px; font-weight:600; margin:0 0 8px; line-height:1.15 }
+h3 a { color:var(--ink); text-decoration:none } h3 a:hover { text-decoration:underline }
+.nums { display:grid; grid-template-columns:repeat(3,1fr); gap:6px 10px; margin:0 0 8px }
+.num { display:flex; flex-direction:column }
+.num .lbl { font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3) }
+.num .val { font-size:18px; font-weight:600 } .num .val small { font-size:13px; font-weight:400; color:var(--ink-2) } .num .val.plan { font-size:15px; font-weight:400 }
+.num.ours .val { color:var(--ours); font-family:"Barlow Condensed", sans-serif; font-size:26px; font-weight:700; background:var(--ours-bg); padding:0 6px; display:inline-block; width:max-content }
+.notes { margin:0 0 6px; font-size:15px; color:var(--ink-2); max-width:70ch }
+.units { font-size:14px; color:var(--ink-2); margin:0 0 6px; font-style:italic }
+.links { display:flex; gap:14px; font-size:14px; font-weight:600 }
+.pri-outbid, .pri-pass { opacity:.75 }
+.foot { margin-top:32px; color:var(--ink-3); font-size:13px; max-width:65ch }
+@media (max-width:480px) { .lot { grid-template-columns:84px 1fr } .thumb img,.noimg { width:84px; height:84px } .nums { grid-template-columns:repeat(2,1fr) } }
+@media (prefers-reduced-motion: no-preference) { nav a { transition:color .15s } }
+</style>
+</head><body><div class="wrap">
+<h1>KJs Needful Things (Harpers Auction House) 9/21</h1>
+<p class="meta"><span>KJs Needful Things</span><span>Madison Heights, MI 48071</span><span>Closes 2026-09-21 19:30</span><span><a href="https://hibid.com/catalog/777032" target="_blank" rel="noopener">Catalog on HiBid</a></span></p>
+<div class="strip">
+  <div><span class="lbl">Buyer's premium</span><span class="val">18%</span></div>
+  <div><span class="lbl">Site</span><span class="val">pickup · 1.9 mi</span></div>
+  <div><span class="lbl">Lots to bid</span><span class="val">33</span></div>
+  <div><span class="lbl">Valued / total</span><span class="val">59 / 496</span></div>
+  <div><span class="lbl">Silver · gold</span><span class="val">$66 · $4,370</span></div>
+</div>
+<p class="trip">Trip: 1.9 mi each way ≈ $21 (0.6 h incl. overhead, $30/h). Not included in the max hammers — decide per auction: P1–P3 lots: 18 · capital if you won them all at max: $1411 · profit at max, all won: $864 → net of trip $843. Each lot won at max is worth ~$48 against a $21 drive.</p>
+<p class="trip">Pickup: Pickup days for this auction are Thursday September 24th from 10am-6pm and Friday September 25th from 8:30am-4:30pm.  Pickup location is 1100 E Mandoline Ave Suite 350, Madison Heights MI 48071.  We are located near the </p>
+<nav><a href="#bid">Bid these</a><a href="#metal">Metal</a><a href="#outbid">Past our max</a><a href="#personal">Personal</a><a href="#pass">Pass</a></nav>
+
+<section id="bid">
+  <h2>Bid these <span class="count">7</span></h2>
+  <p class="blurb">Where the edge is. Our max is the hammer that still clears the ROI floor after buyer's premium, tax and churn.</p>
+  
+<article class="lot pri-P1" id="lot-131">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 131</span>
+      <span class="chip pri">Bid hard</span>
+      
+      <span class="chip conf conf-med">med conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768852" target="_blank" rel="noopener">Vintage 1960&#x27;s Captain Action Action Figure W/ Box</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$170</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">102</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$51<small> · 5 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$250 / $400 / $650</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$96<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">PHOTO: 1967 Ideal Captain Action in the &#x27;Free parachute&#x27; box (worn but present) + Batman costume set on 2nd torso. Boxed CA $200-400, Batman set $150-300 if complete (mask/cape/gloves/belt). Verify completeness at pickup; sell figure+box and Batman set as two listings.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768852" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=Captain+Action+1967+Ideal+box&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=Captain+Action+1967+Ideal+box&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P2" id="lot-317">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 317</span>
+      <span class="chip pri">Bid</span>
+      
+      <span class="chip conf conf-med">med conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769163" target="_blank" rel="noopener">Vintage Stereo Realist 3d Slide Viewer &amp;</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$58</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">35</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$8<small> · 3 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$90 / $140 / $220</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$33<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">PHOTO: Stereo Realist f/3.5 (model 1041) with strap + Realist red-button slide viewer. Untested Realist $60-120, viewer $40-80. Two listings. Active 3D-camera niche.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769163" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=Stereo+Realist+f3.5+camera&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=Stereo+Realist+f3.5+camera&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P3" id="lot-289">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 289</span>
+      <span class="chip pri">Bid if cheap</span>
+      
+      <span class="chip conf conf-med">med conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769052" target="_blank" rel="noopener">Collection Vintage Lever Filler Fountain Pens</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$26</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">13</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$7<small> · 2 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$40 / $70 / $120</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$15<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">PHOTO: 11 vintage pens — lever-filler celluloids, a chased black hard rubber pen (if Waterman/Parker w/ 14k nib, $30-60 alone), gold-filled pencil. Sell as &#x27;restoration lot&#x27; $40-100, or pull the BCHR pen.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769052" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=vintage+fountain+pen+lot+lever+filler&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=vintage+fountain+pen+lot+lever+filler&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P4" id="lot-316">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 316</span>
+      <span class="chip pri">Flyer</span>
+      
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769160" target="_blank" rel="noopener">Vintage Zeiss Ikon Symbolica 35mm Film Camera</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$13</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">13</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$11<small> · 2 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$40 / $65 / $100</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$7<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Zeiss Ikon Symbolica ($30-50) + Konica I rangefinder ($40-70), untested. Camera people buy as-is. At $11.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769160" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=Zeiss+Ikon+Symbolica+camera&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=Zeiss+Ikon+Symbolica+camera&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P4" id="lot-208">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 208</span>
+      <span class="chip pri">Flyer</span>
+      
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768951" target="_blank" rel="noopener">Tomytronic Pac-man Handheld 1980s Game</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$8</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">8</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$5<small> · 1 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$30 / $50 / $80</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$5<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Tomytronic Pac-Man tabletop (1981). Working $50-90, untested/as-is $30-50. Batteries + photo check. At $5/1 bid — overlooked.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768951" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=Tomytronic+Pac-Man&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=Tomytronic+Pac-Man&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P4" id="lot-8U">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 8U</span>
+      <span class="chip pri">Flyer</span>
+      
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768713" target="_blank" rel="noopener">Limited Edition Gaming Token .999 Fine Silver</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">—</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$5<small> · 1 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $35 / $60</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$4<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">&#x27;Limited edition gaming token .999 silver&#x27; — if 1oz, melt ~$32 plus collector premium if it&#x27;s a known game/casino series. At $5/1 bid: cheap melt if it&#x27;s a full ounce. Photo check.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768713" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=Limited+Edition+Gaming+Token+.999+Fine+Silver&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=Limited+Edition+Gaming+Token+.999+Fine+Silver&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P4" id="lot-252">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 252</span>
+      <span class="chip pri">Flyer</span>
+      
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769006" target="_blank" rel="noopener">1992 Skybox Marvel Masterpieces Trading Cards</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">6</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$5<small> · 1 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $45 / $90</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$4<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">1992 SkyBox Marvel Masterpieces — a complete 100-card base set is $30-60; the 5 Spectra-Etch chase cards are $10-30 each. 11 photos; check for Spectra-Etch. At $5.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769006" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=1992+Skybox+Marvel+Masterpieces+set&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=1992+Skybox+Marvel+Masterpieces+set&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+</section>
+
+<section id="metal">
+  <h2>Metal — capped at melt <span class="count">26</span></h2>
+  <p class="blurb">Floor = break-even hammer if you walked the metal into a shop today (no eBay, no profit). Never bid above it; expect to lose most of these to the room.</p>
+  
+<article class="lot pri-P1" id="lot-6">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 6</span>
+      <span class="chip pri">Bid hard</span>
+      <span class="chip metal">floor $803</span>
+      <span class="chip conf conf-med">med conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768679" target="_blank" rel="noopener">1898-s Five Dollar ($5) Half Eagle 90% Gold Coin</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$400</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">620</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$510<small> · 38 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$1,057 / $1,110 / $1,216</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$376<small> · 75% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">1898-S $5 Half Eagle, 0.2419 oz AGW = $1,057 melt at $4,370. Common date, circulated: sells melt+5%. Over the $400 capital ceiling — ceiling is the binding limit, not value.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768679" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=1898-s+Five+Dollar+%28%245%29+Half+Eagle+90%25+Gold+Coin&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=1898-s+Five+Dollar+%28%245%29+Half+Eagle+90%25+Gold+Coin&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P1" id="lot-8GG">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 8GG</span>
+      <span class="chip pri">Bid hard</span>
+      <span class="chip metal">floor $404</span>
+      <span class="chip conf conf-med">med conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768695" target="_blank" rel="noopener">Lot Of (11) Morgan Dollars 90% Silver Cull Coins</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$278</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">380</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$52<small> · 28 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$561 / $573 / $629</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$121<small> · 35% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">PHOTO: 11 cull Morgans (AG/G), 8.507 oz ASW = $561 melt at $66. Culls sell melt to melt+3% on eBay. 28 bids — this will run to melt.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768695" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=cull+Morgan+silver+dollar+lot&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=cull+Morgan+silver+dollar+lot&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P2" id="lot-9">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 9</span>
+      <span class="chip pri">Bid</span>
+      <span class="chip metal">floor $100</span>
+      <span class="chip conf conf-med">med conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768719" target="_blank" rel="noopener">Vintage 14k Gold Mother &amp; Child Cameo Pendant</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$89</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">60</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$10<small> · 6 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$140 / $190 / $260</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$39<small> · 35% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">PHOTO: blue agate cameo in 14k bezel+bail. Est 1.6g of 14k = 0.030 oz AGW = $131 melt at $4,370 (weigh at pickup — 2.5g would be $205). eBay sold $150-250 for this style. Gold makes this near capital-safe.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768719" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=14k+gold+cameo+pendant+agate&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=14k+gold+cameo+pendant+agate&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P2" id="lot-8BB">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 8BB</span>
+      <span class="chip pri">Bid</span>
+      <span class="chip metal">floor $64</span>
+      <span class="chip conf conf-med">med conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768683" target="_blank" rel="noopener">1995 Silver Premier Mint Set</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$47</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">45</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$20<small> · 11 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$90 / $105 / $125</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$20<small> · 35% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">1995-S Silver Premier proof set (5 coins, 1.34 oz ASW = $88 melt) in the deluxe box. 1995 is a better year; $90-120.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768683" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=1995+silver+premier+proof+set&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=1995+silver+premier+proof+set&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P2" id="lot-8E">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 8E</span>
+      <span class="chip pri">Bid</span>
+      <span class="chip metal">floor $69</span>
+      <span class="chip conf conf-med">med conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768690" target="_blank" rel="noopener">Lot Of (4) Franklin Half Dollars 90% Silver Coins</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$47</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">60</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$30<small> · 7 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$96 / $105 / $130</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$20<small> · 35% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">4 Franklin halves in slabs (photo). 1.447 oz ASW = $95 melt; slabbed common dates sell melt+5-15%.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768690" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=Franklin+half+dollar+lot&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=Franklin+half+dollar+lot&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P2" id="lot-8EE">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 8EE</span>
+      <span class="chip pri">Bid</span>
+      <span class="chip metal">floor $37</span>
+      <span class="chip conf conf-med">med conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768691" target="_blank" rel="noopener">1894-s Morgan Silver Dollar 90% Silver Coin</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$44</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">40</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$18<small> · 5 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$75 / $100 / $140</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$19<small> · 35% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">1894-S Morgan — better date. Photo VG-ish: $70-110 VG, $110-150 F. Melt $51. Numismatic, not melt.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768691" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=1894-S+Morgan+dollar&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=1894-S+Morgan+dollar&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P2" id="lot-8CC">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 8CC</span>
+      <span class="chip pri">Bid</span>
+      <span class="chip metal">floor $47</span>
+      <span class="chip conf conf-med">med conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768685" target="_blank" rel="noopener">2016-w American Silver Eagle Proof .999 Fine</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$39</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">48</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$41<small> · 11 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$80 / $90 / $105</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$17<small> · 35% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">2016-W proof ASE, 30th anniversary edge lettering, box+COA in photo. $85-100.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768685" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=2016-W+proof+silver+eagle&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=2016-W+proof+silver+eagle&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P2" id="lot-8A">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 8A</span>
+      <span class="chip pri">Bid</span>
+      <span class="chip metal">floor $47</span>
+      <span class="chip conf conf-med">med conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768681" target="_blank" rel="noopener">2005 Panda 1oz .999 Fine Silver</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$37</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">42</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$41<small> · 14 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$70 / $85 / $100</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$16<small> · 35% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">2005 1oz Panda — pandas carry a premium over melt ($66): $75-95 in capsule.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768681" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=2005+silver+panda+1+oz&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=2005+silver+panda+1+oz&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P3" id="lot-268">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 268</span>
+      <span class="chip pri">Bid if cheap</span>
+      <span class="chip metal">floor $38</span>
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769025" target="_blank" rel="noopener">Sterling Silver &amp; Gemstone Tennis Bracelets</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$35</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$9<small> · 5 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$60 / $90 / $130</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$20<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">THREE gemstone tennis bracelets (~30g = $59 melt). $25-45 each on eBay; list individually.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769025" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=sterling+silver+tennis+bracelet&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=sterling+silver+tennis+bracelet&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P3" id="lot-6A">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 6A</span>
+      <span class="chip pri">Bid if cheap</span>
+      <span class="chip metal">floor $18</span>
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768680" target="_blank" rel="noopener">1824 Bust Half Dollar 90% Silver Coin</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$33</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">55</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$9<small> · 5 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$60 / $85 / $130</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$19<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">1824 Capped Bust half, photo looks G-VG. Numismatic value $60-90 G-VG, $100+ in Fine; melt $26. Not a melt play — a coin play.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768680" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=1824+capped+bust+half+dollar&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=1824+capped+bust+half+dollar&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P3" id="lot-8HH">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 8HH</span>
+      <span class="chip pri">Bid if cheap</span>
+      <span class="chip metal">floor $47</span>
+      <span class="chip conf conf-high">high conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768697" target="_blank" rel="noopener">1984 1oz .999 Fine Silver American Prospector</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$30</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">42</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$31<small> · 8 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$66 / $72 / $80</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$13<small> · 35% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">1984 Prospector 1oz — generic vintage round, melt+5%.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768697" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=1984+prospector+silver+round&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=1984+prospector+silver+round&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P3" id="lot-8FF">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 8FF</span>
+      <span class="chip pri">Bid if cheap</span>
+      <span class="chip metal">floor $37</span>
+      <span class="chip conf conf-med">med conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768693" target="_blank" rel="noopener">1934 Peace Dollar Money Clip</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$22</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">30</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$21<small> · 10 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$52 / $60 / $75</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$12<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">1934 Peace dollar in a money clip — the coin is usually soldered = cull. Melt $51 + clip novelty.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768693" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=peace+dollar+money+clip&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=peace+dollar+money+clip&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P3" id="lot-8F">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 8F</span>
+      <span class="chip pri">Bid if cheap</span>
+      <span class="chip metal">floor $37</span>
+      <span class="chip conf conf-high">high conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768692" target="_blank" rel="noopener">1880-o Morgan Silver Dollar 90% Silver</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$24</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">32</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$20<small> · 7 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$55 / $60 / $70</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$11<small> · 35% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">1880-O Morgan, common, G-VG: melt ($51) + $5-10.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768692" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=1880-O+Morgan+dollar&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=1880-O+Morgan+dollar&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P3" id="lot-8DD">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 8DD</span>
+      <span class="chip pri">Bid if cheap</span>
+      <span class="chip metal">floor $37</span>
+      <span class="chip conf conf-high">high conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768689" target="_blank" rel="noopener">1988 Olympic Proof Silver Dollar</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$23</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">32</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$9<small> · 4 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$52 / $58 / $65</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$10<small> · 35% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">1988-S Olympic proof $1 w/ box+COA: 0.7734 oz = $51 melt; sells melt+10%.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768689" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=1988+olympic+proof+silver+dollar&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=1988+olympic+proof+silver+dollar&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P3" id="lot-8X">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 8X</span>
+      <span class="chip pri">Bid if cheap</span>
+      <span class="chip metal">floor $17</span>
+      <span class="chip conf conf-med">med conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768716" target="_blank" rel="noopener">1893 Columbian Exposition Half Dollar 90% Silver</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$9</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">22</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$7<small> · 3 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $32 / $45</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$5<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">1893 Columbian half, common in AU: $25-40. Melt $24.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768716" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=1893+Columbian+half+dollar&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=1893+Columbian+half+dollar&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P4" id="lot-267">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 267</span>
+      <span class="chip pri">Flyer</span>
+      <span class="chip metal">floor $25</span>
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769024" target="_blank" rel="noopener">Vtg Sterling Silver Southwestern Jewelry</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$26</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$8<small> · 4 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$45 / $70 / $100</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$15<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">SW turquoise set: earrings, ring, more (~20g = $39 melt). If Native-hallmarked, $80-150.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769024" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=sterling+turquoise+southwestern+set&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=sterling+turquoise+southwestern+set&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P4" id="lot-401">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 401</span>
+      <span class="chip pri">Flyer</span>
+      <span class="chip metal">floor $38</span>
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769315" target="_blank" rel="noopener">Vintage Sterling Silver Wavy Design Bracelets</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$26</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$7<small> · 3 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$59 / $70 / $100</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$15<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">2-3 wavy sterling bangles (~30g = $59 melt). Modern, sells $20-35 each.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769315" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=sterling+silver+bangle+bracelet&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=sterling+silver+bangle+bracelet&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P4" id="lot-402">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 402</span>
+      <span class="chip pri">Flyer</span>
+      <span class="chip metal">floor $31</span>
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769316" target="_blank" rel="noopener">Vintage Sterling Silver Navajo Style Cuff Bracelet</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$22</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$9<small> · 3 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$49 / $60 / $90</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$12<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Navajo-style cuff #2 (~25g). Same logic as 393.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769316" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=sterling+navajo+cuff+bracelet&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=sterling+navajo+cuff+bracelet&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P4" id="lot-393">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 393</span>
+      <span class="chip pri">Flyer</span>
+      <span class="chip metal">floor $31</span>
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769305" target="_blank" rel="noopener">Vintage Sterling Silver Navajo Style Bracelet</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$22</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$7<small> · 2 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$49 / $60 / $90</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$12<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Navajo-style cuff (~25g = $49 melt). Hallmarked NA: $80-150; &#x27;style&#x27;: $40-60.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769305" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=sterling+navajo+cuff+bracelet&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=sterling+navajo+cuff+bracelet&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P4" id="lot-8D">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 8D</span>
+      <span class="chip pri">Flyer</span>
+      <span class="chip metal">floor $9</span>
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768688" target="_blank" rel="noopener">1876 Seated Liberty Silver Quarter 25c</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$12</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">25</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$8<small> · 4 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$30 / $38 / $55</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$7<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">1876 Seated Liberty quarter, G-VG: $30-45. Melt $12.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768688" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=1876+seated+liberty+quarter&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=1876+seated+liberty+quarter&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P4" id="lot-278">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 278</span>
+      <span class="chip pri">Flyer</span>
+      <span class="chip metal">floor $19</span>
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769038" target="_blank" rel="noopener">Sterling Silver Statement Earrings</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$8</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$7<small> · 3 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$30 / $45 / $70</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$5<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Green-stone statement earrings + a second pair/ring (~15g). Two listings.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769038" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=sterling+silver+earrings+vintage&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=sterling+silver+earrings+vintage&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P4" id="lot-386">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 386</span>
+      <span class="chip pri">Flyer</span>
+      <span class="chip metal">floor $19</span>
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769296" target="_blank" rel="noopener">Vintage Sterling Silver Necklace Pendants</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$8</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$9<small> · 3 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$30 / $45 / $70</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$5<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">3 pendants incl. a moonstone-style and a black onyx (~15g). Sell individually or as a lot.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769296" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=sterling+silver+pendant+vintage&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=sterling+silver+pendant+vintage&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P4" id="lot-408">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 408</span>
+      <span class="chip pri">Flyer</span>
+      <span class="chip metal">floor $19</span>
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769326" target="_blank" rel="noopener">Sterling Silver Necklace Pendants</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$8</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$5<small> · 1 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$30 / $45 / $70</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$5<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Lapis-style pendant + 2 others (~15g).</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769326" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=sterling+silver+pendant+lapis&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=sterling+silver+pendant+lapis&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P4" id="lot-265">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 265</span>
+      <span class="chip pri">Flyer</span>
+      <span class="chip metal">floor $13</span>
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769022" target="_blank" rel="noopener">Vintage Sterling Silver &amp; Marcasite Earrings &amp;</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$6<small> · 2 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $35 / $50</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$4<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Marcasite earrings + filigree hearts (~10g = $20 melt). Vintage marcasite sells $25-45.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769022" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=sterling+marcasite+earrings&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=sterling+marcasite+earrings&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P4" id="lot-269">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 269</span>
+      <span class="chip pri">Flyer</span>
+      <span class="chip metal">floor $13</span>
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769026" target="_blank" rel="noopener">Sterling Silver Vibrant Swan Pendant Necklace</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$6<small> · 2 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $35 / $50</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$4<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Swan pendant + chain (~10g).</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769026" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=sterling+swan+pendant+necklace&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=sterling+swan+pendant+necklace&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-P4" id="lot-266">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 266</span>
+      <span class="chip pri">Flyer</span>
+      <span class="chip metal">floor $10</span>
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769023" target="_blank" rel="noopener">Vtg Sterling Silver Orchid Earrings &amp; Dangle</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$4</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$6<small> · 2 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$20 / $30 / $40</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$2<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Orchid + dangle earrings (~8g).</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769023" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=sterling+orchid+earrings&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=sterling+orchid+earrings&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+</section>
+
+<section id="outbid">
+  <h2>Already past our max <span class="count">20</span></h2>
+  <p class="blurb">The room got there first. Listed so you can see what we passed on and why.</p>
+  
+<article class="lot pri-outbid" id="lot-8K">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 8K</span>
+      <span class="chip pri">Past our max</span>
+      <span class="chip metal">floor $47</span>
+      <span class="chip conf conf-med">med conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768699" target="_blank" rel="noopener">1992 China 10 Yuan Silver Panda 1 Oz .999 Silver</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$51</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">—</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$123<small> · 19 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$115 / $135 / $160</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$23<small> · 35% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">1992 1oz Panda — better year, $120-160 capsuled.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768699" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=1992+China+10+Yuan+Silver+Panda+1+Oz+.999+Silver&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=1992+China+10+Yuan+Silver+Panda+1+Oz+.999+Silver&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-8H">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 8H</span>
+      <span class="chip pri">Past our max</span>
+      <span class="chip metal">floor $47</span>
+      <span class="chip conf conf-med">med conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768696" target="_blank" rel="noopener">1996 American Eagle Proof 1oz .999 Silver</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$48</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">65</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$51<small> · 12 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$90 / $110 / $140</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$22<small> · 35% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">1996 proof ASE — a scarcer proof year; $95-130 with box/COA (verify box at pickup).</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768696" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=1996+proof+American+Silver+Eagle&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=1996+proof+American+Silver+Eagle&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-156">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 156</span>
+      <span class="chip pri">Past our max</span>
+      
+      <span class="chip conf conf-med">med conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768883" target="_blank" rel="noopener">Xbox One System, Remote, Nba 2k20 &amp; Grand Theft</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$34</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">—</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$62<small> · 6 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$90 / $120 / $150</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$15<small> · 35% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Xbox One (original or S?) + controller + NBA 2K20 + GTA V, powers on. Console $70-100, controller $20, games $5. At $62/6 bids, ~fully priced; only worth it under $50.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768883" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=Xbox+One+System%2C+Remote%2C+Nba+2k20+%26+Grand+Theft&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=Xbox+One+System%2C+Remote%2C+Nba+2k20+%26+Grand+Theft&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-97">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 97</span>
+      <span class="chip pri">Past our max</span>
+      
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768811" target="_blank" rel="noopener">Scalextric Batmobile &amp; Batman Inspired Slot Cars</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$13</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">—</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$31<small> · 8 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$40 / $60 / $90</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$7<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Scalextric Batmobile (C3xxx) is a sought-after release, $50-80 boxed; + Batman-inspired car. At $31/8 bids — contested.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768811" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=Scalextric+Batmobile+%26+Batman+Inspired+Slot+Cars&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=Scalextric+Batmobile+%26+Batman+Inspired+Slot+Cars&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-163">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 163</span>
+      <span class="chip pri">Past our max</span>
+      
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768891" target="_blank" rel="noopener">Glowing Manganese Westmoreland Blue Hen On Nest</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">—</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$31<small> · 19 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$30 / $45 / $70</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$5<small> · 70% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Westmoreland blue hen on nest (UV-reactive) $35-60. At $31/19 bids — the glow-glass crowd found it. No.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768891" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=Glowing+Manganese+Westmoreland+Blue+Hen+On+Nest&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=Glowing+Manganese+Westmoreland+Blue+Hen+On+Nest&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-179">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 179</span>
+      <span class="chip pri">Past our max</span>
+      
+      <span class="chip conf conf-med">med conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768912" target="_blank" rel="noopener">Wii System, Wiimote, Sensor, Wii Sports &amp; Cables</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$10</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">—</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$23<small> · 3 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$40 / $55 / $75</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$5<small> · 35% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Wii + Wiimote + sensor + Wii Sports + cables. Complete-ish Wii sells $45-70. At $23/3 bids, some room.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768912" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=Wii+System%2C+Wiimote%2C+Sensor%2C+Wii+Sports+%26+Cables&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=Wii+System%2C+Wiimote%2C+Sensor%2C+Wii+Sports+%26+Cables&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-176">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 176</span>
+      <span class="chip pri">Past our max</span>
+      
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768909" target="_blank" rel="noopener">Fenton Handpainted Glossy Black Bridesmaid Figure</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$4</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">—</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$6<small> · 3 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $40 / $60</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$4<small> · 70% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Fenton hand-painted Bridesmaid figurine, signed, boxed LE — $30-60 each; slow but boxed helps. At $6.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768909" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=Fenton+Handpainted+Glossy+Black+Bridesmaid+Figure&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=Fenton+Handpainted+Glossy+Black+Bridesmaid+Figure&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-177">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 177</span>
+      <span class="chip pri">Past our max</span>
+      
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768910" target="_blank" rel="noopener">Fenton Handpainted Fall Theme Bridesmaid Figure</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$4</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">—</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$5<small> · 1 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $40 / $60</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$4<small> · 70% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Same as lot 176, fall theme. At $5.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768910" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=Fenton+Handpainted+Fall+Theme+Bridesmaid+Figure&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=Fenton+Handpainted+Fall+Theme+Bridesmaid+Figure&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-88">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 88</span>
+      <span class="chip pri">Past our max</span>
+      
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768801" target="_blank" rel="noopener">Scalextric Ford Gt Gte 1/32 Slot Cars</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">—</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$25<small> · 2 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $40 / $60</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$4<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Scalextric Ford GT GTE 1/32 boxed, untested. $25-45 each on eBay. At $25/2 bids — fully priced.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768801" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=Scalextric+Ford+Gt+Gte+1%2F32+Slot+Cars&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=Scalextric+Ford+Gt+Gte+1%2F32+Slot+Cars&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-260">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 260</span>
+      <span class="chip pri">Past our max</span>
+      <span class="chip metal">floor $10</span>
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769015" target="_blank" rel="noopener">Vintage Sterling Silver Parrot Brooch Pin</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$10<small> · 3 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $35 / $50</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$4<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Sterling parrot brooch (~8g = $16 melt). $25-45 if signed.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769015" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=sterling+parrot+brooch&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=sterling+parrot+brooch&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-405">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 405</span>
+      <span class="chip pri">Past our max</span>
+      <span class="chip metal">floor $8</span>
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769321" target="_blank" rel="noopener">Vintage Sterling Silver Abstract Ladies Ring</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">15-25</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$7<small> · 3 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $35 / $50</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$4<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Abstract ring w/ opal-look stone, size 8 (~6g).</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769321" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=sterling+silver+ring+size+8&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=sterling+silver+ring+size+8&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-361">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 361</span>
+      <span class="chip pri">Past our max</span>
+      
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769264" target="_blank" rel="noopener">3 Nba Detroit Piston Card Lot Cade Cunningham,</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$4</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">—</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$7<small> · 3 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$20 / $40 / $80</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$2<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Pistons lot: Cade Cunningham, Tobias Harris /7, Isaiah Stewart auto /25. Low-numbered parallels + auto: $30-80 depending on the Cade card. At $7.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769264" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=3+Nba+Detroit+Piston+Card+Lot+Cade+Cunningham%2C&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=3+Nba+Detroit+Piston+Card+Lot+Cade+Cunningham%2C&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-276">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 276</span>
+      <span class="chip pri">Past our max</span>
+      
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769035" target="_blank" rel="noopener">Brass, Kiss &amp; More Zippo Lighters</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$4</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">—</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$11<small> · 4 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$20 / $35 / $60</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$2<small> · 35% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Zippo lot incl. a KISS Zippo (licensed, $20-40 alone) + brass. Zippos sell individually fast. At $11/4 bids.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769035" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=Brass%2C+Kiss+%26+More+Zippo+Lighters&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=Brass%2C+Kiss+%26+More+Zippo+Lighters&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-457">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 457</span>
+      <span class="chip pri">Past our max</span>
+      
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769387" target="_blank" rel="noopener">W.t. Armstrong Flute In Case</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$2</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">—</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$12<small> · 5 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$35 / $60 / $100</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$2<small> · 70% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">W.T. Armstrong flute in case — student model $40-90 as-is. At $12/5 bids.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769387" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=W.t.+Armstrong+Flute+In+Case&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=W.t.+Armstrong+Flute+In+Case&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-106">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 106</span>
+      <span class="chip pri">Past our max</span>
+      
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768823" target="_blank" rel="noopener">Scalextric Digital 1/32 Scale Slot Car Racing Set</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$3</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">—</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$5<small> · 2 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$60 / $100 / $160</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$2<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Scalextric Digital 1/32 set w/ 4 cars, 4 controllers, extra track. Digital sets $100-200 used if working; heavy/bulky to ship (L). At $5/2 bids — overlooked because it&#x27;s big. Local pickup resale or freight.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768823" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=Scalextric+Digital+1%2F32+Scale+Slot+Car+Racing+Set&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=Scalextric+Digital+1%2F32+Scale+Slot+Car+Racing+Set&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-245">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 245</span>
+      <span class="chip pri">Past our max</span>
+      
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768996" target="_blank" rel="noopener">1995 Fleer Ultra X-men Collection Trading Cards In</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$1</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">—</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$6<small> · 3 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$15 / $30 / $60</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$1<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">1995 Fleer Ultra X-Men in a Trapper Keeper — base set ~$20-40; Sinister Observations/Hunters&amp;Stalkers chase adds. At $6.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768996" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=1995+Fleer+Ultra+X-men+Collection+Trading+Cards+In&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=1995+Fleer+Ultra+X-men+Collection+Trading+Cards+In&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-356">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 356</span>
+      <span class="chip pri">Past our max</span>
+      
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769259" target="_blank" rel="noopener">2023 Prizm Anthony Richardson Flashback Rookie N</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$1</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">—</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$7<small> · 3 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$15 / $25 / $40</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$1<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">2023 Prizm Anthony Richardson &#x27;Flashback&#x27; No Huddle PSA 10 — insert, not the base RC; $15-35. At $7.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769259" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=2023+Prizm+Anthony+Richardson+Flashback+Rookie+N&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=2023+Prizm+Anthony+Richardson+Flashback+Rookie+N&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-406">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 406</span>
+      <span class="chip pri">Past our max</span>
+      
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769324" target="_blank" rel="noopener">Vintage Sterling Silver Usmc Rifle Expert Badge</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$1</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">—</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$0<small> · 0 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$15 / $25 / $40</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$1<small> · 45% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Sterling USMC rifle expert badge — militaria + sterling, $20-40. ZERO bids.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769324" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=Vintage+Sterling+Silver+Usmc+Rifle+Expert+Badge&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=Vintage+Sterling+Silver+Usmc+Rifle+Expert+Badge&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-453">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 453</span>
+      <span class="chip pri">Past our max</span>
+      
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769380" target="_blank" rel="noopener">Vintage Hcouf Clarinet &amp; Case</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$0</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">—</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$7<small> · 3 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$30 / $50 / $80</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$0<small> · 70% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Student clarinet w/ case — $30-60 as-is for pads/overhaul. Slow. At $7.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769380" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=Vintage+Hcouf+Clarinet+%26+Case&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=Vintage+Hcouf+Clarinet+%26+Case&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-158">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 158</span>
+      <span class="chip pri">Past our max</span>
+      
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768886" target="_blank" rel="noopener">Hotwheels, Matchbox &amp; More Diecast Cars</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$0</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">—</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$5<small> · 1 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$12 / $20 / $40</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$0<small> · 44% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Hot Wheels/Matchbox loose diecast — $1/car unless redlines. Photo check for redlines. At $5.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768886" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=Hotwheels%2C+Matchbox+%26+More+Diecast+Cars&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=Hotwheels%2C+Matchbox+%26+More+Diecast+Cars&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+</section>
+
+<section id="personal">
+  <h2>Personal <span class="count">1</span></h2>
+  <p class="blurb">Not scored as a flip.</p>
+  
+<article class="lot pri-pass" id="lot-471">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 471</span>
+      <span class="chip pri">Pass</span>
+      
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769404" target="_blank" rel="noopener">Vintage Bally &quot;lost World&quot; Pinball Machine 1977</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$0</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">175</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$26<small> · 4 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$60 / $120 / $250</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$-16<small> · 0% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">PERSONAL (Phil): 1977 Bally Lost World cabinet/playfield/backglass, no electronics. As a parts/restoration piece $100-300 locally; backglass alone can be $100+ if intact. Not a flip — a fall project. At $26/4 bids.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769404" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=Bally+Lost+World+pinball+1977&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=Bally+Lost+World+pinball+1977&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+</section>
+
+<section id="pass">
+  <h2>Pass <span class="count">5</span></h2>
+  <p class="blurb">Valued, but no hammer clears the floor.</p>
+  
+<article class="lot pri-pass" id="lot-284">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 284</span>
+      <span class="chip pri">Pass</span>
+      
+      <span class="chip conf conf-high">high conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769045" target="_blank" rel="noopener">Vintage Pokemon Card Collection</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$0</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">—</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$6<small> · 2 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$10 / $18 / $30</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$-1<small> · 0% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">PHOTO: ~150 modern XY / Sun&amp;Moon bulk (2014-19), a few reverse holos, no vintage. Bulk rate $10-20.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769045" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=Vintage+Pokemon+Card+Collection&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=Vintage+Pokemon+Card+Collection&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-pass" id="lot-392">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 392</span>
+      <span class="chip pri">Pass</span>
+      
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769303" target="_blank" rel="noopener">Nba Hoops 89&#x27; Michael Jordan, Larry Bird &amp; More</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$0</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">—</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$6<small> · 2 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$10 / $20 / $40</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$-1<small> · 0% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">&#x27;89 Hoops Jordan + Bird + more — junk-wax era, $10-25 unless a Jordan is mint.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769303" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=Nba+Hoops+89%27+Michael+Jordan%2C+Larry+Bird+%26+More&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=Nba+Hoops+89%27+Michael+Jordan%2C+Larry+Bird+%26+More&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-pass" id="lot-387">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 387</span>
+      <span class="chip pri">Pass</span>
+      
+      <span class="chip conf conf-high">high conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769297" target="_blank" rel="noopener">1989-90 Nba Hoops Michael Jordan #200 Basketball</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$0</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">—</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$6<small> · 2 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$8 / $15 / $25</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$-2<small> · 0% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">1989-90 Hoops Jordan #200 — very common, $8-20 raw. At $6/2 bids: no.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769297" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=1989-90+Nba+Hoops+Michael+Jordan+%23200+Basketball&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=1989-90+Nba+Hoops+Michael+Jordan+%23200+Basketball&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-pass" id="lot-452">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 452</span>
+      <span class="chip pri">Pass</span>
+      
+      <span class="chip conf conf-low">low conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321769379" target="_blank" rel="noopener">Vintage H.&amp; A. Selmer Bundy Clarinet In Case</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$0</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">—</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$5<small> · 1 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $40 / $70</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$-3<small> · 0% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">Bundy (Selmer) clarinet — the standard student horn, $30-60 as-is. At $5.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321769379" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=Vintage+H.%26+A.+Selmer+Bundy+Clarinet+In+Case&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=Vintage+H.%26+A.+Selmer+Bundy+Clarinet+In+Case&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+<article class="lot pri-pass" id="lot-8T">
+  <div class="thumb"><div class="noimg"></div></div>
+  <div class="body">
+    <div class="head">
+      <span class="lotno">Lot 8T</span>
+      <span class="chip pri">Pass</span>
+      
+      <span class="chip conf conf-high">high conf</span>
+    </div>
+    <h3><a href="https://hibid.com/lot/321768712" target="_blank" rel="noopener">.999 Fine Silver 1/10th Troy Oz</a></h3>
+    <div class="nums">
+      <div class="num ours"><span class="lbl">Our max</span><span class="val">$0</span></div>
+      <div class="num"><span class="lbl">Your max</span><span class="val">—</span></div>
+      <div class="num"><span class="lbl">Current</span><span class="val">$5<small> · 1 bids</small></span></div>
+      <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$4 / $6 / $8</span></div>
+      <div class="num"><span class="lbl">Profit @ max</span><span class="val">$-5<small> · 0% ROI</small></span></div>
+      <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+    </div>
+    <p class="notes">1/10 oz silver round; ~$5. Not worth a listing.</p>
+    
+    <div class="links">
+      <a href="https://hibid.com/lot/321768712" target="_blank" rel="noopener">HiBid</a>
+      <a href="https://www.ebay.com/sch/i.html?_nkw=.999+Fine+Silver+1%2F10th+Troy+Oz&LH_Sold=1&LH_Complete=1&_sop=13" target="_blank" rel="noopener">Sold comps</a>
+      <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=.999+Fine+Silver+1%2F10th+Troy+Oz&dayRange=90&tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+    </div>
+  </div>
+</article>
+</section>
+<p class="foot">Estimates are the agent's from photos and category knowledge, not live eBay comps — use the Sold comps / Terapeak links to validate before bidding. Metal values use spot as of 2026-09-18. Your max = your HiBid watch notes. Generated by lot-eval.</p>
+</div>
+</body></html>
