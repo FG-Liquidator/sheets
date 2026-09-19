@@ -98,12 +98,17 @@ details.logic { background:var(--bg-2); padding:10px 12px; margin:14px 0 0 }
     <p class="warn">No live eBay comps. Values are the agent&#x27;s estimates; every lot carries a derivation and a comps link to validate.</p>
     <h4>How the max hammer is computed</h4>
     <pre>true_cost  = hammer x (1+bp) x (1+tax) + retrieval + churn
-retrieval  = 0 in pickup mode (the trip is a per-auction decision, shown in the header)
-churn      = (list+pack minutes) x rate + materials + storage x months + value x capital_rate x months
+retrieval  = 0 in pickup mode (the trip is a per-auction decision,
+             shown in the header); ship mode shares one box per invoice
+churn      = (list+pack minutes) x rate + materials
+             + storage x months + value x capital_rate x months
 net        = value x (1 - fee - promoted) - fee_fixed,   per listing
-floor      : profit &gt;= min_roi x true_cost,  min_roi = base_roi + roi_per_month x months_to_sell
-max_hammer = (net_after_churn / (1+min_roi) - retrieval) / ((1+bp)(1+tax)),  capped at the capital ceiling
-floor_max  = melt x shop_payout / ((1+bp)(1+tax))   - break-even if the exit is a metals buyer, not eBay</pre>
+floor      : profit &gt;= min_roi x true_cost
+             min_roi = base_roi + roi_per_month x months_to_sell
+max_hammer = (net_after_churn / (1+min_roi) - retrieval) / ((1+bp)(1+tax))
+             capped at the capital ceiling
+floor_max  = melt x shop_payout / ((1+bp)(1+tax))
+             break-even if the exit is a metals buyer, not eBay</pre>
     <h4>Margin</h4>
     <div class="kv"><span>Base ROI, instant flip</span><b>30%</b></div>
     <div class="kv"><span>Added per month to sell</span><b>10%</b></div>
