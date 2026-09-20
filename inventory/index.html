@@ -1,0 +1,57 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Inventory</title>
+<style>
+:root { --bg:#F2F4F1; --ink:#1B211E; --ink-2:#4E5853; --line:#D3D9D4; --ours:#B4650C }
+@media (prefers-color-scheme: dark) { :root { --bg:#161A18; --ink:#E6EAE6; --ink-2:#B3BBB5; --line:#2E3733; --ours:#E4A052 } }
+body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.45 "Source Sans 3", system-ui, sans-serif }
+.wrap { max-width:520px; margin:12vh auto; padding:0 16px }
+h1 { font-size:28px; margin:0 0 6px } p { color:var(--ink-2); margin:0 0 14px }
+button { font:inherit; padding:10px 18px; border:1px solid var(--ink); background:transparent; color:var(--ink); cursor:pointer; border-radius:4px }
+button.primary { background:var(--ours); border-color:var(--ours); color:#fff }
+.err { color:#B42318; margin-top:12px } .bar { display:flex; gap:10px; align-items:center }
+</style></head><body><div class="wrap">
+<h1>Inventory</h1>
+<p id="msg">Listing sheets and cost basis. Sign in with the Google account for nguye208@gmail.com.</p>
+<div class="bar"><button class="primary" id="in">Sign in with Google</button><button id="out" hidden>Sign out</button></div>
+<p class="err" id="err"></p>
+</div>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+const app = initializeApp({"apiKey": "AIzaSyBwfapP0ojcUCkbkoEl8dmQEQG9iyE6Y9U", "authDomain": "future-gadget-labs-b7e6b.firebaseapp.com", "projectId": "future-gadget-labs-b7e6b", "appId": "1:9095230039:web:753fc132cb7212e7ed6912"});
+const auth = getAuth(app), db = getFirestore(app);
+const $ = id => document.getElementById(id);
+async function inflate(b64) {
+  const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+  const ds = new DecompressionStream("gzip");
+  const stream = new Blob([bytes]).stream().pipeThrough(ds);
+  return await new Response(stream).text();
+}
+async function load(user) {
+  $("msg").textContent = "Signed in as " + user.email + " - loading...";
+  try {
+    const snap = await getDoc(doc(db, "inventory", "sheet"));
+    if (!snap.exists()) throw new Error("nothing published yet");
+    const d = snap.data();
+    const page = await inflate(d.html_gz);
+    const csv = d.csv_gz ? await inflate(d.csv_gz) : null;
+    document.open(); document.write(page); document.close();
+    const bar = document.createElement("div");
+    bar.style.cssText = "position:fixed;top:8px;right:8px;display:flex;gap:8px;font:12px system-ui;z-index:9";
+    if (csv) {
+      const a = document.createElement("a"); a.textContent = "listings.csv";
+      a.href = URL.createObjectURL(new Blob([csv], {type: "text/csv"})); a.download = "listings.csv"; bar.appendChild(a);
+    }
+    const o = document.createElement("button"); o.textContent = "Sign out"; o.onclick = () => signOut(auth).then(() => location.reload());
+    bar.appendChild(o); document.body.appendChild(bar);
+  } catch (e) {
+    $("msg").textContent = "Signed in as " + user.email + ".";
+    $("err").textContent = (e.code === "permission-denied") ? "This account is not on the allowlist." : ("Could not load: " + e.message);
+    $("out").hidden = false; $("in").hidden = true;
+  }
+}
+$("in").onclick = () => signInWithPopup(auth, new GoogleAuthProvider()).catch(e => $("err").textContent = e.message);
+$("out").onclick = () => signOut(auth).then(() => location.reload());
+onAuthStateChanged(auth, u => { if (u) load(u); });
+</script></body></html>
