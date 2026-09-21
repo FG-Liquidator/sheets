@@ -36,18 +36,6 @@
   "published": "2026-09-20T18:47+00:00"
  },
  {
-  "id": 767801,
-  "name": "Brighton S. Hacker Rd. Online Estate Auction",
-  "house": "Deal Auction Group LLC.",
-  "city": "Brighton, MI",
-  "closes": "2026-09-22T19:00:00",
-  "bp": "18%",
-  "lots": 885,
-  "valued": 58,
-  "lots_to_bid": 0,
-  "published": "2026-09-20T18:47+00:00"
- },
- {
   "id": 777032,
   "name": "KJs Needful Things (Harpers Auction House) 9/21",
   "house": "KJs Needful Things",
@@ -58,5 +46,17 @@
   "valued": 59,
   "lots_to_bid": 4,
   "published": "2026-09-21T20:22+00:00"
+ },
+ {
+  "id": 767801,
+  "name": "Brighton S. Hacker Rd. Online Estate Auction",
+  "house": "Deal Auction Group LLC.",
+  "city": "Brighton, MI",
+  "closes": "2026-09-22T19:00:00",
+  "bp": "18%",
+  "lots": 885,
+  "valued": 59,
+  "lots_to_bid": 0,
+  "published": "2026-09-21T23:23+00:00"
  }
 ]
