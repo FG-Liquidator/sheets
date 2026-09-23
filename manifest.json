@@ -72,18 +72,6 @@
   "published": "2026-09-23T00:29+00:00"
  },
  {
-  "id": 778559,
-  "name": "Vinyl Record Auction #71 (9/23)",
-  "house": "Neils Online Auctions",
-  "city": "Holly, MI",
-  "closes": "2026-09-23T19:30:00",
-  "bp": "3%",
-  "lots": 373,
-  "valued": 15,
-  "lots_to_bid": 0,
-  "published": "2026-09-23T00:44+00:00"
- },
- {
   "id": 774379,
   "name": "Plymouth Eaton Dr. Phase 2 Estate Auction",
   "house": "Deal Auction Group LLC.",
@@ -94,5 +82,17 @@
   "valued": 20,
   "lots_to_bid": 1,
   "published": "2026-09-23T00:46+00:00"
+ },
+ {
+  "id": 778559,
+  "name": "Vinyl Record Auction #71 (9/23)",
+  "house": "Neils Online Auctions",
+  "city": "Holly, MI",
+  "closes": "2026-09-23T19:30:00",
+  "bp": "3%",
+  "lots": 373,
+  "valued": 35,
+  "lots_to_bid": 0,
+  "published": "2026-09-23T02:02+00:00"
  }
 ]
