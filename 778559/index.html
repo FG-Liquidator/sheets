@@ -1,0 +1,770 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Vinyl Record Auction #71 (9/23)</title>
+<meta name="description" content="Bid sheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+:root {
+  --bg:#F2F4F1; --bg-2:#E8ECE8; --ink:#1B211E; --ink-2:#4E5853; --ink-3:#7A847F; --line:#D3D9D4;
+  --ours:#B4650C; --ours-bg:#F6E8D6; --link:#1F6F52; --metal:#4A5B6B; --metal-bg:#E1E7EC;
+  --p1:#1F6F52; --p2:#3C7D63; --p3:#6E8A7C; --p4:#9AA69F; --out:#8A9490;
+  --conf-high:#1F6F52; --conf-med:#8A6D1F; --conf-low:#9E4A3B;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg:#161A18; --bg-2:#1F2521; --ink:#E6EAE6; --ink-2:#B3BBB5; --ink-3:#7F8985; --line:#2E3733;
+  --ours:#E4A052; --ours-bg:#33271A; --link:#6FC29C; --metal:#9FB2C2; --metal-bg:#25303A;
+  --p1:#6FC29C; --p2:#5FA986; --p3:#7F9C8E; --p4:#5F6C66; --out:#6A7570;
+  --conf-high:#6FC29C; --conf-med:#D6B25A; --conf-low:#E08A78;
+} }
+:root[data-theme="dark"] {
+  --bg:#161A18; --bg-2:#1F2521; --ink:#E6EAE6; --ink-2:#B3BBB5; --ink-3:#7F8985; --line:#2E3733;
+  --ours:#E4A052; --ours-bg:#33271A; --link:#6FC29C; --metal:#9FB2C2; --metal-bg:#25303A;
+  --p1:#6FC29C; --p2:#5FA986; --p3:#7F9C8E; --p4:#5F6C66; --out:#6A7570;
+  --conf-high:#6FC29C; --conf-med:#D6B25A; --conf-low:#E08A78;
+}
+* { box-sizing:border-box }
+body { background:var(--bg); color:var(--ink); font:16px/1.45 "Source Sans 3", "Segoe UI", system-ui, sans-serif; margin:0; font-variant-numeric:tabular-nums }
+a { color:var(--link) }
+a:focus-visible, button:focus-visible { outline:2px solid var(--ours); outline-offset:2px }
+.wrap { max-width:860px; margin:0 auto; padding:16px 14px 64px }
+h1,h2,h3,.lotno,.chip,.lbl,.count { font-family:"Barlow Condensed", "Arial Narrow", sans-serif }
+h1 { font-size:30px; font-weight:700; line-height:1.05; margin:0 0 6px; text-wrap:balance }
+.meta { color:var(--ink-2); font-size:15px; display:flex; flex-wrap:wrap; gap:6px 16px; margin:0 0 12px }
+.stamp { font-family:"Barlow Condensed", sans-serif; font-size:15px; color:var(--ours); margin:0 0 6px; letter-spacing:.02em }
+.strip { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); margin:0 0 8px }
+.strip div { background:var(--bg-2); padding:8px 10px }
+.strip .lbl { display:block; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3) }
+.strip .val { font-size:20px; font-weight:600; font-family:"Barlow Condensed", sans-serif }
+.trip { font-size:14px; color:var(--ink-2); margin:8px 0 0 }
+nav { position:sticky; top:0; background:var(--bg); border-bottom:1px solid var(--line); display:flex; gap:14px; padding:10px 0; margin:12px 0 4px; overflow-x:auto; z-index:2 }
+nav a { font-family:"Barlow Condensed", sans-serif; font-weight:600; font-size:16px; text-decoration:none; color:var(--ink-2); white-space:nowrap }
+section { margin:22px 0 0 }
+h2 { font-size:24px; font-weight:600; margin:0 0 2px; display:flex; align-items:baseline; gap:8px }
+.count { font-size:15px; color:var(--ink-3); font-weight:500 }
+.blurb { margin:0 0 10px; color:var(--ink-2); font-size:15px; max-width:65ch }
+.lot { padding:14px 0; border-top:1px solid var(--line) }
+.head { display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-bottom:2px }
+.lotno { font-weight:700; font-size:18px }
+.chip { font-size:12px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; padding:2px 7px; border-radius:2px; color:#fff; background:var(--out) }
+.pri-P1 .chip.pri { background:var(--p1) } .pri-P2 .chip.pri { background:var(--p2) } .pri-P3 .chip.pri { background:var(--p3) } .pri-P4 .chip.pri { background:var(--p4) }
+.chip.metal { background:var(--metal-bg); color:var(--metal) }
+.chip.conf { background:transparent; border:1px solid currentColor } .conf-high { color:var(--conf-high) } .conf-med { color:var(--conf-med) } .conf-low { color:var(--conf-low) }
+h3 { font-size:19px; font-weight:600; margin:0 0 8px; line-height:1.15 }
+h3 a { color:var(--ink); text-decoration:none } h3 a:hover { text-decoration:underline }
+.nums { display:grid; grid-template-columns:repeat(3,1fr); gap:6px 10px; margin:0 0 8px }
+.num { display:flex; flex-direction:column }
+.num .lbl { font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3) }
+.num .val { font-size:18px; font-weight:600 } .num .val small { font-size:13px; font-weight:400; color:var(--ink-2) } .num .val.plan { font-size:15px; font-weight:400 }
+.num.ours .val { color:var(--ours); font-family:"Barlow Condensed", sans-serif; font-size:26px; font-weight:700; background:var(--ours-bg); padding:0 6px; display:inline-block; width:max-content }
+.notes { margin:0 0 6px; font-size:15px; color:var(--ink-2); max-width:70ch }
+.units { font-size:14px; color:var(--ink-2); margin:0 0 6px; font-style:italic }
+.links { display:flex; gap:14px; font-size:14px; font-weight:600 }
+.pri-outbid, .pri-pass { opacity:.75 }
+.foot { margin-top:32px; color:var(--ink-3); font-size:13px; max-width:65ch }
+details { margin:8px 0 10px }
+summary { cursor:pointer; font-family:"Barlow Condensed", sans-serif; font-weight:600; font-size:15px; color:var(--ink-2); list-style:none; display:flex; align-items:center; gap:8px }
+summary::-webkit-details-marker { display:none }
+summary::before { content:"+"; display:inline-block; width:15px; height:15px; line-height:14px; text-align:center; border:1px solid var(--line); color:var(--ink-3); font-family:monospace }
+details[open] > summary::before { content:"2" }
+summary:hover { color:var(--link) }
+.method { font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3); font-weight:600 }
+.whybody { border-left:2px solid var(--line); padding:4px 0 2px 14px; margin:8px 0 0 7px; max-width:70ch }
+.whybody h4 { font-family:"Barlow Condensed", sans-serif; font-size:14px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3); margin:12px 0 3px; font-weight:600 }
+.whybody h4:first-child { margin-top:0 }
+.whybody p { margin:0; font-size:15px; color:var(--ink-2) }
+.whybody pre { font-size:12.5px; line-height:1.6; overflow-x:auto; background:var(--bg-2); padding:9px 11px; margin:0; color:var(--ink-2) }
+.kv { display:flex; justify-content:space-between; gap:16px; font-size:14px; padding:3px 0; border-bottom:1px dotted var(--line) }
+.kv span { color:var(--ink-3) } .kv b { font-weight:600; text-align:right }
+.warn { color:var(--conf-low) !important; font-weight:600 }
+.kv b.ok { color:var(--conf-high) } .kv b.no { color:var(--ink-3) }
+.num.ours .sub { display:block; font-size:12px; color:var(--ink-2); font-weight:400; margin-top:2px; font-family:"Source Sans 3", sans-serif }
+.strip .val small { font-size:13px; font-weight:400; color:var(--ink-3) }
+.pri-volume .chip.pri { background:var(--metal-bg); color:var(--metal) }
+details.logic { background:var(--bg-2); padding:10px 12px; margin:14px 0 0 }
+@media (max-width:480px) { .nums { grid-template-columns:repeat(2,1fr) } }
+@media (prefers-reduced-motion: no-preference) { nav a { transition:color .15s } }
+</style>
+</head><body><div class="wrap">
+<h1>Vinyl Record Auction #71 (9/23)</h1>
+<p class="stamp">Bids &amp; counts as of <b>Tue Sep 22, 8:01 PM</b> ET (23.5 h before close) &middot; valuations last edited Tue Sep 22, 8:30 PM &middot; sheet built Tue Sep 22, 8:30 PM</p>
+<p class="meta"><span>Neils Online Auctions</span><span>Holly, MI 48442</span><span>Closes 2026-09-23 19:30</span><span><a href="https://hibid.com/catalog/778559" target="_blank" rel="noopener">Catalog on HiBid</a></span></p>
+<div class="strip">
+  <div><span class="lbl">Buyer's premium</span><span class="val">3%</span></div>
+  <div><span class="lbl">Site</span><span class="val">ineligible · 32.6 mi</span></div>
+  <div><span class="lbl">Lots to bid</span><span class="val">0<small> +11 volume</small></span></div>
+  <div><span class="lbl">Valued / total</span><span class="val">15 / 373</span></div>
+  <div><span class="lbl">Silver · gold</span><span class="val">$66 · $4,370</span></div>
+</div>
+<p class="trip">Trip: 32.6 mi each way ≈ $117 (2.4 h incl. overhead, $30/h). Not included in the max hammers — decide per auction: P1–P3 lots: 0 · capital if you won them all at max: $0 · profit at max, all won: $0 → net of trip $-117. Each lot won at max is worth ~$0 against a $117 drive.</p>
+<p class="trip">Pickup: Thursday, Friday &amp; Saturday 10-4pm or by appointment.</p>
+<p class="trip">Resale certificate for this house: run <code>python3 -m lot_eval form3372 778559</code> on the workbench (kept local, never published).</p>
+
+<details class="logic">
+  <summary>Evaluation logic used for this sheet <span class="method">v2026-09-19.2</span></summary>
+  <div class="whybody">
+    <p class="warn">No live eBay comps. Values are the agent&#x27;s estimates; every lot carries a derivation and a comps link to validate.</p>
+    <h4>How the max hammer is computed</h4>
+    <pre>true_cost  = hammer x (1+bp) x (1+tax) + retrieval + churn
+retrieval  = 0 in pickup mode (the trip is a per-auction decision,
+             shown in the header); ship mode shares one box per invoice
+churn      = (list+pack minutes) x rate + materials
+             + storage x months + value x capital_rate x months
+net        = value x (1 - fee - promoted) - fee_fixed,   per listing
+floor      : profit &gt;= min_roi x true_cost
+             min_roi = base_roi + roi_per_month x months_to_sell   (capital lots)
+             min_roi = volume_roi                                  (volume lots: landed cost at max
+             under volume_capital_max - the wage inside churn is the return, ROI is a buffer)
+max_hammer = (net_after_churn / (1+min_roi) - retrieval) / ((1+bp)(1+tax))
+             capped at the capital ceiling
+floor_max  = melt x shop_payout / ((1+bp)(1+tax))
+             break-even if the exit is a metals buyer, not eBay</pre>
+    <h4>Margin</h4>
+    <div class="kv"><span>Base ROI, instant flip</span><b>30%</b></div>
+    <div class="kv"><span>Added per month to sell</span><b>10%</b></div>
+    <div class="kv"><span>Applied floors</span><b>fast 35% &middot; medium 45% &middot; slow 70%</b></div>
+    <div class="kv"><span>Capital ceiling per lot</span><b>$400</b></div>
+    <div class="kv"><span>Default value basis</span><b>value_low</b> </div>
+    <div class="kv"><span>Volume rule</span><b>landed cost &le; $75 &rarr; 10% over wage instead of the ROI floor</b></div>
+    <h4>Churn, per listing</h4>
+    <div class="kv"><span>Your time</span><b>$30/h</b></div>
+    <div class="kv"><span>List + pack, small item</span><b>8 + 5 min</b></div>
+    <div class="kv"><span>Materials, small item</span><b>$2</b></div>
+    <div class="kv"><span>Days to sell</span><b>fast 14 &middot; medium 45 &middot; slow 120</b></div>
+    <div class="kv"><span>Capital opportunity cost</span><b>20%/yr</b></div>
+    <h4>Selling &amp; buying costs</h4>
+    <div class="kv"><span>eBay fees</span><b>13.55% + 2% promoted + $0</b></div>
+    <div class="kv"><span>Buyer's premium</span><b>3% &mdash; parsed from &ldquo;buyers premium (3%&rdquo;</b></div>
+    <div class="kv"><span>Sales tax at pickup</span><b>6%</b></div>
+    <h4>Metals</h4>
+    <div class="kv"><span>Spot used</span><b>silver $66 &middot; gold $4,370 (2026-09-18)</b></div>
+    <div class="kv"><span>Shop payout assumed</span><b>silver 90% &middot; gold 95% &middot; sterling 80%</b></div>
+    <h4>How the values were reached</h4>
+    <div class="kv"><span>title only, from recall</span><b>15 lots</b></div>
+    <h4>What the agent actually looked at</h4>
+    <div class="kv"><span>Full-size photos opened</span><b>0 lots</b></div>
+    <div class="kv"><span>Thumbnail only</span><b>0 lots</b></div>
+    <div class="kv"><span>Title and description only</span><b>15 lots</b></div>
+    <h4>Criteria in force</h4>
+    <div class="kv"><span>graded / certified collectibles</span><b>tier A &middot; S &middot; fast</b></div><div class="kv"><span>precious metal / bullion</span><b>tier A &middot; S &middot; fast</b></div><div class="kv"><span>media-mail-able: books, music, movies, games</span><b>tier A &middot; S &middot; fast</b></div><div class="kv"><span>raw coins, cards, comics, stamps</span><b>tier B &middot; S &middot; medium</b></div><div class="kv"><span>small collectibles that don&#x27;t spoil</span><b>tier B &middot; S &middot; medium</b></div><div class="kv"><span>branded tools and electronics</span><b>tier B &middot; M &middot; fast</b></div><div class="kv"><span>general antiques, art, decor — slow</span><b>tier C &middot; M &middot; slow</b></div><div class="kv"><span>bulky or perishable — skip</span><b>tier skip &middot; L &middot; slow</b></div>
+  </div>
+</details>
+<nav><a href="#bid">Bid these</a><a href="#metal">Metal</a><a href="#volume">Volume</a><a href="#outbid">Past our max</a><a href="#personal">Personal</a><a href="#pass">Pass</a></nav>
+
+
+
+<section id="volume">
+  <h2>Volume &mdash; store fillers <span class="count">11</span></h2>
+  <p class="blurb">Capital-light lots priced by the wage rule: the max is where the listing still pays your hourly rate (plus a small buffer), not a return on capital. Worth winning at their max to build eBay inventory; never worth chasing.</p>
+  
+<article class="lot pri-volume" id="lot-2437">
+  <div class="head">
+    <span class="lotno">Lot 2437</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/322523217" target="_blank" rel="noopener">Coltrane &amp; Quinichette - Cattin&#x27; - LP - VG</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$56</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$12<small> &middot; 9 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$55 / $95 / $160</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$13<small> &middot; $6 wage + $6</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">John Coltrane &amp; Paul Quinichette &#x27;Cattin&#x27;&#x27; - Prestige PRLP 7158, ORIGINAL mono pressing (yellow/black label, Bergenfield NJ address). Record VG, cover Fair. The find of this sale.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none - house grading relied on (Neils states grade, label, catalog no., pressing)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 record (or box set) per the house description</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>House states PRLP 7158 with the yellow/black Bergenfield labels - that address dates the original 1959 mono pressing, not a later NYC or Fantasy reissue. eBay/Discogs sold for original Bergenfield Prestige Coltrane titles: NM $250-450, VG+ $120-200, VG with a beat cover $50-120. L = VG vinyl and a Fair cover priced honestly; M = fair for the pressing; H = the vinyl plays better than VG suggests.</p>
+        <h4>Why med confidence</h4>
+        <p>med - the Bergenfield address is the whole thesis and the house stated it explicitly; the risk is the Fair cover (seam splits, possible ring wear) and VG vinyl noise, both of which are disclosed. Verify the deep groove and the RVG stamp in the dead wax at pickup - if both are there it is the first press and the top of the range.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$69</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/322523217" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=John+Coltrane+%26+Paul+Quinichette+%27Cattin%27%27&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=John+Coltrane+%26+Paul+Quinichette+%27Cattin%27%27&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-2474">
+  <div class="head">
+    <span class="lotno">Lot 2474</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/322523254" target="_blank" rel="noopener">Freddie Hubbard - The Baddest Hubbard - LP - VG+</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$19</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$6<small> &middot; 5 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $40 / $65</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$9<small> &middot; $6 wage + $2</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Freddie Hubbard &#x27;The Baddest Hubbard&#x27; - CTI 6047, WHITE LABEL PROMO &#x27;Radio Station Copy&#x27;, gatefold, 1972. VG+/VG+.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none - house grading relied on (Neils states grade, label, catalog no., pressing)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 record (or box set) per the house description</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>House states white-label promo, gatefold, CTI 6047, Motown-distributed 1972. CTI promos sell above stock copies: Discogs/eBay $25-70 for VG+ promo copies of this compilation.</p>
+        <h4>Why med confidence</h4>
+        <p>med - Neils states record/cover grade, label, catalog number and pressing details in every description (a record specialist), so the house data stands in for the photo per the value-lots skill; CTI covers commonly have ring wear the grade may be generous about.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$24</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/322523254" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=Freddie+Hubbard+%27The+Baddest+Hubbard%27&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Freddie+Hubbard+%27The+Baddest+Hubbard%27&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-2353">
+  <div class="head">
+    <span class="lotno">Lot 2353</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/322523133" target="_blank" rel="noopener">Various Artists - The Soul of Jazz 1961 - LP - VG+</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$16</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$3<small> &middot; 3 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$20 / $35 / $55</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$8<small> &middot; $6 wage + $2</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Various &#x27;The Soul of Jazz 1961&#x27; - Riverside RLP S-5 sampler, blue microgroove labels: Monk, Wes Montgomery, Bill Evans, Cannonball. VG+/VG.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none - house grading relied on (Neils states grade, label, catalog no., pressing)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 record (or box set) per the house description</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>House states Riverside RLP S-5, Bill Grauer Productions NYC, blue microgroove labels = early-60s original. Riverside samplers with a Monk/Evans/Montgomery lineup sell $20-55.</p>
+        <h4>Why med confidence</h4>
+        <p>med - Neils states record/cover grade, label, catalog number and pressing details in every description (a record specialist), so the house data stands in for the photo per the value-lots skill.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$20</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/322523133" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=Various+%27The+Soul+of+Jazz+1961%27&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Various+%27The+Soul+of+Jazz+1961%27&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-2251">
+  <div class="head">
+    <span class="lotno">Lot 2251</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/322523087" target="_blank" rel="noopener">The Beatles - Beatles &#x27;65 - LP - VG</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$12</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$3<small> &middot; 2 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$18 / $30 / $50</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$8<small> &middot; $6 wage + $1</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">The Beatles &#x27;Beatles &#x27;65&#x27; - Capitol T-2228 MONO, rainbow rim label. Record VG, cover G.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none - house grading relied on (Neils states grade, label, catalog no., pressing)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 record (or box set) per the house description</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>House states T-2228 mono with the rainbow-rim Capitol label. Mono Beatles Capitol LPs sell above stereo: VG copies $20-50 depending on the cover.</p>
+        <h4>Why med confidence</h4>
+        <p>med - Neils states record/cover grade, label, catalog number and pressing details in every description (a record specialist), so the house data stands in for the photo per the value-lots skill; a G cover on a Beatles LP is the usual ring-wear/split, disclosed.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$16</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/322523087" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=The+Beatles+%27Beatles+%2765%27&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=The+Beatles+%27Beatles+%2765%27&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-2354">
+  <div class="head">
+    <span class="lotno">Lot 2354</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/322523134" target="_blank" rel="noopener">Various - Jazz Odyssey Vol 1 - 3xLP - VG+</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$10</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$2<small> &middot; 5 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$18 / $30 / $45</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$8<small> &middot; $6 wage + $1</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Various &#x27;Jazz Odyssey Vol 1: The Sound of New Orleans 1917-1947&#x27; - Columbia C3L 30, MONO 3-LP box. VG+/VG+ with marker on the labels.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none - house grading relied on (Neils states grade, label, catalog no., pressing)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 record (or box set) per the house description</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>House states C3L 30 mono 3-LP box with light box wear and marker on labels. These sell $20-45 complete with the booklet.</p>
+        <h4>Why med confidence</h4>
+        <p>med - Neils states record/cover grade, label, catalog number and pressing details in every description (a record specialist), so the house data stands in for the photo per the value-lots skill; the booklet&#x27;s presence was not stated and it is a third of the value.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$13</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/322523134" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=Various+%27Jazz+Odyssey+Vol+1%3A+The+Sound+of+New+Orle&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Various+%27Jazz+Odyssey+Vol+1%3A+The+Sound+of+New+Orle&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-2362">
+  <div class="head">
+    <span class="lotno">Lot 2362</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/322523142" target="_blank" rel="noopener">The Monkees - The Monkees - Mono LP - VG+</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$9</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$5<small> &middot; 4 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$15 / $25 / $40</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$8<small> &middot; $6 wage + $1</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">The Monkees s/t debut - Colgems COM-101 MONO. Record VG+, cover Fair (edge splits, tearing).</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none - house grading relied on (Neils states grade, label, catalog no., pressing)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 record (or box set) per the house description</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>House states COM-101 mono, cover F with splits. Mono Monkees debut in VG+ vinyl sells $20-45; the cover caps it.</p>
+        <h4>Why med confidence</h4>
+        <p>med - Neils states record/cover grade, label, catalog number and pressing details in every description (a record specialist), so the house data stands in for the photo per the value-lots skill; the cover is honestly graded F, which is the discount.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$11</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/322523142" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=The+Monkees+s%2Ft+debut&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=The+Monkees+s%2Ft+debut&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-2284">
+  <div class="head">
+    <span class="lotno">Lot 2284</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/322523120" target="_blank" rel="noopener">Willie Hutch - Fully Exposed - LP - [G]</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$7</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$0<small> &middot; 0 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$15 / $25 / $45</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$7<small> &middot; $6 wage + $1</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Willie Hutch &#x27;Fully Exposed&#x27; - Motown M 784V1-DJ, PROMO &#x27;DJ Copy Not For Sale&#x27;, 1973. Record G, cover G with tearing. Sought-after Motown funk/soul.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none - house grading relied on (Neils states grade, label, catalog no., pressing)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 record (or box set) per the house description</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>House states the DJ promo labels and cover stamp, heavy wear both. Hutch&#x27;s Motown LPs are collected by funk buyers: NM $60-120, G promo copies still $15-45 because the title is hard to find at all.</p>
+        <h4>Why med confidence</h4>
+        <p>med - Neils states record/cover grade, label, catalog number and pressing details in every description (a record specialist), so the house data stands in for the photo per the value-lots skill; G vinyl means audible noise - sell to a collector who wants the pressing, not a listener.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$9</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/322523120" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=Willie+Hutch+%27Fully+Exposed%27&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Willie+Hutch+%27Fully+Exposed%27&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-2355">
+  <div class="head">
+    <span class="lotno">Lot 2355</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/322523135" target="_blank" rel="noopener">Various Artists - The Motown Story - 5xLP - VG+</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$7</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$4<small> &middot; 3 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$15 / $25 / $38</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$7<small> &middot; $6 wage + $1</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">&#x27;Come And Get These Memories - The Motown Story&#x27; - Columbia House 5P 7292, 5-LP box, 1981. VG+/VG+.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none - house grading relied on (Neils states grade, label, catalog no., pressing)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 record (or box set) per the house description</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>House states the 5-LP Columbia House box. Sells $15-40 complete.</p>
+        <h4>Why med confidence</h4>
+        <p>med - Neils states record/cover grade, label, catalog number and pressing details in every description (a record specialist), so the house data stands in for the photo per the value-lots skill.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$9</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/322523135" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=%27Come+And+Get+These+Memories&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=%27Come+And+Get+These+Memories&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-2356">
+  <div class="head">
+    <span class="lotno">Lot 2356</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/322523136" target="_blank" rel="noopener">Isaac Hayes - Hot Buttered Soul - LP - VG+</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$4<small> &middot; 5 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$12 / $20 / $32</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$7<small> &middot; $6 wage + $1</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Isaac Hayes &#x27;Hot Buttered Soul&#x27; - Stax STX-4114 (Fantasy-distributed reissue). VG+/VG with a name written on the label.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none - house grading relied on (Neils states grade, label, catalog no., pressing)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 record (or box set) per the house description</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>House states STX-4114, Fantasy/Berkeley = a 1970s-80s reissue, not the 1969 Enterprise original. Reissue copies sell $12-30.</p>
+        <h4>Why med confidence</h4>
+        <p>med - Neils states record/cover grade, label, catalog number and pressing details in every description (a record specialist), so the house data stands in for the photo per the value-lots skill; the Fantasy address rules out the valuable original, so this is priced as the reissue it is.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$7</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/322523136" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=Isaac+Hayes+%27Hot+Buttered+Soul%27&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Isaac+Hayes+%27Hot+Buttered+Soul%27&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-2265">
+  <div class="head">
+    <span class="lotno">Lot 2265</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/322523101" target="_blank" rel="noopener">Arthur Lyman - Love For Sale! - LP - VG+</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$4</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$0<small> &middot; 0 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$12 / $20 / $32</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$7<small> &middot; $6 wage + $0</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Arthur Lyman Group &#x27;Love For Sale!&#x27; - Life Series/HiFi SL-1009 stereo exotica. VG+/VG+.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none - house grading relied on (Neils states grade, label, catalog no., pressing)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 record (or box set) per the house description</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>House states HiFi Records Hollywood SL-1009. Exotica has a steady tiki-revival market: $12-35.</p>
+        <h4>Why med confidence</h4>
+        <p>med - Neils states record/cover grade, label, catalog number and pressing details in every description (a record specialist), so the house data stands in for the photo per the value-lots skill.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$5</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/322523101" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=Arthur+Lyman+Group+%27Love+For+Sale%21%27&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Arthur+Lyman+Group+%27Love+For+Sale%21%27&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-2264">
+  <div class="head">
+    <span class="lotno">Lot 2264</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/322523100" target="_blank" rel="noopener">Millie Jackson - Live &amp; Uncensored - 2xLP - VG+</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$4</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$0<small> &middot; 0 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$12 / $20 / $30</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$7<small> &middot; $6 wage + $0</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Millie Jackson &#x27;Live &amp; Uncensored&#x27; - Spring SP-2-6725 2xLP, 1979. VG+/VG+ with heavy marker on the front.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none - house grading relied on (Neils states grade, label, catalog no., pressing)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 record (or box set) per the house description</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>House states the double LP and the marker damage. Sells $12-30; the marker costs the top end.</p>
+        <h4>Why med confidence</h4>
+        <p>med - Neils states record/cover grade, label, catalog number and pressing details in every description (a record specialist), so the house data stands in for the photo per the value-lots skill.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$5</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/322523100" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=Millie+Jackson+%27Live+%26+Uncensored%27&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Millie+Jackson+%27Live+%26+Uncensored%27&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+</section>
+
+<section id="outbid">
+  <h2>Already past our max <span class="count">4</span></h2>
+  <p class="blurb">The room got there first. Listed so you can see what we passed on and why.</p>
+  
+<article class="lot pri-outbid" id="lot-2200">
+  <div class="head">
+    <span class="lotno">Lot 2200</span>
+    <span class="chip pri">Past our max</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/322523036" target="_blank" rel="noopener">The Beatles - 1962-1966 - 2xLP - VG+</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$4</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$4<small> &middot; 3 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$10 / $18 / $28</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$7<small> &middot; $6 wage + $1</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">The Beatles &#x27;1962-1966&#x27; (Red Album) - Capitol SKBO-3403, blue labels, gatefold. VG+/VG+ with handwriting on the front.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none - house grading relied on (Neils states grade, label, catalog no., pressing)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 record (or box set) per the house description</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>House states SKBO-3403 blue-label US pressing. Red Album sells $12-30; handwriting on the cover is the discount.</p>
+        <h4>Why med confidence</h4>
+        <p>med - Neils states record/cover grade, label, catalog number and pressing details in every description (a record specialist), so the house data stands in for the photo per the value-lots skill.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$6</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/322523036" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=The+Beatles+%271962-1966%27+%28Red+Album%29&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=The+Beatles+%271962-1966%27+%28Red+Album%29&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-2472">
+  <div class="head">
+    <span class="lotno">Lot 2472</span>
+    <span class="chip pri">Past our max</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/322523252" target="_blank" rel="noopener">Ahmad Jamal - &#x27;73 - LP - VG+</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$4</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$8<small> &middot; 6 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$12 / $20 / $32</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$7<small> &middot; $6 wage + $0</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Ahmad Jamal &#x27;&#x27;73&#x27; - 20th Century T-417, pop-art cover. VG+/VG+.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none - house grading relied on (Neils states grade, label, catalog no., pressing)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 record (or box set) per the house description</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>House states T-417. Jamal&#x27;s 70s electric period sells to the sample/jazz-funk crowd: $12-35.</p>
+        <h4>Why med confidence</h4>
+        <p>med - Neils states record/cover grade, label, catalog number and pressing details in every description (a record specialist), so the house data stands in for the photo per the value-lots skill.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$5</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/322523252" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=Ahmad+Jamal+%27%2773%27&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Ahmad+Jamal+%27%2773%27&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-2261">
+  <div class="head">
+    <span class="lotno">Lot 2261</span>
+    <span class="chip pri">Past our max</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/322523097" target="_blank" rel="noopener">Freddie Hubbard - High Blues Pressure - LP - VG+</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$2</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$9<small> &middot; 11 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$10 / $18 / $28</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$7<small> &middot; $6 wage + $0</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Freddie Hubbard &#x27;High Blues Pressure&#x27; - Atlantic SC 1501, 1970s reissue labels (75 Rockefeller Plaza). VG+/VG+ with marker on the cover.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none - house grading relied on (Neils states grade, label, catalog no., pressing)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 record (or box set) per the house description</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>House states the Rockefeller Plaza address = 1970s reissue, not the 1968 original. Reissues sell $10-30; the marker caps it.</p>
+        <h4>Why med confidence</h4>
+        <p>med - Neils states record/cover grade, label, catalog number and pressing details in every description (a record specialist), so the house data stands in for the photo per the value-lots skill; the address rules out the original.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$4</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/322523097" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=Freddie+Hubbard+%27High+Blues+Pressure%27&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=Freddie+Hubbard+%27High+Blues+Pressure%27&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-2365">
+  <div class="head">
+    <span class="lotno">Lot 2365</span>
+    <span class="chip pri">Past our max</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/322523145" target="_blank" rel="noopener">The Yardbirds - Shapes of Things - 2xLP - VG+</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$1</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$5<small> &middot; 4 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$10 / $16 / $26</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$7<small> &middot; $6 wage + $0</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">The Yardbirds &#x27;Shapes of Things&#x27; - Bomb Records BOMB 104.5, 2xLP gatefold, Canadian 1977. VG+/VG+.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none - house grading relied on (Neils states grade, label, catalog no., pressing)</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 record (or box set) per the house description</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>House states the Canadian Bomb pressing. A compilation, not an original album: $10-28.</p>
+        <h4>Why med confidence</h4>
+        <p>med - Neils states record/cover grade, label, catalog number and pressing details in every description (a record specialist), so the house data stands in for the photo per the value-lots skill.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$2</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/322523145" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=The+Yardbirds+%27Shapes+of+Things%27&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=The+Yardbirds+%27Shapes+of+Things%27&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+</section>
+
+
+<p class="foot">Estimates are the agent's from photos and category knowledge, not live eBay comps — use the Sold comps / Terapeak links to validate before bidding. Metal values use spot as of 2026-09-18. Your max = your HiBid watch notes. Generated by lot-eval.</p>
+</div>
+</body></html>

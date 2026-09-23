@@ -70,5 +70,17 @@
   "valued": 11,
   "lots_to_bid": 2,
   "published": "2026-09-23T00:29+00:00"
+ },
+ {
+  "id": 778559,
+  "name": "Vinyl Record Auction #71 (9/23)",
+  "house": "Neils Online Auctions",
+  "city": "Holly, MI",
+  "closes": "2026-09-23T19:30:00",
+  "bp": "3%",
+  "lots": 373,
+  "valued": 15,
+  "lots_to_bid": 0,
+  "published": "2026-09-23T00:30+00:00"
  }
 ]
