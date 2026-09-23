@@ -82,5 +82,17 @@
   "valued": 15,
   "lots_to_bid": 0,
   "published": "2026-09-23T00:44+00:00"
+ },
+ {
+  "id": 774379,
+  "name": "Plymouth Eaton Dr. Phase 2 Estate Auction",
+  "house": "Deal Auction Group LLC.",
+  "city": "plymouth, MI",
+  "closes": "2026-09-23T19:00:00",
+  "bp": "18%",
+  "lots": 1026,
+  "valued": 20,
+  "lots_to_bid": 1,
+  "published": "2026-09-23T00:46+00:00"
  }
 ]
