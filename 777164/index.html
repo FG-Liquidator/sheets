@@ -1,0 +1,422 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Sep. 23rd Online Consignment Auction --- Shipping Available</title>
+<meta name="description" content="Bid sheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+:root {
+  --bg:#F2F4F1; --bg-2:#E8ECE8; --ink:#1B211E; --ink-2:#4E5853; --ink-3:#7A847F; --line:#D3D9D4;
+  --ours:#B4650C; --ours-bg:#F6E8D6; --link:#1F6F52; --metal:#4A5B6B; --metal-bg:#E1E7EC;
+  --p1:#1F6F52; --p2:#3C7D63; --p3:#6E8A7C; --p4:#9AA69F; --out:#8A9490;
+  --conf-high:#1F6F52; --conf-med:#8A6D1F; --conf-low:#9E4A3B;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg:#161A18; --bg-2:#1F2521; --ink:#E6EAE6; --ink-2:#B3BBB5; --ink-3:#7F8985; --line:#2E3733;
+  --ours:#E4A052; --ours-bg:#33271A; --link:#6FC29C; --metal:#9FB2C2; --metal-bg:#25303A;
+  --p1:#6FC29C; --p2:#5FA986; --p3:#7F9C8E; --p4:#5F6C66; --out:#6A7570;
+  --conf-high:#6FC29C; --conf-med:#D6B25A; --conf-low:#E08A78;
+} }
+:root[data-theme="dark"] {
+  --bg:#161A18; --bg-2:#1F2521; --ink:#E6EAE6; --ink-2:#B3BBB5; --ink-3:#7F8985; --line:#2E3733;
+  --ours:#E4A052; --ours-bg:#33271A; --link:#6FC29C; --metal:#9FB2C2; --metal-bg:#25303A;
+  --p1:#6FC29C; --p2:#5FA986; --p3:#7F9C8E; --p4:#5F6C66; --out:#6A7570;
+  --conf-high:#6FC29C; --conf-med:#D6B25A; --conf-low:#E08A78;
+}
+* { box-sizing:border-box }
+body { background:var(--bg); color:var(--ink); font:16px/1.45 "Source Sans 3", "Segoe UI", system-ui, sans-serif; margin:0; font-variant-numeric:tabular-nums }
+a { color:var(--link) }
+a:focus-visible, button:focus-visible { outline:2px solid var(--ours); outline-offset:2px }
+.wrap { max-width:860px; margin:0 auto; padding:16px 14px 64px }
+h1,h2,h3,.lotno,.chip,.lbl,.count { font-family:"Barlow Condensed", "Arial Narrow", sans-serif }
+h1 { font-size:30px; font-weight:700; line-height:1.05; margin:0 0 6px; text-wrap:balance }
+.meta { color:var(--ink-2); font-size:15px; display:flex; flex-wrap:wrap; gap:6px 16px; margin:0 0 12px }
+.stamp { font-family:"Barlow Condensed", sans-serif; font-size:15px; color:var(--ours); margin:0 0 6px; letter-spacing:.02em }
+.strip { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); margin:0 0 8px }
+.strip div { background:var(--bg-2); padding:8px 10px }
+.strip .lbl { display:block; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3) }
+.strip .val { font-size:20px; font-weight:600; font-family:"Barlow Condensed", sans-serif }
+.trip { font-size:14px; color:var(--ink-2); margin:8px 0 0 }
+nav { position:sticky; top:0; background:var(--bg); border-bottom:1px solid var(--line); display:flex; gap:14px; padding:10px 0; margin:12px 0 4px; overflow-x:auto; z-index:2 }
+nav a { font-family:"Barlow Condensed", sans-serif; font-weight:600; font-size:16px; text-decoration:none; color:var(--ink-2); white-space:nowrap }
+section { margin:22px 0 0 }
+h2 { font-size:24px; font-weight:600; margin:0 0 2px; display:flex; align-items:baseline; gap:8px }
+.count { font-size:15px; color:var(--ink-3); font-weight:500 }
+.blurb { margin:0 0 10px; color:var(--ink-2); font-size:15px; max-width:65ch }
+.lot { padding:14px 0; border-top:1px solid var(--line) }
+.head { display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-bottom:2px }
+.lotno { font-weight:700; font-size:18px }
+.chip { font-size:12px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; padding:2px 7px; border-radius:2px; color:#fff; background:var(--out) }
+.pri-P1 .chip.pri { background:var(--p1) } .pri-P2 .chip.pri { background:var(--p2) } .pri-P3 .chip.pri { background:var(--p3) } .pri-P4 .chip.pri { background:var(--p4) }
+.chip.metal { background:var(--metal-bg); color:var(--metal) }
+.chip.conf { background:transparent; border:1px solid currentColor } .conf-high { color:var(--conf-high) } .conf-med { color:var(--conf-med) } .conf-low { color:var(--conf-low) }
+h3 { font-size:19px; font-weight:600; margin:0 0 8px; line-height:1.15 }
+h3 a { color:var(--ink); text-decoration:none } h3 a:hover { text-decoration:underline }
+.nums { display:grid; grid-template-columns:repeat(3,1fr); gap:6px 10px; margin:0 0 8px }
+.num { display:flex; flex-direction:column }
+.num .lbl { font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3) }
+.num .val { font-size:18px; font-weight:600 } .num .val small { font-size:13px; font-weight:400; color:var(--ink-2) } .num .val.plan { font-size:15px; font-weight:400 }
+.num.ours .val { color:var(--ours); font-family:"Barlow Condensed", sans-serif; font-size:26px; font-weight:700; background:var(--ours-bg); padding:0 6px; display:inline-block; width:max-content }
+.notes { margin:0 0 6px; font-size:15px; color:var(--ink-2); max-width:70ch }
+.units { font-size:14px; color:var(--ink-2); margin:0 0 6px; font-style:italic }
+.links { display:flex; gap:14px; font-size:14px; font-weight:600 }
+.pri-outbid, .pri-pass { opacity:.75 }
+.foot { margin-top:32px; color:var(--ink-3); font-size:13px; max-width:65ch }
+details { margin:8px 0 10px }
+summary { cursor:pointer; font-family:"Barlow Condensed", sans-serif; font-weight:600; font-size:15px; color:var(--ink-2); list-style:none; display:flex; align-items:center; gap:8px }
+summary::-webkit-details-marker { display:none }
+summary::before { content:"+"; display:inline-block; width:15px; height:15px; line-height:14px; text-align:center; border:1px solid var(--line); color:var(--ink-3); font-family:monospace }
+details[open] > summary::before { content:"2" }
+summary:hover { color:var(--link) }
+.method { font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3); font-weight:600 }
+.whybody { border-left:2px solid var(--line); padding:4px 0 2px 14px; margin:8px 0 0 7px; max-width:70ch }
+.whybody h4 { font-family:"Barlow Condensed", sans-serif; font-size:14px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3); margin:12px 0 3px; font-weight:600 }
+.whybody h4:first-child { margin-top:0 }
+.whybody p { margin:0; font-size:15px; color:var(--ink-2) }
+.whybody pre { font-size:12.5px; line-height:1.6; overflow-x:auto; background:var(--bg-2); padding:9px 11px; margin:0; color:var(--ink-2) }
+.kv { display:flex; justify-content:space-between; gap:16px; font-size:14px; padding:3px 0; border-bottom:1px dotted var(--line) }
+.kv span { color:var(--ink-3) } .kv b { font-weight:600; text-align:right }
+.warn { color:var(--conf-low) !important; font-weight:600 }
+.kv b.ok { color:var(--conf-high) } .kv b.no { color:var(--ink-3) }
+.num.ours .sub { display:block; font-size:12px; color:var(--ink-2); font-weight:400; margin-top:2px; font-family:"Source Sans 3", sans-serif }
+.strip .val small { font-size:13px; font-weight:400; color:var(--ink-3) }
+.pri-volume .chip.pri { background:var(--metal-bg); color:var(--metal) }
+details.logic { background:var(--bg-2); padding:10px 12px; margin:14px 0 0 }
+@media (max-width:480px) { .nums { grid-template-columns:repeat(2,1fr) } }
+@media (prefers-reduced-motion: no-preference) { nav a { transition:color .15s } }
+</style>
+</head><body><div class="wrap">
+<h1>Sep. 23rd Online Consignment Auction --- Shipping Available</h1>
+<p class="stamp">Bids &amp; counts as of <b>Tue Sep 22, 8:00 PM</b> ET (22.0 h before close) &middot; valuations last edited Tue Sep 22, 8:14 PM &middot; sheet built Tue Sep 22, 8:14 PM</p>
+<p class="meta"><span>Coughlin&#x27;s Auctions</span><span>Clinton Twp, MI 48035</span><span>Closes 2026-09-23 18:00</span><span><a href="https://hibid.com/catalog/777164" target="_blank" rel="noopener">Catalog on HiBid</a></span></p>
+<div class="strip">
+  <div><span class="lbl">Buyer's premium</span><span class="val">18%</span></div>
+  <div><span class="lbl">Site</span><span class="val">pickup · 11.9 mi</span></div>
+  <div><span class="lbl">Lots to bid</span><span class="val">2<small> +1 volume</small></span></div>
+  <div><span class="lbl">Valued / total</span><span class="val">6 / 538</span></div>
+  <div><span class="lbl">Silver · gold</span><span class="val">$66 · $4,370</span></div>
+</div>
+<p class="trip">Trip: 11.9 mi each way ≈ $52 (1.2 h incl. overhead, $30/h). Not included in the max hammers — decide per auction: P1–P3 lots: 2 · capital if you won them all at max: $149 · profit at max, all won: $85 → net of trip $33. Each lot won at max is worth ~$42 against a $52 drive.</p>
+<p class="trip">Pickup: Pickup times for this online auction are Thursday, Sep. 24th from 11am-6:30pm and Friday, Sep. 25th from 9:30am-4:30pm. 
+
+Pick Up Location: 35075 Forton Ct., Clinton Twp MI 48035</p>
+<p class="trip">Resale certificate for this house: run <code>python3 -m lot_eval form3372 777164</code> on the workbench (kept local, never published).</p>
+
+<details class="logic">
+  <summary>Evaluation logic used for this sheet <span class="method">v2026-09-19.2</span></summary>
+  <div class="whybody">
+    <p class="warn">No live eBay comps. Values are the agent&#x27;s estimates; every lot carries a derivation and a comps link to validate.</p>
+    <h4>How the max hammer is computed</h4>
+    <pre>true_cost  = hammer x (1+bp) x (1+tax) + retrieval + churn
+retrieval  = 0 in pickup mode (the trip is a per-auction decision,
+             shown in the header); ship mode shares one box per invoice
+churn      = (list+pack minutes) x rate + materials
+             + storage x months + value x capital_rate x months
+net        = value x (1 - fee - promoted) - fee_fixed,   per listing
+floor      : profit &gt;= min_roi x true_cost
+             min_roi = base_roi + roi_per_month x months_to_sell   (capital lots)
+             min_roi = volume_roi                                  (volume lots: landed cost at max
+             under volume_capital_max - the wage inside churn is the return, ROI is a buffer)
+max_hammer = (net_after_churn / (1+min_roi) - retrieval) / ((1+bp)(1+tax))
+             capped at the capital ceiling
+floor_max  = melt x shop_payout / ((1+bp)(1+tax))
+             break-even if the exit is a metals buyer, not eBay</pre>
+    <h4>Margin</h4>
+    <div class="kv"><span>Base ROI, instant flip</span><b>30%</b></div>
+    <div class="kv"><span>Added per month to sell</span><b>10%</b></div>
+    <div class="kv"><span>Applied floors</span><b>fast 35% &middot; medium 45% &middot; slow 70%</b></div>
+    <div class="kv"><span>Capital ceiling per lot</span><b>$400</b></div>
+    <div class="kv"><span>Default value basis</span><b>value_low</b> </div>
+    <div class="kv"><span>Volume rule</span><b>landed cost &le; $75 &rarr; 10% over wage instead of the ROI floor</b></div>
+    <h4>Churn, per listing</h4>
+    <div class="kv"><span>Your time</span><b>$30/h</b></div>
+    <div class="kv"><span>List + pack, small item</span><b>8 + 5 min</b></div>
+    <div class="kv"><span>Materials, small item</span><b>$2</b></div>
+    <div class="kv"><span>Days to sell</span><b>fast 14 &middot; medium 45 &middot; slow 120</b></div>
+    <div class="kv"><span>Capital opportunity cost</span><b>20%/yr</b></div>
+    <h4>Selling &amp; buying costs</h4>
+    <div class="kv"><span>eBay fees</span><b>13.55% + 2% promoted + $0</b></div>
+    <div class="kv"><span>Buyer's premium</span><b>18% &mdash; parsed from &ldquo;18% buyer&#x27;s premium&rdquo;</b></div>
+    <div class="kv"><span>Sales tax at pickup</span><b>6%</b></div>
+    <h4>Metals</h4>
+    <div class="kv"><span>Spot used</span><b>silver $66 &middot; gold $4,370 (2026-09-18)</b></div>
+    <div class="kv"><span>Shop payout assumed</span><b>silver 90% &middot; gold 95% &middot; sterling 80%</b></div>
+    <h4>How the values were reached</h4>
+    <div class="kv"><span>identified from photo</span><b>4 lots</b></div><div class="kv"><span>title only, from recall</span><b>2 lots</b></div>
+    <h4>What the agent actually looked at</h4>
+    <div class="kv"><span>Full-size photos opened</span><b>4 lots</b></div>
+    <div class="kv"><span>Thumbnail only</span><b>0 lots</b></div>
+    <div class="kv"><span>Title and description only</span><b>2 lots</b></div>
+    <h4>Criteria in force</h4>
+    <div class="kv"><span>graded / certified collectibles</span><b>tier A &middot; S &middot; fast</b></div><div class="kv"><span>precious metal / bullion</span><b>tier A &middot; S &middot; fast</b></div><div class="kv"><span>media-mail-able: books, music, movies, games</span><b>tier A &middot; S &middot; fast</b></div><div class="kv"><span>raw coins, cards, comics, stamps</span><b>tier B &middot; S &middot; medium</b></div><div class="kv"><span>small collectibles that don&#x27;t spoil</span><b>tier B &middot; S &middot; medium</b></div><div class="kv"><span>branded tools and electronics</span><b>tier B &middot; M &middot; fast</b></div><div class="kv"><span>general antiques, art, decor — slow</span><b>tier C &middot; M &middot; slow</b></div><div class="kv"><span>bulky or perishable — skip</span><b>tier skip &middot; L &middot; slow</b></div>
+  </div>
+</details>
+<nav><a href="#bid">Bid these</a><a href="#metal">Metal</a><a href="#volume">Volume</a><a href="#outbid">Past our max</a><a href="#personal">Personal</a><a href="#pass">Pass</a></nav>
+
+<section id="bid">
+  <h2>Bid these <span class="count">2</span></h2>
+  <p class="blurb">Where the edge is. Our max is the hammer that still clears the ROI floor after buyer's premium, tax and churn.</p>
+  
+<article class="lot pri-P1" id="lot-383">
+  <div class="head">
+    <span class="lotno">Lot 383</span>
+    <span class="chip pri">Bid hard</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/321853143" target="_blank" rel="noopener">Vintage Nakamichi CR-2A 2-Head Cassette Deck</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$80</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$71<small> &middot; 9 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$130 / $200 / $300</span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$46<small> &middot; 45% ROI on top of wage</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Nakamichi CR-2A 2-head cassette deck, powers on. Audiophile brand with a real following; the CR series is the late-80s budget Nak but still Nakamichi. Untested beyond power-on: belts are the usual failure.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>1 of 9 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 deck; front panel checked for missing controls</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photo 1: CR-2A front panel intact, all buttons and both knobs present, Dolby B/C and MPX filter, faceplate scuffed but unbroken; house says it powers on. eBay sold: CR-2A serviced/working $200-350; &#x27;powers on, untested&#x27; $120-200; for parts $60-90. L = sold as untested; M = plays and records after a belt kit (~$25 and an evening); H = fully serviced listing.</p>
+        <h4>Why med confidence</h4>
+        <p>med - identity and cosmetic state are clear, but transport function is unknown and 35-year-old belts are usually the problem; test a tape before choosing the listing tier. Heavy: budget $25 shipping.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>capital &mdash; 45% ROI floor (medium)</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$147</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/321853143" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=nakamichi+cr-2a+cassette+deck&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=nakamichi+cr-2a+cassette+deck&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-P2" id="lot-211">
+  <div class="head">
+    <span class="lotno">Lot 211</span>
+    <span class="chip pri">Bid</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/321852970" target="_blank" rel="noopener">Signed Bobby Orr, Gordie Howe &amp; Ken Dryden Books</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$69</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$16<small> &middot; 5 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$110 / $165 / $240</span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$39<small> &middot; 45% ROI on top of wage</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">3 signed hockey books, real provenance: Bobby Orr &#x27;Orr: My Story&#x27; with the publisher&#x27;s gold SIGNED COPY seal and a &#x27;#4&#x27; signature; Gordie AND Colleen Howe &#x27;and...Howe!&#x27; dual-signed in red, dated 1996, WITH the original Riverview signing-event ticket (Gibraltar Trade Center 12/8/1996) laid in; Ken Dryden &#x27;Home Game&#x27;. Sell the Orr and Howe separately.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>7 of 11 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>3 books; Orr and both Howe signatures read; signing ticket read</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photos 1-7: Orr&#x27;s gold &#x27;Signed Copy&#x27; publisher seal on the jacket plus the signature page with &#x27;#4&#x27; - publisher-authenticated signed editions are the trusted kind. The Howe carries a &#x27;Best Seller Autograph Guaranteed&#x27; seal, both Howe signatures in red (&#x27;Colleen Howe&#x27;, &#x27;Gordie Howe #9&#x27;, &#x27;Mr. Hockey&#x27;), personalised &#x27;To Robert&#x27;, dated 1996, and the event ticket that states Mr. and Mrs. Hockey personally autograph each copy purchased through the fundraiser. eBay sold: Orr publisher-signed &#x27;My Story&#x27; $50-100; Howe dual-signed with provenance $60-130 (personalisation costs ~25%); Dryden signed $20-40. L = each at the low end; M = Orr and Howe listed separately with the ticket photographed; H = a Detroit Howe collector.</p>
+        <h4>Why med confidence</h4>
+        <p>med - the Orr seal and the Howe event ticket are the two best forms of non-third-party provenance, so authenticity is not the risk; the personalisation to &#x27;Robert&#x27; caps the Howe, and Dryden&#x27;s signature was not shown in the photos I opened.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>capital &mdash; 45% ROI floor (medium)</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$126</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/321852970" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=bobby+orr+my+story+signed+copy+book&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=bobby+orr+my+story+signed+copy+book&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+</section>
+
+
+<section id="volume">
+  <h2>Volume &mdash; store fillers <span class="count">1</span></h2>
+  <p class="blurb">Capital-light lots priced by the wage rule: the max is where the listing still pays your hourly rate (plus a small buffer), not a return on capital. Worth winning at their max to build eBay inventory; never worth chasing.</p>
+  
+<article class="lot pri-volume" id="lot-56">
+  <div class="head">
+    <span class="lotno">Lot 56</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/321852788" target="_blank" rel="noopener">1995 Disney Pixar Toy Story Deluxe Video Set</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$20</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$14<small> &middot; 8 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$35 / $55 / $90</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$14<small> &middot; $11 wage + $3</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Toy Story Exclusive Deluxe Video Edition (1995/96), silver embossed box, SEALED with the Disney Store sticker intact. The most collectible of the Masterpiece deluxe sets - first Pixar feature, lithographs + 3-D cel.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>1 of 6 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 sealed box set</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photo 1: shrink intact, Disney Store return-receipt sticker on the wrap, silver foil box clean. eBay sold for sealed Toy Story deluxe: $35-90 (unsealed $15-25). L = shrink is loose/torn on inspection; M = sealed as shown; H = a Pixar collector.</p>
+        <h4>Why med confidence</h4>
+        <p>med - seal looks intact in the photo but shrink tears hide at the seams; the box corners cannot be checked from the front shot.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$28</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/321852788" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=toy+story+exclusive+deluxe+video+edition+sealed&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=toy+story+exclusive+deluxe+video+edition+sealed&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+</section>
+
+<section id="outbid">
+  <h2>Already past our max <span class="count">2</span></h2>
+  <p class="blurb">The room got there first. Listed so you can see what we passed on and why.</p>
+  
+<article class="lot pri-outbid" id="lot-53">
+  <div class="head">
+    <span class="lotno">Lot 53</span>
+    <span class="chip pri">Past our max</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/321852785" target="_blank" rel="noopener">1995 Disney Masterpiece Lion King Deluxe Video Set</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$11</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$17<small> &middot; 7 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $40 / $65</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$12<small> &middot; $11 wage + $1</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">The Lion King Masterpiece Exclusive Deluxe Video Edition (1995), sealed: feature + Making Of tape, 6 lithographs, commemorative epigraph.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>1 of 6 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 sealed box set</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photo 1: shrink intact over the full box, contents list legible on the front banner. eBay sold sealed: $25-65. L/M/H as for the Toy Story set but a larger print run.</p>
+        <h4>Why med confidence</h4>
+        <p>med - seal appears intact; corner crushing not visible from the front.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$15</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/321852785" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=lion+king+masterpiece+deluxe+video+edition+sealed&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=lion+king+masterpiece+deluxe+video+edition+sealed&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-23">
+  <div class="head">
+    <span class="lotno">Lot 23</span>
+    <span class="chip pri">Past our max</span>
+    
+    <span class="chip conf conf-low">low confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/321852755" target="_blank" rel="noopener">NIP Disney Snow White Deluxe VHS Box Set</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$2</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$10<small> &middot; 5 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $40 / $60</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$11<small> &middot; $11 wage + $0</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Snow White Deluxe VHS box set, new in package (stock #2921). Snow White is the strongest title of the Masterpiece deluxe line after Toy Story.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 box set per house</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>House says new in package, 12x16.5 in. eBay sold sealed Snow White deluxe: $25-60.</p>
+        <h4>Why low confidence</h4>
+        <p>low - photos not opened; &#x27;new in package&#x27; is the house&#x27;s word.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_low</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$3</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/321852755" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=snow+white+masterpiece+deluxe+video+edition+sealed&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=snow+white+masterpiece+deluxe+video+edition+sealed&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+</section>
+
+
+<section id="pass">
+  <h2>Pass <span class="count">1</span></h2>
+  <p class="blurb">Valued, but no hammer clears the floor.</p>
+  
+<article class="lot pri-pass" id="lot-51">
+  <div class="head">
+    <span class="lotno">Lot 51</span>
+    <span class="chip pri">Pass</span>
+    
+    <span class="chip conf conf-low">low confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/321852783" target="_blank" rel="noopener">‘95 Disney Masterpiece Pocahontas Deluxe Video Set</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$0</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$7<small> &middot; 3 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$18 / $28 / $45</span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$-8<small> &middot; 0% ROI on top of wage</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Pocahontas Masterpiece Deluxe Video Edition (1995), house says factory sealed: feature + Making Of, 4-print art portfolio.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">title only, from recall</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>none</b></div><div class="kv"><span>Condition assessed from photo</span><b class="no">&#10007;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 box set per house</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>House description states factory sealed and enumerates the contents. Pocahontas is the least-wanted of the 1995 deluxe sets: sealed $18-45.</p>
+        <h4>Why low confidence</h4>
+        <p>low - photos not opened; relying on the house&#x27;s &#x27;factory sealed&#x27;.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_low</b></div>
+        <div class="kv"><span>Rule applied</span><b>capital &mdash; 70% ROI floor (slow)</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$-8</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/321852783" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=pocahontas+deluxe+video+edition+sealed&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=pocahontas+deluxe+video+edition+sealed&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+</section>
+<p class="foot">Estimates are the agent's from photos and category knowledge, not live eBay comps — use the Sold comps / Terapeak links to validate before bidding. Metal values use spot as of 2026-09-18. Your max = your HiBid watch notes. Generated by lot-eval.</p>
+</div>
+</body></html>
