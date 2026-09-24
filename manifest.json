@@ -106,5 +106,17 @@
   "valued": 6,
   "lots_to_bid": 4,
   "published": "2026-09-24T05:08+00:00"
+ },
+ {
+  "id": 777599,
+  "name": "Literature and Vinyl Records Online Auction",
+  "house": "Patriot Wholesale Direct",
+  "city": "Lake Orion, MI",
+  "closes": "2026-09-27T19:00:00",
+  "bp": "18%",
+  "lots": 312,
+  "valued": 2,
+  "lots_to_bid": 0,
+  "published": "2026-09-24T15:22+00:00"
  }
 ]
