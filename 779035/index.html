@@ -1,0 +1,451 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>KJs Needful Things (Harpers Auction House) 9/28</title>
+<meta name="description" content="Bid sheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+:root {
+  --bg:#F2F4F1; --bg-2:#E8ECE8; --ink:#1B211E; --ink-2:#4E5853; --ink-3:#7A847F; --line:#D3D9D4;
+  --ours:#B4650C; --ours-bg:#F6E8D6; --link:#1F6F52; --metal:#4A5B6B; --metal-bg:#E1E7EC;
+  --p1:#1F6F52; --p2:#3C7D63; --p3:#6E8A7C; --p4:#9AA69F; --out:#8A9490;
+  --conf-high:#1F6F52; --conf-med:#8A6D1F; --conf-low:#9E4A3B;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg:#161A18; --bg-2:#1F2521; --ink:#E6EAE6; --ink-2:#B3BBB5; --ink-3:#7F8985; --line:#2E3733;
+  --ours:#E4A052; --ours-bg:#33271A; --link:#6FC29C; --metal:#9FB2C2; --metal-bg:#25303A;
+  --p1:#6FC29C; --p2:#5FA986; --p3:#7F9C8E; --p4:#5F6C66; --out:#6A7570;
+  --conf-high:#6FC29C; --conf-med:#D6B25A; --conf-low:#E08A78;
+} }
+:root[data-theme="dark"] {
+  --bg:#161A18; --bg-2:#1F2521; --ink:#E6EAE6; --ink-2:#B3BBB5; --ink-3:#7F8985; --line:#2E3733;
+  --ours:#E4A052; --ours-bg:#33271A; --link:#6FC29C; --metal:#9FB2C2; --metal-bg:#25303A;
+  --p1:#6FC29C; --p2:#5FA986; --p3:#7F9C8E; --p4:#5F6C66; --out:#6A7570;
+  --conf-high:#6FC29C; --conf-med:#D6B25A; --conf-low:#E08A78;
+}
+* { box-sizing:border-box }
+body { background:var(--bg); color:var(--ink); font:16px/1.45 "Source Sans 3", "Segoe UI", system-ui, sans-serif; margin:0; font-variant-numeric:tabular-nums }
+a { color:var(--link) }
+a:focus-visible, button:focus-visible { outline:2px solid var(--ours); outline-offset:2px }
+.wrap { max-width:860px; margin:0 auto; padding:16px 14px 64px }
+h1,h2,h3,.lotno,.chip,.lbl,.count { font-family:"Barlow Condensed", "Arial Narrow", sans-serif }
+h1 { font-size:30px; font-weight:700; line-height:1.05; margin:0 0 6px; text-wrap:balance }
+.meta { color:var(--ink-2); font-size:15px; display:flex; flex-wrap:wrap; gap:6px 16px; margin:0 0 12px }
+.stamp { font-family:"Barlow Condensed", sans-serif; font-size:15px; color:var(--ours); margin:0 0 6px; letter-spacing:.02em }
+.strip { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); margin:0 0 8px }
+.strip div { background:var(--bg-2); padding:8px 10px }
+.strip .lbl { display:block; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3) }
+.strip .val { font-size:20px; font-weight:600; font-family:"Barlow Condensed", sans-serif }
+.trip { font-size:14px; color:var(--ink-2); margin:8px 0 0 }
+nav { position:sticky; top:0; background:var(--bg); border-bottom:1px solid var(--line); display:flex; gap:14px; padding:10px 0; margin:12px 0 4px; overflow-x:auto; z-index:2 }
+nav a { font-family:"Barlow Condensed", sans-serif; font-weight:600; font-size:16px; text-decoration:none; color:var(--ink-2); white-space:nowrap }
+section { margin:22px 0 0 }
+h2 { font-size:24px; font-weight:600; margin:0 0 2px; display:flex; align-items:baseline; gap:8px }
+.count { font-size:15px; color:var(--ink-3); font-weight:500 }
+.blurb { margin:0 0 10px; color:var(--ink-2); font-size:15px; max-width:65ch }
+.lot { padding:14px 0; border-top:1px solid var(--line) }
+.head { display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-bottom:2px }
+.lotno { font-weight:700; font-size:18px }
+.chip { font-size:12px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; padding:2px 7px; border-radius:2px; color:#fff; background:var(--out) }
+.pri-P1 .chip.pri { background:var(--p1) } .pri-P2 .chip.pri { background:var(--p2) } .pri-P3 .chip.pri { background:var(--p3) } .pri-P4 .chip.pri { background:var(--p4) }
+.chip.metal { background:var(--metal-bg); color:var(--metal) }
+.chip.conf { background:transparent; border:1px solid currentColor } .conf-high { color:var(--conf-high) } .conf-med { color:var(--conf-med) } .conf-low { color:var(--conf-low) }
+h3 { font-size:19px; font-weight:600; margin:0 0 8px; line-height:1.15 }
+h3 a { color:var(--ink); text-decoration:none } h3 a:hover { text-decoration:underline }
+.nums { display:grid; grid-template-columns:repeat(3,1fr); gap:6px 10px; margin:0 0 8px }
+.num { display:flex; flex-direction:column }
+.num .lbl { font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3) }
+.num .val { font-size:18px; font-weight:600 } .num .val small { font-size:13px; font-weight:400; color:var(--ink-2) } .num .val.plan { font-size:15px; font-weight:400 }
+.num.ours .val { color:var(--ours); font-family:"Barlow Condensed", sans-serif; font-size:26px; font-weight:700; background:var(--ours-bg); padding:0 6px; display:inline-block; width:max-content }
+.notes { margin:0 0 6px; font-size:15px; color:var(--ink-2); max-width:70ch }
+.units { font-size:14px; color:var(--ink-2); margin:0 0 6px; font-style:italic }
+.links { display:flex; gap:14px; font-size:14px; font-weight:600 }
+.pri-outbid, .pri-pass { opacity:.75 }
+.foot { margin-top:32px; color:var(--ink-3); font-size:13px; max-width:65ch }
+details { margin:8px 0 10px }
+summary { cursor:pointer; font-family:"Barlow Condensed", sans-serif; font-weight:600; font-size:15px; color:var(--ink-2); list-style:none; display:flex; align-items:center; gap:8px }
+summary::-webkit-details-marker { display:none }
+summary::before { content:"+"; display:inline-block; width:15px; height:15px; line-height:14px; text-align:center; border:1px solid var(--line); color:var(--ink-3); font-family:monospace }
+details[open] > summary::before { content:"2" }
+summary:hover { color:var(--link) }
+.method { font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3); font-weight:600 }
+.whybody { border-left:2px solid var(--line); padding:4px 0 2px 14px; margin:8px 0 0 7px; max-width:70ch }
+.whybody h4 { font-family:"Barlow Condensed", sans-serif; font-size:14px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3); margin:12px 0 3px; font-weight:600 }
+.whybody h4:first-child { margin-top:0 }
+.whybody p { margin:0; font-size:15px; color:var(--ink-2) }
+.whybody pre { font-size:12.5px; line-height:1.6; overflow-x:auto; background:var(--bg-2); padding:9px 11px; margin:0; color:var(--ink-2) }
+.kv { display:flex; justify-content:space-between; gap:16px; font-size:14px; padding:3px 0; border-bottom:1px dotted var(--line) }
+.kv span { color:var(--ink-3) } .kv b { font-weight:600; text-align:right }
+.warn { color:var(--conf-low) !important; font-weight:600 }
+.kv b.ok { color:var(--conf-high) } .kv b.no { color:var(--ink-3) }
+.num.ours .sub { display:block; font-size:12px; color:var(--ink-2); font-weight:400; margin-top:2px; font-family:"Source Sans 3", sans-serif }
+.strip .val small { font-size:13px; font-weight:400; color:var(--ink-3) }
+.pri-volume .chip.pri { background:var(--metal-bg); color:var(--metal) }
+details.logic { background:var(--bg-2); padding:10px 12px; margin:14px 0 0 }
+@media (max-width:480px) { .nums { grid-template-columns:repeat(2,1fr) } }
+@media (prefers-reduced-motion: no-preference) { nav a { transition:color .15s } }
+</style>
+</head><body><div class="wrap">
+<h1>KJs Needful Things (Harpers Auction House) 9/28</h1>
+<p class="stamp">Bids &amp; counts as of <b>Wed Sep 23, 11:29 PM</b> ET (116.0 h before close) &middot; valuations last edited Thu Sep 24, 11:34 AM &middot; sheet built Thu Sep 24, 11:34 AM</p>
+<p class="meta"><span>KJs Needful Things</span><span>Madison Heights, MI 48071</span><span>Closes 2026-09-28 19:30</span><span><a href="https://hibid.com/catalog/779035" target="_blank" rel="noopener">Catalog on HiBid</a></span></p>
+<div class="strip">
+  <div><span class="lbl">Buyer's premium</span><span class="val">18%<small> card</small></span></div>
+  <div><span class="lbl">Site</span><span class="val">pickup · 1.9 mi</span></div>
+  <div><span class="lbl">Lots to bid</span><span class="val">3<small> +4 volume</small></span></div>
+  <div><span class="lbl">Valued / total</span><span class="val">7 / 567</span></div>
+  <div><span class="lbl">Silver · gold</span><span class="val">$66 · $4,370</span></div>
+</div>
+<p class="trip">Trip: 1.9 mi each way ≈ $21 (0.6 h incl. overhead, $30/h). Not included in the max hammers — decide per auction: P1–P3 lots: 3 · capital if you won them all at max: $261 · profit at max, all won: $148 → net of trip $127. Each lot won at max is worth ~$49 against a $21 drive.</p>
+<p class="trip">Pickup: Pickup days for this this auction are Thursday October 1st from 10am-6pm and Friday October 2nd from 8:30am-4:30pm.  Pickup location is 1100 E Mandoline Ave Suite 350, Madison Heights MI 48071.  We are located near the s</p>
+<p class="trip">Resale certificate for this house: run <code>python3 -m lot_eval form3372 779035</code> on the workbench (kept local, never published).</p>
+
+<details class="logic">
+  <summary>Evaluation logic used for this sheet <span class="method">v2026-09-19.2</span></summary>
+  <div class="whybody">
+    <p class="warn">No live eBay comps. Values are the agent&#x27;s estimates; every lot carries a derivation and a comps link to validate.</p>
+    <h4>How the max hammer is computed</h4>
+    <pre>true_cost  = hammer x (1+bp) x (1+tax) + retrieval + churn
+retrieval  = 0 in pickup mode (the trip is a per-auction decision,
+             shown in the header); ship mode shares one box per invoice
+churn      = (list+pack minutes) x rate + materials
+             + storage x months + value x capital_rate x months
+net        = value x (1 - fee - promoted) - fee_fixed,   per listing
+floor      : profit &gt;= min_roi x true_cost
+             min_roi = base_roi + roi_per_month x months_to_sell   (capital lots)
+             min_roi = volume_roi                                  (volume lots: landed cost at max
+             under volume_capital_max - the wage inside churn is the return, ROI is a buffer)
+max_hammer = (net_after_churn / (1+min_roi) - retrieval) / ((1+bp)(1+tax))
+             capped at the capital ceiling
+floor_max  = melt x shop_payout / ((1+bp)(1+tax))
+             break-even if the exit is a metals buyer, not eBay</pre>
+    <h4>Margin</h4>
+    <div class="kv"><span>Base ROI, instant flip</span><b>30%</b></div>
+    <div class="kv"><span>Added per month to sell</span><b>10%</b></div>
+    <div class="kv"><span>Applied floors</span><b>fast 35% &middot; medium 45% &middot; slow 70%</b></div>
+    <div class="kv"><span>Capital ceiling per lot</span><b>$400</b></div>
+    <div class="kv"><span>Default value basis</span><b>value_low</b> </div>
+    <div class="kv"><span>Volume rule</span><b>landed cost &le; $75 &rarr; 10% over wage instead of the ROI floor</b></div>
+    <h4>Churn, per listing</h4>
+    <div class="kv"><span>Your time</span><b>$30/h</b></div>
+    <div class="kv"><span>List + pack, small item</span><b>8 + 5 min</b></div>
+    <div class="kv"><span>Materials, small item</span><b>$2</b></div>
+    <div class="kv"><span>Days to sell</span><b>fast 14 &middot; medium 45 &middot; slow 120</b></div>
+    <div class="kv"><span>Capital opportunity cost</span><b>20%/yr</b></div>
+    <h4>Selling &amp; buying costs</h4>
+    <div class="kv"><span>eBay fees</span><b>13.55% + 2% promoted + $0</b></div>
+    <div class="kv"><span>Buyer's premium</span><b>18% on the card rate &mdash; parsed from &ldquo;18% buyer&#x27;s premium&rdquo;</b></div>
+    <div class="kv"><span>&nbsp;&nbsp;card / cash</span><b>18% card &middot; 18% cash</b></div>
+    <div class="kv"><span>Sales tax at pickup</span><b>6%</b></div>
+    <h4>Metals</h4>
+    <div class="kv"><span>Spot used</span><b>silver $66 &middot; gold $4,370 (2026-09-18)</b></div>
+    <div class="kv"><span>Shop payout assumed</span><b>silver 90% &middot; gold 95% &middot; sterling 80%</b></div>
+    <h4>How the values were reached</h4>
+    <div class="kv"><span>identified from photo</span><b>7 lots</b></div>
+    <h4>What the agent actually looked at</h4>
+    <div class="kv"><span>Full-size photos opened</span><b>7 lots</b></div>
+    <div class="kv"><span>Thumbnail only</span><b>0 lots</b></div>
+    <div class="kv"><span>Title and description only</span><b>0 lots</b></div>
+    <h4>Criteria in force</h4>
+    <div class="kv"><span>graded / certified collectibles</span><b>tier A &middot; S &middot; fast</b></div><div class="kv"><span>precious metal / bullion</span><b>tier A &middot; S &middot; fast</b></div><div class="kv"><span>media-mail-able: books, music, movies, games</span><b>tier A &middot; S &middot; fast</b></div><div class="kv"><span>raw coins, cards, comics, stamps</span><b>tier B &middot; S &middot; medium</b></div><div class="kv"><span>small collectibles that don&#x27;t spoil</span><b>tier B &middot; S &middot; medium</b></div><div class="kv"><span>branded tools and electronics</span><b>tier B &middot; M &middot; fast</b></div><div class="kv"><span>general antiques, art, decor — slow</span><b>tier C &middot; M &middot; slow</b></div><div class="kv"><span>bulky or perishable — skip</span><b>tier skip &middot; L &middot; slow</b></div>
+  </div>
+</details>
+<nav><a href="#bid">Bid these</a><a href="#metal">Metal</a><a href="#volume">Volume</a><a href="#outbid">Past our max</a><a href="#personal">Personal</a><a href="#pass">Pass</a></nav>
+
+<section id="bid">
+  <h2>Bid these <span class="count">3</span></h2>
+  <p class="blurb">Where the edge is. Our max is the hammer that still clears the ROI floor after buyer's premium, tax and churn.</p>
+  
+<article class="lot pri-P1" id="lot-349">
+  <div class="head">
+    <span class="lotno">Lot 349</span>
+    <span class="chip pri">Bid hard</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/322777251" target="_blank" rel="noopener">Complete Set Easton Press William Faulkner Novels</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$116</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$7<small> &middot; 2 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$170 / $280 / $420</span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$66<small> &middot; 45% ROI on top of wage</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">ELEVEN Easton Press William Faulkner volumes, 1992/1998: As I Lay Dying, The Unvanquished, The Reivers, Intruder in the Dust, Go Down Moses, Light in August, A Fable, The Sound and the Fury, Absalom Absalom, Collected Stories 1 and 2. Currently $7. Easton Press: full leather, gilt page edges, moire endpapers, sewn-in ribbon. They sell steadily to collectors who buy by author-set. Ship Media Mail but they are heavy - ~2 lb a volume.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>4 of 4 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>11 volumes counted and titled; copyright page read (Easton Press 1998)</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photos 1-4: eleven volumes counted against a ruler, spines read individually; boards show the gilt WF monogram; the copyright page reads &#x27;special contents (c) 1998 by Easton Press (MBI, Inc.), Norwalk, Connecticut&#x27;, archival paper. Leather is bright with no visible scuffing or sunning. eBay sold for Easton Press Faulkner: $25-45 a volume singly, $180-350 for a run of 10+. L = sold as one set at the bulk rate; M = fair for an 11-volume author set; H = split into singles for the named titles (Sound and the Fury, As I Lay Dying, Light in August carry the set).</p>
+        <h4>Why med confidence</h4>
+        <p>med - count, publisher, edition year and condition all confirmed from photos. The risk is spine sunning, which does not show in a flat-lit photo and is the usual Easton flaw; also 24 lb of books, so ship as a set rather than singles unless one title justifies it.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>capital &mdash; 45% ROI floor (medium)</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$212</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/322777251" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=easton+press+faulkner+leather+bound+set&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=easton+press+faulkner+leather+bound+set&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-P1" id="lot-348">
+  <div class="head">
+    <span class="lotno">Lot 348</span>
+    <span class="chip pri">Bid hard</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/322777250" target="_blank" rel="noopener">Easton Press John Steinbeck Novels</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$76</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$51<small> &middot; 2 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$120 / $190 / $290</span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$43<small> &middot; 45% ROI on top of wage</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">EIGHT Easton Press John Steinbeck volumes: Grapes of Wrath, East of Eden, Of Mice and Men, The Winter of Our Discontent, Tortilla Flat, Cannery Row, The Pearl/The Long Valley, The Red Pony. Navy leather with the red JS cartouche. Currently $51. Easton Press: full leather, gilt page edges, moire endpapers, sewn-in ribbon. They sell steadily to collectors who buy by author-set. Ship Media Mail but they are heavy - ~2 lb a volume.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>1 of 17 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>8 volumes counted and titled</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photo 1: eight volumes, seven upright with spines read plus The Red Pony laid flat showing the JS-diapered board. Uniform navy/red/gilt binding = one matched Steinbeck set. Steinbeck is a stronger seller than Faulkner. eBay sold: $30-50 a volume, $150-300 for a run of 8. L = bulk; M = fair; H = Grapes of Wrath and East of Eden pulled as singles.</p>
+        <h4>Why med confidence</h4>
+        <p>med - count, titles and matched binding confirmed. The house note mentions a 1968 Grapes of Wrath &#x27;reused edition&#x27; which I could not verify in the photo I opened; if one volume is a different printing it breaks the matched set slightly.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>capital &mdash; 45% ROI floor (medium)</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$138</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/322777250" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=easton+press+steinbeck+leather+bound+set&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=easton+press+steinbeck+leather+bound+set&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-P2" id="lot-346">
+  <div class="head">
+    <span class="lotno">Lot 346</span>
+    <span class="chip pri">Bid</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/322777248" target="_blank" rel="noopener">Easton Press The Great Military Command. Complete</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$69</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$14<small> &middot; 5 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$110 / $175 / $260</span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$39<small> &middot; 45% ROI on top of wage</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Easton Press &#x27;The Great Military Commanders&#x27; COMPLETE 7-volume set, all 1993: Caesar, Patton, Rommel, Lee I, Lee II, Napoleon, Wellington. Green leather, gilt. Currently $14. Easton Press: full leather, gilt page edges, moire endpapers, sewn-in ribbon. They sell steadily to collectors who buy by author-set. Ship Media Mail but they are heavy - ~2 lb a volume.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>1 of 8 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>7 volumes counted and titled from the spines</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photo 1: all seven spines read left to right, uniform green leather with matching gilt tooling and the series title on each - a complete matched set, which is what the market pays for. eBay sold: $20-40 a volume, $130-260 for the complete seven. L = bulk set price; M = fair complete; H = a military-history collector.</p>
+        <h4>Why med confidence</h4>
+        <p>med - completeness and uniformity confirmed from the photo; gilt is bright. Spine sunning and hinge condition not verifiable from one flat shot.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>capital &mdash; 45% ROI floor (medium)</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$126</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/322777248" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=easton+press+great+military+commanders+set&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=easton+press+great+military+commanders+set&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+</section>
+
+
+<section id="volume">
+  <h2>Volume &mdash; store fillers <span class="count">4</span></h2>
+  <p class="blurb">Capital-light lots priced by the wage rule: the max is where the listing still pays your hourly rate (plus a small buffer), not a return on capital. Worth winning at their max to build eBay inventory; never worth chasing.</p>
+  
+<article class="lot pri-volume" id="lot-357">
+  <div class="head">
+    <span class="lotno">Lot 357</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/322777259" target="_blank" rel="noopener">Franklin Library Gold Gilted Leather Tom Jones&amp;</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$43</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$5<small> &middot; 1 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$55 / $90 / $130</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$12<small> &middot; $6 wage + $5</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">FOUR Franklin Library blue leather volumes incl. Tom Jones (1980), Saint Augustine (1982), Tacitus. Gilt edges. Currently $5. Franklin Library: the other leather-bound subscription press. A tier below Easton on price but the same buyer. Gilt edges and full leather throughout.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>1 of 6 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>4 volumes counted; 2 titles read from the photo, rest from house</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photo 1: four volumes in matching blue full leather with differing gilt devices, two shown face-up with bright gilt page edges. Franklin Library at $18-40 each; four volumes = $70-160 as a group.</p>
+        <h4>Why med confidence</h4>
+        <p>med - count and condition confirmed; only two spines were legible in the photo I opened, so the fourth title is from the house description.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$60</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/322777259" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=franklin+library+leather+bound+lot&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=franklin+library+leather+bound+lot&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-352">
+  <div class="head">
+    <span class="lotno">Lot 352</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/322777254" target="_blank" rel="noopener">Franklin Library The Scarlet Letter 1979</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$34</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$6<small> &middot; 2 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$45 / $75 / $110</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$11<small> &middot; $6 wage + $4</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">THREE Franklin Library 1979 leather volumes: The Scarlet Letter (Hawthorne), Moby-Dick (Melville), The Decameron (Boccaccio). Black leather, heavy gilt. Currently $6. Franklin Library: the other leather-bound subscription press. A tier below Easton on price but the same buyer. Gilt edges and full leather throughout.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>1 of 7 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>3 volumes counted and titled</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photo 1: three volumes, spines read, black full leather with elaborate gilt tooling, gilt page edges visible. Franklin Library 1979 &#x27;Greatest Books&#x27; series sells $18-40 a volume; Moby-Dick and Scarlet Letter are the wanted titles.</p>
+        <h4>Why med confidence</h4>
+        <p>med - titles, publisher style and condition confirmed from the photo; gilt bright, no visible scuffing.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$48</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/322777254" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=franklin+library+leather+moby+dick+scarlet+letter&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=franklin+library+leather+moby+dick+scarlet+letter&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-359">
+  <div class="head">
+    <span class="lotno">Lot 359</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/322777261" target="_blank" rel="noopener">Voltaire Candide Franklin Library Gilt Pages &amp;more</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$32</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$5<small> &middot; 1 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$45 / $70 / $105</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$11<small> &middot; $6 wage + $4</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">THREE Franklin Library green leather volumes: Plato Selected Dialogues (1983), Voltaire Candide (1979), Chaucer Canterbury Tales. Currently $5. Franklin Library: the other leather-bound subscription press. A tier below Easton on price but the same buyer. Gilt edges and full leather throughout.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>1 of 4 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>3 volumes counted and titled</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photo 1: three spines read directly - Plato, Candide, Canterbury Tales - green and black full leather with gilt. Franklin Library $18-40 each.</p>
+        <h4>Why med confidence</h4>
+        <p>med - all three titles read from the photo; condition looks clean with bright gilt.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$44</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/322777261" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=franklin+library+leather+plato+candide+chaucer&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=franklin+library+leather+plato+candide+chaucer&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-361">
+  <div class="head">
+    <span class="lotno">Lot 361</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/322777263" target="_blank" rel="noopener">Franklin Library Tales From The Arabian Nights</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$32</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$5<small> &middot; 1 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$45 / $70 / $105</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$11<small> &middot; $6 wage + $4</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">THREE Franklin Library volumes: Plutarch Selected Lives (tan), Tristram Shandy (Sterne, pink), Tales from the Arabian Nights (Burton, burgundy). Currently $5. Franklin Library: the other leather-bound subscription press. A tier below Easton on price but the same buyer. Gilt edges and full leather throughout.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>1 of 7 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>3 volumes counted and titled</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photo 1: three spines read directly, each a different leather colour with heavy gilt tooling. Arabian Nights (Burton) is the most wanted of the three. $18-40 each.</p>
+        <h4>Why med confidence</h4>
+        <p>med - all three titles read; condition bright.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$44</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/322777263" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=franklin+library+arabian+nights+burton+leather&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=franklin+library+arabian+nights+burton+leather&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+</section>
+
+
+
+<p class="foot">Estimates are the agent's from photos and category knowledge, not live eBay comps — use the Sold comps / Terapeak links to validate before bidding. Metal values use spot as of 2026-09-18. Your max = your HiBid watch notes. Generated by lot-eval.</p>
+</div>
+</body></html>

@@ -118,5 +118,17 @@
   "valued": 2,
   "lots_to_bid": 0,
   "published": "2026-09-24T15:22+00:00"
+ },
+ {
+  "id": 779035,
+  "name": "KJs Needful Things (Harpers Auction House) 9/28",
+  "house": "KJs Needful Things",
+  "city": "Madison Heights, MI",
+  "closes": "2026-09-28T19:30:00",
+  "bp": "18%",
+  "lots": 567,
+  "valued": 7,
+  "lots_to_bid": 3,
+  "published": "2026-09-24T15:34+00:00"
  }
 ]
