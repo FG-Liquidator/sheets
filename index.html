@@ -3,99 +3,135 @@
 <meta name="robots" content="noindex,nofollow"><title>Auction sheets</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap">
 <style>
-:root { --bg:#F2F4F1; --bg-2:#E8ECE8; --ink:#1B211E; --ink-2:#4E5853; --ink-3:#7A847F; --line:#D3D9D4; --ours:#B4650C; --link:#1F6F52 }
-@media (prefers-color-scheme: dark) { :root { --bg:#161A18; --bg-2:#1F2521; --ink:#E6EAE6; --ink-2:#B3BBB5; --ink-3:#7F8985; --line:#2E3733; --ours:#E4A052; --link:#6FC29C } }
+:root { --bg:#F2F4F1; --bg-2:#E8ECE8; --ink:#1B211E; --ink-2:#4E5853; --ink-3:#7A847F; --line:#D3D9D4; --ours:#B4650C; --link:#1F6F52; --warn:#8A1C1C }
+@media (prefers-color-scheme: dark) { :root { --bg:#161A18; --bg-2:#1F2521; --ink:#E6EAE6; --ink-2:#B3BBB5; --ink-3:#7F8985; --line:#2E3733; --ours:#E4A052; --link:#6FC29C; --warn:#E08A8A } }
 * { box-sizing:border-box }
 body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.45 "Source Sans 3", system-ui, sans-serif; font-variant-numeric:tabular-nums }
-.wrap { max-width:860px; margin:0 auto; padding:20px 14px 60px }
-h1 { font-family:"Barlow Condensed", sans-serif; font-size:32px; font-weight:700; margin:0 0 4px }
-.sub { color:var(--ink-2); margin:0 0 18px }
-.row { display:grid; grid-template-columns:130px 1fr 70px 80px 50px; gap:10px; align-items:center; padding:12px 0; border-top:1px solid var(--line); color:inherit; text-decoration:none }
-.row:last-child { border-bottom:1px solid var(--line) }
-.row:hover .name { color:var(--link) }
+.wrap { max-width:900px; margin:0 auto; padding:20px 14px 60px }
+h1 { font-family:"Barlow Condensed", sans-serif; font-size:32px; font-weight:700; margin:0 0 2px }
+.sub { color:var(--ink-2); margin:0 0 20px; font-size:15px } .sub a { color:var(--link) }
+.sec { margin:0 0 18px }
+.sec > summary { cursor:pointer; list-style:none; padding:6px 0; border-bottom:2px solid var(--ink); font-family:"Barlow Condensed",sans-serif; font-size:20px; letter-spacing:.01em }
+.sec > summary::-webkit-details-marker { display:none }
+.sec > summary::before { content:"▾ "; color:var(--ink-3) } .sec:not([open]) > summary::before { content:"▸ " }
+.sec .c { display:inline-block; background:var(--ink); color:var(--bg); border-radius:10px; padding:0 8px; font-size:13px; margin-left:4px; vertical-align:2px }
+.sec em { display:block; font-family:"Source Sans 3",sans-serif; font-size:13px; font-style:normal; color:var(--ink-2); font-weight:400; letter-spacing:0 }
+.row { display:grid; grid-template-columns:150px 1fr 70px 80px; gap:10px; align-items:center; padding:11px 0; border-bottom:1px solid var(--line); color:inherit; text-decoration:none }
+a.row:hover .name { color:var(--link) }
+.row.nosheet { opacity:.72 } .row.nosheet .name::after { content:" · not evaluated"; color:var(--warn); font-weight:600; font-size:13px }
 .when { font-family:"Barlow Condensed", sans-serif; font-weight:600; color:var(--ink-2) }
-.name { font-weight:600; font-size:18px; line-height:1.15 } .name small { display:block; font-weight:400; font-size:14px; color:var(--ink-2) }
-.n { text-align:right } .n b { display:block; font-family:"Barlow Condensed", sans-serif; font-size:22px; font-weight:700; color:var(--ours) } .n small { font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3) }
-@media (max-width:560px) { .row { grid-template-columns:1fr 60px 60px; } .when { grid-column:1 / -1; padding-bottom:0 } .n:last-child { display:none } }
+.name { font-weight:600; font-size:17px; line-height:1.15 } .name small { display:block; font-weight:400; font-size:13px; color:var(--ink-2) }
+.mi.far { color:var(--warn) }
+.n { text-align:right } .n b { display:block; font-family:"Barlow Condensed", sans-serif; font-size:21px; font-weight:700; color:var(--ours) }
+.n small { font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3) }
+@media (max-width:620px) { .row { grid-template-columns:1fr 60px 66px } .when { grid-column:1 / -1; padding-bottom:0; font-size:14px } }
 </style></head><body><div class="wrap">
 <h1>Auction sheets</h1>
-<p class="sub">HiBid auctions evaluated by lot-eval. Newest close first. <a href="inventory/">Inventory</a> (sign-in).</p>
-
-<a class="row" href="779035/">
-  <span class="when">2026-09-28 19:30</span>
-  <span class="name">KJs Needful Things (Harpers Auction House) 9/28<small>KJs Needful Things · Madison Heights, MI</small></span>
+<p class="sub">HiBid auctions in the 48071 funnel. <a href="inventory/">Inventory</a> (sign-in).
+Built Sat Sep 26, 2:37 PM ET.</p>
+<details class="sec" open>
+  <summary><b>Needs evaluation</b> <span class="c">6</span><em>open, fetched, not yet valued — this is the worklist</em></summary>
+  <div class="row nosheet"><span class="when">Sat 9/26 5PM · 2h</span>
+  <span class="name">Part 2 - Rick Michelon Collection Auction (Live &amp; Online)<small>Rowley&#x27;s Auction Service · <span class="mi">9 mi</span> · BP 10%</small></span>
+  <span class="n"><b>—</b><small>to bid</small></span>
+  <span class="n"><b>0/233</b><small>valued</small></span></div><div class="row nosheet"><span class="when">Mon 9/28 7PM</span>
+  <span class="name">Leon&#x27;s Family Dining<small>Detroit Metro Auctions · <span class="mi">20 mi</span> · BP 15%</small></span>
+  <span class="n"><b>—</b><small>to bid</small></span>
+  <span class="n"><b>0/234</b><small>valued</small></span></div><div class="row nosheet"><span class="when">Tue 9/29 7PM</span>
+  <span class="name">(BLUE) Tuesday Night Discovery Auction (9/29)<small>Neils Online Auctions · <span class="mi far">33 mi</span> · BP 18%</small></span>
+  <span class="n"><b>—</b><small>to bid</small></span>
+  <span class="n"><b>0/1097</b><small>valued</small></span></div><div class="row nosheet"><span class="when">Wed 9/30 6PM</span>
+  <span class="name">Sep. 30th Online Consignment Auction --- Shipping Availabl<small>Coughlin&#x27;s Auctions · <span class="mi">12 mi</span> · BP 18%</small></span>
+  <span class="n"><b>—</b><small>to bid</small></span>
+  <span class="n"><b>0/540</b><small>valued</small></span></div><div class="row nosheet"><span class="when">Sat 10/3 6PM</span>
+  <span class="name">Vintage Comic Books, Star Wars, Transformers, Records + Mo<small>Back to the Past Collectibles · <span class="mi">14 mi</span> · BP 19%</small></span>
+  <span class="n"><b>—</b><small>to bid</small></span>
+  <span class="n"><b>0/276</b><small>valued</small></span></div><div class="row nosheet"><span class="when">Sat 10/3 7PM</span>
+  <span class="name">J&amp;T Comics September 2026 Auction<small>J&amp;T Comics · <span class="mi">11 mi</span> · BP 16%</small></span>
+  <span class="n"><b>—</b><small>to bid</small></span>
+  <span class="n"><b>0/206</b><small>valued</small></span></div>
+</details>
+<details class="sec" open>
+  <summary><b>Open — worked</b> <span class="c">3</span><em>evaluated; bid from these</em></summary>
+  <a class="row" href="776924/"><span class="when">Sat 9/26 6PM · 3h</span>
+  <span class="name">Easy Riders: Hot Wheels Redlines, Vintage and Modern Dieca<small>Back to the Past Collectibles · <span class="mi">14 mi</span> · BP 19%</small></span>
+  <span class="n"><b>4</b><small>to bid</small></span>
+  <span class="n"><b>6/300</b><small>valued</small></span></a><a class="row" href="777599/"><span class="when">Sun 9/27 7PM · 28h</span>
+  <span class="name">Literature and Vinyl Records Online Auction<small>Patriot Wholesale Direct · <span class="mi">16 mi</span> · BP 18%</small></span>
+  <span class="n"><b>—</b><small>to bid</small></span>
+  <span class="n"><b>2/312</b><small>valued</small></span></a><a class="row" href="779035/"><span class="when">Mon 9/28 7PM</span>
+  <span class="name">KJs Needful Things (Harpers Auction House) 9/28<small>KJs Needful Things · <span class="mi">2 mi</span> · BP 18%</small></span>
   <span class="n"><b>3</b><small>to bid</small></span>
-  <span class="n"><b>8/567</b><small>valued</small></span>
-  <span class="n"><b>18%</b><small>BP</small></span>
-</a>
-<a class="row" href="777599/">
-  <span class="when">2026-09-27 19:00</span>
-  <span class="name">Literature and Vinyl Records Online Auction<small>Patriot Wholesale Direct · Lake Orion, MI</small></span>
-  <span class="n"><b>0</b><small>to bid</small></span>
-  <span class="n"><b>2/312</b><small>valued</small></span>
-  <span class="n"><b>18%</b><small>BP</small></span>
-</a>
-<a class="row" href="776924/">
-  <span class="when">2026-09-26 18:00</span>
-  <span class="name">Easy Riders: Hot Wheels Redlines, Vintage and Modern Diecast<small>Back to the Past Collectibles · Farmington Hills, MI</small></span>
-  <span class="n"><b>4</b><small>to bid</small></span>
-  <span class="n"><b>6/300</b><small>valued</small></span>
-  <span class="n"><b>19%</b><small>BP</small></span>
-</a>
-<a class="row" href="778559/">
-  <span class="when">2026-09-23 19:30</span>
-  <span class="name">Vinyl Record Auction #71 (9/23)<small>Neils Online Auctions · Holly, MI</small></span>
-  <span class="n"><b>0</b><small>to bid</small></span>
-  <span class="n"><b>35/372</b><small>valued</small></span>
-  <span class="n"><b>18%</b><small>BP</small></span>
-</a>
-<a class="row" href="777598/">
-  <span class="when">2026-09-23 19:00</span>
-  <span class="name">Auto, Sports, Hobbies &amp; Workshop Online Auction<small>Patriot Wholesale Direct · Lake Orion, MI</small></span>
-  <span class="n"><b>0</b><small>to bid</small></span>
-  <span class="n"><b>6/86</b><small>valued</small></span>
-  <span class="n"><b>18%</b><small>BP</small></span>
-</a>
-<a class="row" href="774379/">
-  <span class="when">2026-09-23 19:00</span>
-  <span class="name">Plymouth Eaton Dr. Phase 2 Estate Auction<small>Deal Auction Group LLC. · plymouth, MI</small></span>
+  <span class="n"><b>8/567</b><small>valued</small></span></a>
+</details>
+<details class="sec" >
+  <summary><b>Closed</b> <span class="c">22</span><em>archive, newest first</em></summary>
+  <div class="row nosheet"><span class="when">Thu 9/24 8PM</span>
+  <span class="name">Port Huron Marketplace Online Auction - Sept. 24 (Thurs)<small>Rowley&#x27;s Auction Service · <span class="mi far">45 mi</span> · BP 10%</small></span>
+  <span class="n"><b>—</b><small>to bid</small></span>
+  <span class="n"><b>0/582</b><small>valued</small></span></div><div class="row nosheet"><span class="when">Thu 9/24 7PM</span>
+  <span class="name">Sept. Detroit Online Auction<small>Deal Auction Group LLC. · <span class="mi far">34 mi</span> · BP 18%</small></span>
+  <span class="n"><b>—</b><small>to bid</small></span>
+  <span class="n"><b>0/535</b><small>valued</small></span></div><div class="row nosheet"><span class="when">Thu 9/24 4PM</span>
+  <span class="name">HIMMLER TRUST JEWELRY AUCTION 9-24-2026<small>Chuck Cryderman and Associates, L.L.C. · <span class="mi far">36 mi</span> · BP 15%</small></span>
+  <span class="n"><b>—</b><small>to bid</small></span>
+  <span class="n"><b>0/921</b><small>valued</small></span></div><div class="row nosheet"><span class="when">Wed 9/23 8PM</span>
+  <span class="name">Lapeer Habitat Restore Online Auction - Sept. 23 (Wed)<small>Rowley&#x27;s Auction Service · <span class="mi far">41 mi</span> · BP 11%</small></span>
+  <span class="n"><b>—</b><small>to bid</small></span>
+  <span class="n"><b>0/259</b><small>valued</small></span></div><a class="row" href="778559/"><span class="when">Wed 9/23 7PM</span>
+  <span class="name">Vinyl Record Auction #71 (9/23)<small>Neils Online Auctions · <span class="mi far">33 mi</span> · BP 18%</small></span>
+  <span class="n"><b>—</b><small>to bid</small></span>
+  <span class="n"><b>35/372</b><small>valued</small></span></a><a class="row" href="774379/"><span class="when">Wed 9/23 7PM</span>
+  <span class="name">Plymouth Eaton Dr. Phase 2 Estate Auction<small>Deal Auction Group LLC. · <span class="mi">22 mi</span> · BP 18%</small></span>
   <span class="n"><b>1</b><small>to bid</small></span>
-  <span class="n"><b>20/1026</b><small>valued</small></span>
-  <span class="n"><b>18%</b><small>BP</small></span>
-</a>
-<a class="row" href="777164/">
-  <span class="when">2026-09-23 18:00</span>
-  <span class="name">Sep. 23rd Online Consignment Auction --- Shipping Available<small>Coughlin&#x27;s Auctions · Clinton Twp, MI</small></span>
+  <span class="n"><b>20/1026</b><small>valued</small></span></a><a class="row" href="777598/"><span class="when">Wed 9/23 7PM</span>
+  <span class="name">Auto, Sports, Hobbies &amp; Workshop Online Auction<small>Patriot Wholesale Direct · <span class="mi">16 mi</span> · BP 18%</small></span>
+  <span class="n"><b>—</b><small>to bid</small></span>
+  <span class="n"><b>6/86</b><small>valued</small></span></a><div class="row nosheet"><span class="when">Wed 9/23 7PM</span>
+  <span class="name">September 23 New Consignments - Antiques, Vintage, Tools e<small>Relics Online Auction and Estate Sales · <span class="mi far">46 mi</span> · BP 15%</small></span>
+  <span class="n"><b>—</b><small>to bid</small></span>
+  <span class="n"><b>0/122</b><small>valued</small></span></div><a class="row" href="777164/"><span class="when">Wed 9/23 6PM</span>
+  <span class="name">Sep. 23rd Online Consignment Auction --- Shipping Availabl<small>Coughlin&#x27;s Auctions · <span class="mi">12 mi</span> · BP 18%</small></span>
   <span class="n"><b>2</b><small>to bid</small></span>
-  <span class="n"><b>11/538</b><small>valued</small></span>
-  <span class="n"><b>18%</b><small>BP</small></span>
-</a>
-<a class="row" href="767801/">
-  <span class="when">2026-09-22 19:00</span>
-  <span class="name">Brighton S. Hacker Rd. Online Estate Auction<small>Deal Auction Group LLC. · Brighton, MI</small></span>
-  <span class="n"><b>0</b><small>to bid</small></span>
-  <span class="n"><b>59/885</b><small>valued</small></span>
-  <span class="n"><b>18%</b><small>BP</small></span>
-</a>
-<a class="row" href="777032/">
-  <span class="when">2026-09-21 19:30</span>
-  <span class="name">KJs Needful Things (Harpers Auction House) 9/21<small>KJs Needful Things · Madison Heights, MI</small></span>
+  <span class="n"><b>11/538</b><small>valued</small></span></a><div class="row nosheet"><span class="when">Wed 9/23 6PM</span>
+  <span class="name">Baseball Card Private Collection Michigan<small>Coles Auction Service · <span class="mi far">48 mi</span> · BP 18%</small></span>
+  <span class="n"><b>—</b><small>to bid</small></span>
+  <span class="n"><b>0/125</b><small>valued</small></span></div><a class="row" href="767801/"><span class="when">Tue 9/22 7PM</span>
+  <span class="name">Brighton S. Hacker Rd. Online Estate Auction<small>Deal Auction Group LLC. · <span class="mi far">36 mi</span> · BP 18%</small></span>
+  <span class="n"><b>—</b><small>to bid</small></span>
+  <span class="n"><b>59/884</b><small>valued</small></span></a><div class="row nosheet"><span class="when">Tue 9/22 7PM</span>
+  <span class="name">September 22 Modern, Vintage, Old, and Antique Purge<small>Relics Online Auction and Estate Sales · <span class="mi far">46 mi</span> · BP 15%</small></span>
+  <span class="n"><b>—</b><small>to bid</small></span>
+  <span class="n"><b>0/372</b><small>valued</small></span></div><a class="row" href="777032/"><span class="when">Mon 9/21 7PM</span>
+  <span class="name">KJs Needful Things (Harpers Auction House) 9/21<small>KJs Needful Things · <span class="mi">2 mi</span> · BP 18%</small></span>
   <span class="n"><b>4</b><small>to bid</small></span>
-  <span class="n"><b>59/496</b><small>valued</small></span>
-  <span class="n"><b>18%</b><small>BP</small></span>
-</a>
-<a class="row" href="777592/">
-  <span class="when">2026-09-20 19:00</span>
-  <span class="name">Home &amp; Household Online Auction<small>Patriot Wholesale Direct · Lake Orion, MI</small></span>
-  <span class="n"><b>0</b><small>to bid</small></span>
-  <span class="n"><b>8/187</b><small>valued</small></span>
-  <span class="n"><b>18%</b><small>BP</small></span>
-</a>
-<a class="row" href="775147/">
-  <span class="when">2026-09-19 18:00</span>
-  <span class="name">Key Comics, Rare Vinyl, Hot Wheels Redlines, DVDs &amp; BluRay<small>Back to the Past Collectibles · Farmington Hills, MI</small></span>
-  <span class="n"><b>2</b><small>to bid</small></span>
-  <span class="n"><b>92/323</b><small>valued</small></span>
-  <span class="n"><b>19%</b><small>BP</small></span>
-</a>
+  <span class="n"><b>59/496</b><small>valued</small></span></a><a class="row" href="777592/"><span class="when">Sun 9/20 7PM</span>
+  <span class="name">Home &amp; Household Online Auction<small>Patriot Wholesale Direct · <span class="mi">16 mi</span> · BP 18%</small></span>
+  <span class="n"><b>—</b><small>to bid</small></span>
+  <span class="n"><b>8/187</b><small>valued</small></span></a><a class="row" href="775147/"><span class="when">Sat 9/19 6PM</span>
+  <span class="name">Key Comics, Rare Vinyl, Hot Wheels Redlines, DVDs &amp; BluRay<small>Back to the Past Collectibles · <span class="mi">14 mi</span> · BP 19%</small></span>
+  <span class="n"><b>1</b><small>to bid</small></span>
+  <span class="n"><b>92/323</b><small>valued</small></span></a><div class="row nosheet"><span class="when">Thu 9/17 6PM</span>
+  <span class="name">Part 2- Galactic Online Estate Auction- Carleton, MI<small>Great Lakes Asset Liquidation LLC · <span class="mi far">37 mi</span> · BP 16%</small></span>
+  <span class="n"><b>1</b><small>to bid</small></span>
+  <span class="n"><b>48/1028</b><small>valued</small></span></div><div class="row nosheet"><span class="when">Wed 9/16 7PM</span>
+  <span class="name">Vinyl Record Auction #70 (9/16)<small>Neils Online Auctions · <span class="mi far">33 mi</span> · BP 18%</small></span>
+  <span class="n"><b>—</b><small>to bid</small></span>
+  <span class="n"><b>17/375</b><small>valued</small></span></div><div class="row nosheet"><span class="when">Tue 9/15 7PM</span>
+  <span class="name">Multiple Resellers Liquidation Online Auction<small>Estate Auction Experts of Michigan · <span class="mi">16 mi</span> · BP 18%</small></span>
+  <span class="n"><b>—</b><small>to bid</small></span>
+  <span class="n"><b>3/523</b><small>valued</small></span></div><div class="row nosheet"><span class="when">Mon 9/14 7PM</span>
+  <span class="name">KJs Needful Things (Harpers Auction House) 9/14<small>KJs Needful Things · <span class="mi">2 mi</span> · BP 18%</small></span>
+  <span class="n"><b>—</b><small>to bid</small></span>
+  <span class="n"><b>2/626</b><small>valued</small></span></div><div class="row nosheet"><span class="when">Mon 9/14 7PM</span>
+  <span class="name">Pontiac Restaurant Equipment #8<small>Detroit Metro Auctions · <span class="mi">16 mi</span> · BP 15%</small></span>
+  <span class="n"><b>—</b><small>to bid</small></span>
+  <span class="n"><b>0/120</b><small>valued</small></span></div><div class="row nosheet"><span class="when">Wed 9/9 6PM</span>
+  <span class="name">Sep. 9th Online Consignment Auction --- Shipping Available<small>Coughlin&#x27;s Auctions · <span class="mi">12 mi</span> · BP 18%</small></span>
+  <span class="n"><b>—</b><small>to bid</small></span>
+  <span class="n"><b>10/997</b><small>valued</small></span></div><div class="row nosheet"><span class="when">Mon 8/31 7PM</span>
+  <span class="name">KJs Needful Things (Harpers Auction House) 8/31<small>KJs Needful Things · <span class="mi">2 mi</span> · BP 18%</small></span>
+  <span class="n"><b>—</b><small>to bid</small></span>
+  <span class="n"><b>10/729</b><small>valued</small></span></div>
+</details>
 </div></body></html>
