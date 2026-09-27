@@ -8,7 +8,7 @@
   "bp": "10%",
   "miles": 9.1,
   "mode": "pickup",
-  "lots": 233,
+  "lots": 236,
   "valued": 0,
   "lots_to_bid": 0,
   "has_sheet": false
@@ -303,9 +303,9 @@
   "miles": 19.8,
   "mode": "pickup",
   "lots": 234,
-  "valued": 0,
+  "valued": 6,
   "lots_to_bid": 0,
-  "has_sheet": false
+  "has_sheet": true
  },
  {
   "id": 778559,
