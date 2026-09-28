@@ -1,0 +1,731 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Vinyl Record Auction #72 (9/30)</title>
+<meta name="description" content="Bid sheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+:root {
+  --bg:#F2F4F1; --bg-2:#E8ECE8; --ink:#1B211E; --ink-2:#4E5853; --ink-3:#7A847F; --line:#D3D9D4;
+  --ours:#B4650C; --ours-bg:#F6E8D6; --link:#1F6F52; --metal:#4A5B6B; --metal-bg:#E1E7EC;
+  --p1:#1F6F52; --p2:#3C7D63; --p3:#6E8A7C; --p4:#9AA69F; --out:#8A9490;
+  --conf-high:#1F6F52; --conf-med:#8A6D1F; --conf-low:#9E4A3B;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg:#161A18; --bg-2:#1F2521; --ink:#E6EAE6; --ink-2:#B3BBB5; --ink-3:#7F8985; --line:#2E3733;
+  --ours:#E4A052; --ours-bg:#33271A; --link:#6FC29C; --metal:#9FB2C2; --metal-bg:#25303A;
+  --p1:#6FC29C; --p2:#5FA986; --p3:#7F9C8E; --p4:#5F6C66; --out:#6A7570;
+  --conf-high:#6FC29C; --conf-med:#D6B25A; --conf-low:#E08A78;
+} }
+:root[data-theme="dark"] {
+  --bg:#161A18; --bg-2:#1F2521; --ink:#E6EAE6; --ink-2:#B3BBB5; --ink-3:#7F8985; --line:#2E3733;
+  --ours:#E4A052; --ours-bg:#33271A; --link:#6FC29C; --metal:#9FB2C2; --metal-bg:#25303A;
+  --p1:#6FC29C; --p2:#5FA986; --p3:#7F9C8E; --p4:#5F6C66; --out:#6A7570;
+  --conf-high:#6FC29C; --conf-med:#D6B25A; --conf-low:#E08A78;
+}
+* { box-sizing:border-box }
+body { background:var(--bg); color:var(--ink); font:16px/1.45 "Source Sans 3", "Segoe UI", system-ui, sans-serif; margin:0; font-variant-numeric:tabular-nums }
+a { color:var(--link) }
+a:focus-visible, button:focus-visible { outline:2px solid var(--ours); outline-offset:2px }
+.wrap { max-width:860px; margin:0 auto; padding:16px 14px 64px }
+h1,h2,h3,.lotno,.chip,.lbl,.count { font-family:"Barlow Condensed", "Arial Narrow", sans-serif }
+h1 { font-size:30px; font-weight:700; line-height:1.05; margin:0 0 6px; text-wrap:balance }
+.meta { color:var(--ink-2); font-size:15px; display:flex; flex-wrap:wrap; gap:6px 16px; margin:0 0 12px }
+.stamp { font-family:"Barlow Condensed", sans-serif; font-size:15px; color:var(--ours); margin:0 0 6px; letter-spacing:.02em }
+.strip { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); margin:0 0 8px }
+.strip div { background:var(--bg-2); padding:8px 10px }
+.strip .lbl { display:block; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3) }
+.strip .val { font-size:20px; font-weight:600; font-family:"Barlow Condensed", sans-serif }
+.trip { font-size:14px; color:var(--ink-2); margin:8px 0 0 }
+nav { position:sticky; top:0; background:var(--bg); border-bottom:1px solid var(--line); display:flex; gap:14px; padding:10px 0; margin:12px 0 4px; overflow-x:auto; z-index:2 }
+nav a { font-family:"Barlow Condensed", sans-serif; font-weight:600; font-size:16px; text-decoration:none; color:var(--ink-2); white-space:nowrap }
+section { margin:22px 0 0 }
+h2 { font-size:24px; font-weight:600; margin:0 0 2px; display:flex; align-items:baseline; gap:8px }
+.count { font-size:15px; color:var(--ink-3); font-weight:500 }
+.blurb { margin:0 0 10px; color:var(--ink-2); font-size:15px; max-width:65ch }
+.lot { padding:14px 0; border-top:1px solid var(--line) }
+.head { display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-bottom:2px }
+.lotno { font-weight:700; font-size:18px }
+.chip { font-size:12px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; padding:2px 7px; border-radius:2px; color:#fff; background:var(--out) }
+.pri-P1 .chip.pri { background:var(--p1) } .pri-P2 .chip.pri { background:var(--p2) } .pri-P3 .chip.pri { background:var(--p3) } .pri-P4 .chip.pri { background:var(--p4) }
+.chip.metal { background:var(--metal-bg); color:var(--metal) }
+.chip.conf { background:transparent; border:1px solid currentColor } .conf-high { color:var(--conf-high) } .conf-med { color:var(--conf-med) } .conf-low { color:var(--conf-low) }
+h3 { font-size:19px; font-weight:600; margin:0 0 8px; line-height:1.15 }
+h3 a { color:var(--ink); text-decoration:none } h3 a:hover { text-decoration:underline }
+.nums { display:grid; grid-template-columns:repeat(3,1fr); gap:6px 10px; margin:0 0 8px }
+.num { display:flex; flex-direction:column }
+.num .lbl { font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3) }
+.num .val { font-size:18px; font-weight:600 } .num .val small { font-size:13px; font-weight:400; color:var(--ink-2) } .num .val.plan { font-size:15px; font-weight:400 }
+.num.ours .val { color:var(--ours); font-family:"Barlow Condensed", sans-serif; font-size:26px; font-weight:700; background:var(--ours-bg); padding:0 6px; display:inline-block; width:max-content }
+.notes { margin:0 0 6px; font-size:15px; color:var(--ink-2); max-width:70ch }
+.units { font-size:14px; color:var(--ink-2); margin:0 0 6px; font-style:italic }
+.links { display:flex; gap:14px; font-size:14px; font-weight:600 }
+.pri-outbid, .pri-pass { opacity:.75 }
+.foot { margin-top:32px; color:var(--ink-3); font-size:13px; max-width:65ch }
+details { margin:8px 0 10px }
+summary { cursor:pointer; font-family:"Barlow Condensed", sans-serif; font-weight:600; font-size:15px; color:var(--ink-2); list-style:none; display:flex; align-items:center; gap:8px }
+summary::-webkit-details-marker { display:none }
+summary::before { content:"+"; display:inline-block; width:15px; height:15px; line-height:14px; text-align:center; border:1px solid var(--line); color:var(--ink-3); font-family:monospace }
+details[open] > summary::before { content:"2" }
+summary:hover { color:var(--link) }
+.method { font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3); font-weight:600 }
+.whybody { border-left:2px solid var(--line); padding:4px 0 2px 14px; margin:8px 0 0 7px; max-width:70ch }
+.whybody h4 { font-family:"Barlow Condensed", sans-serif; font-size:14px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3); margin:12px 0 3px; font-weight:600 }
+.whybody h4:first-child { margin-top:0 }
+.whybody p { margin:0; font-size:15px; color:var(--ink-2) }
+.whybody pre { font-size:12.5px; line-height:1.6; overflow-x:auto; background:var(--bg-2); padding:9px 11px; margin:0; color:var(--ink-2) }
+.kv { display:flex; justify-content:space-between; gap:16px; font-size:14px; padding:3px 0; border-bottom:1px dotted var(--line) }
+.kv span { color:var(--ink-3) } .kv b { font-weight:600; text-align:right }
+.warn { color:var(--conf-low) !important; font-weight:600 }
+.kv b.ok { color:var(--conf-high) } .kv b.no { color:var(--ink-3) }
+.num.ours .sub { display:block; font-size:12px; color:var(--ink-2); font-weight:400; margin-top:2px; font-family:"Source Sans 3", sans-serif }
+.strip .val small { font-size:13px; font-weight:400; color:var(--ink-3) }
+.pri-volume .chip.pri { background:var(--metal-bg); color:var(--metal) }
+details.logic { background:var(--bg-2); padding:10px 12px; margin:14px 0 0 }
+@media (max-width:480px) { .nums { grid-template-columns:repeat(2,1fr) } }
+@media (prefers-reduced-motion: no-preference) { nav a { transition:color .15s } }
+</style>
+</head><body><div class="wrap">
+<h1>Vinyl Record Auction #72 (9/30)</h1>
+<p class="stamp">Bids &amp; counts as of <b>Sun Sep 27, 11:53 PM</b> ET (67.6 h before close) &middot; valuations last edited Mon Sep 28, 12:53 AM &middot; sheet built Mon Sep 28, 12:54 AM</p>
+<p class="meta"><span>Neils Online Auctions</span><span>Holly, MI 48442</span><span>Closes 2026-09-30 19:30</span><span><a href="https://hibid.com/catalog/780472" target="_blank" rel="noopener">Catalog on HiBid</a></span></p>
+<div class="strip">
+  <div><span class="lbl">Buyer's premium</span><span class="val">18%<small> card &middot; 15% cash</small></span></div>
+  <div><span class="lbl">Site</span><span class="val">ineligible · 32.6 mi</span></div>
+  <div><span class="lbl">Lots to bid</span><span class="val">0<small> +12 volume</small></span></div>
+  <div><span class="lbl">Valued / total</span><span class="val">14 / 472</span></div>
+  <div><span class="lbl">Silver · gold</span><span class="val">$65 · $4,270</span></div>
+</div>
+<p class="trip">Trip: 32.6 mi each way ≈ $117 (2.4 h incl. overhead, $30/h). Not included in the max hammers — decide per auction: P1–P3 lots: 0 · capital if you won them all at max: $0 · profit at max, all won: $0 → net of trip $-117. Each lot won at max is worth ~$0 against a $117 drive.</p>
+<p class="trip">Pickup: Thursday, Friday &amp; Saturday 10-4pm or by appointment.</p>
+<p class="trip">Resale certificate for this house: run <code>python3 -m lot_eval form3372 780472</code> on the workbench (kept local, never published).</p>
+
+<details class="logic">
+  <summary>Evaluation logic used for this sheet <span class="method">v2026-09-19.2</span></summary>
+  <div class="whybody">
+    <p class="warn">No live eBay comps. Values are the agent&#x27;s estimates; every lot carries a derivation and a comps link to validate.</p>
+    <h4>How the max hammer is computed</h4>
+    <pre>true_cost  = hammer x (1+bp) x (1+tax) + retrieval + churn
+retrieval  = 0 in pickup mode (the trip is a per-auction decision,
+             shown in the header); ship mode shares one box per invoice
+churn      = (list+pack minutes) x rate + materials
+             + storage x months + value x capital_rate x months
+net        = value x (1 - fee - promoted) - fee_fixed,   per listing
+floor      : profit &gt;= min_roi x true_cost
+             min_roi = base_roi + roi_per_month x months_to_sell   (capital lots)
+             min_roi = volume_roi                                  (volume lots: landed cost at max
+             under volume_capital_max - the wage inside churn is the return, ROI is a buffer)
+max_hammer = (net_after_churn / (1+min_roi) - retrieval) / ((1+bp)(1+tax))
+             capped at the capital ceiling
+floor_max  = melt x shop_payout / ((1+bp)(1+tax))
+             break-even if the exit is a metals buyer, not eBay</pre>
+    <h4>Margin</h4>
+    <div class="kv"><span>Base ROI, instant flip</span><b>30%</b></div>
+    <div class="kv"><span>Added per month to sell</span><b>10%</b></div>
+    <div class="kv"><span>Applied floors</span><b>fast 35% &middot; medium 45% &middot; slow 70%</b></div>
+    <div class="kv"><span>Capital ceiling per lot</span><b>$400</b></div>
+    <div class="kv"><span>Default value basis</span><b>value_low</b> </div>
+    <div class="kv"><span>Volume rule</span><b>landed cost &le; $75 &rarr; 10% over wage instead of the ROI floor</b></div>
+    <h4>Churn, per listing</h4>
+    <div class="kv"><span>Your time</span><b>$30/h</b></div>
+    <div class="kv"><span>List + pack, small item</span><b>8 + 5 min</b></div>
+    <div class="kv"><span>Materials, small item</span><b>$2</b></div>
+    <div class="kv"><span>Days to sell</span><b>fast 14 &middot; medium 45 &middot; slow 120</b></div>
+    <div class="kv"><span>Capital opportunity cost</span><b>20%/yr</b></div>
+    <h4>Selling &amp; buying costs</h4>
+    <div class="kv"><span>eBay fees</span><b>13.55% + 2% promoted + $0</b></div>
+    <div class="kv"><span>Buyer's premium</span><b>18% on the card rate &mdash; parsed from &ldquo;18% buyers premium&rdquo;</b></div>
+    <div class="kv"><span>&nbsp;&nbsp;card / cash</span><b>18% card &middot; 15% cash</b></div>
+    <div class="kv"><span>Sales tax at pickup</span><b>6%</b></div>
+    <h4>Metals</h4>
+    <div class="kv"><span>Spot used</span><b>silver $65 &middot; gold $4,270 (2026-09-24)</b></div>
+    <div class="kv"><span>Shop payout assumed</span><b>silver 90% &middot; gold 95% &middot; sterling 80%</b></div>
+    <h4>How the values were reached</h4>
+    <div class="kv"><span>identified from photo</span><b>14 lots</b></div>
+    <h4>What the agent actually looked at</h4>
+    <div class="kv"><span>Full-size photos opened</span><b>14 lots</b></div>
+    <div class="kv"><span>Thumbnail only</span><b>0 lots</b></div>
+    <div class="kv"><span>Title and description only</span><b>0 lots</b></div>
+    <h4>Criteria in force</h4>
+    <div class="kv"><span>graded / certified collectibles</span><b>tier A &middot; S &middot; fast</b></div><div class="kv"><span>precious metal / bullion</span><b>tier A &middot; S &middot; fast</b></div><div class="kv"><span>media-mail-able: books, music, movies, games</span><b>tier A &middot; S &middot; fast</b></div><div class="kv"><span>raw coins, cards, comics, stamps</span><b>tier B &middot; S &middot; medium</b></div><div class="kv"><span>small collectibles that don&#x27;t spoil</span><b>tier B &middot; S &middot; medium</b></div><div class="kv"><span>branded tools and electronics</span><b>tier B &middot; M &middot; fast</b></div><div class="kv"><span>general antiques, art, decor — slow</span><b>tier C &middot; M &middot; slow</b></div><div class="kv"><span>bulky or perishable — skip</span><b>tier skip &middot; L &middot; slow</b></div>
+  </div>
+</details>
+<nav><a href="#bid">Bid these</a><a href="#metal">Metal</a><a href="#volume">Volume</a><a href="#outbid">Past our max</a><a href="#personal">Personal</a><a href="#pass">Pass</a></nav>
+
+
+
+<section id="volume">
+  <h2>Volume &mdash; store fillers <span class="count">12</span></h2>
+  <p class="blurb">Capital-light lots priced by the wage rule: the max is where the listing still pays your hourly rate (plus a small buffer), not a return on capital. Worth winning at their max to build eBay inventory; never worth chasing.</p>
+  
+<article class="lot pri-volume" id="lot-1951">
+  <div class="head">
+    <span class="lotno">Lot 1951</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-high">high confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/323527894" target="_blank" rel="noopener">Miles Davis - Volume 1 - LP - VG+</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$46</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$14<small> &middot; 6 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$60 / $90 / $130</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$12<small> &middot; $6 wage + $6</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Miles Davis &#x27;Volume 1&#x27;, Blue Note BLP 1501 MONO, 767 Lexington Ave label, deep groove. With J.J. Johnson, Jackie McLean, Art Blakey, Kenny Clarke. Currently $14, 6 bids.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>5 of 5 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 LP: label, both sides of the disc, and both sides of the jacket read</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photo 3 label: &#x27;33 1/3 MICROGROOVE LONG PLAYING / BLUE NOTE RECORDS 767 LEXINGTON AVE NYC&#x27;, BLP 1501, (BN 1501-A). The 767 Lexington address ran 1956-62 and BLP 1501 was issued 1956, so this is a Lexington-era mono, the original address for the title. Photos 4-5: the deep-groove ring is clearly visible just outside the label on both sides - consistent with a 1950s pressing, not a 1960s repress. Surfaces are glossy with light hairlines under raking light and no visible gouges; VG+ is fair. Photo 2 back: track listings for BLP 1501 and 1502, &#x27;Remastered by Rudy Van Gelder&#x27;, Leonard Feather liner notes. Photo 1 front: the jacket has been repaired with wide blue-grey tape along the full spine and the bottom edge, and there is heavy ring wear and staining. That is a G jacket and the house says so. L = the tape repair caps it; M = strong VG+ disc, beat jacket, which is exactly the copy a listener buys; H = someone chasing a Lexington 1501 at any jacket grade.</p>
+        <h4>Why high confidence</h4>
+        <p>high on the pressing era, medium on the exact pressing. The Lexington address and deep groove are unambiguous from the photos, but without a dead-wax shot I cannot separate a 1956 first run from a later-1950s Lexington repress - both look identical at the label, and the gap between them is real money on this title. I priced it as the repress case, which is the safe read.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$65</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/323527894" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=miles+davis+volume+1+blp+1501+lexington+deep+groove+mono&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=miles+davis+volume+1+blp+1501+lexington+deep+groove+mono&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-1976">
+  <div class="head">
+    <span class="lotno">Lot 1976</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-high">high confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/323527919" target="_blank" rel="noopener">S. Turrentine - That&#x27;s Where It&#x27;s At - LP - VG+</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$47</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$3<small> &middot; 2 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$60 / $90 / $130</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$12<small> &middot; $6 wage + $6</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Stanley Turrentine &#x27;That&#x27;s Where It&#x27;s At&#x27;, Blue Note BLP 4096 MONO, 1962 original New York USA. Les McCann, Herbie Lewis, Otis Finch. Currently $3, 2 bids.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>5 of 5 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 LP: label, both sides of the disc, and both sides of the jacket read</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photo 3 label: &#x27;BLUE NOTE RECORDS INC - NEW YORK USA&#x27;, BLP 4096, (BN-LP 4096-A). Issued 1962; NY USA is the original mono label. Photo 2 back: &#x27;For Complete Catalog Write to BLUE NOTE RECORDS INC., 43 West 61st St., New York 23&#x27; - pre-ZIP, so an original-run jacket. Recording by Rudy Van Gelder. Photo 1 front: laminated, 4096 oval intact, gloss still strong; minor corner and edge wear. The back has water/damp staining across the upper area and along the right edge - that is the flaw, and it is why I would grade the jacket VG rather than the house&#x27;s VG+. Photos 4-5: both sides glossy and clean, no visible scratches - VG+ is fair. Turrentine with Les McCann is a soul-jazz staple that moves without needing a collector. L = the back-cover staining puts buyers off; M = VG+ disc / VG jacket as shown; H = clean-play copy to a soul-jazz buyer.</p>
+        <h4>Why high confidence</h4>
+        <p>high - label and pre-ZIP back address both read directly, disc surfaces photograph clean on both sides. The staining on the back cover is cosmetic and disclosable; it costs maybe 20% but does not change what the record is.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$65</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/323527919" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=stanley+turrentine+that%27s+where+it%27s+at+blp+4096+new+york+usa+mono&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=stanley+turrentine+that%27s+where+it%27s+at+blp+4096+new+york+usa+mono&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-1930">
+  <div class="head">
+    <span class="lotno">Lot 1930</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-high">high confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/323527873" target="_blank" rel="noopener">Herbie Hancock - Speak Like A Child - LP - VG+</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$44</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$0<small> &middot; 0 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$55 / $85 / $120</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$12<small> &middot; $6 wage + $6</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Herbie Hancock &#x27;Speak Like A Child&#x27;, Blue Note BST 84279 stereo, 1968 ORIGINAL. Gatefold. Thad Jones/Peter Phillips/Jerry Dodgion/Ron Carter/Mickey Roker. Currently $0, 0 bids.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>6 of 6 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 LP: label, both sides of the disc, and both sides of the jacket read</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photo 3 label: &#x27;33 1/3 STEREO LONG PLAYING / BLUE NOTE RECORDS - A DIVISION OF LIBERTY RECORDS, INC.&#x27; BST 84279. Speak Like A Child was released in 1968, so the Division-of-Liberty label IS its first pressing - this is NOT a later reissue. (Correcting my own first pass, which filed it as Liberty-era reissue by reflex; the reflex only holds for titles issued before 1966.) Photo 1 front: &#x27;STEREO BST 84279 / BLUE NOTE / A PRODUCT OF LIBERTY RECORDS&#x27; box top-left - the 1968 jacket. Photo 3 gatefold interior: liner notes + Van Gelder credit, clean, no splits, no writing. Photos 5-6 both sides: glossy, light surface haze under raking light, no scratches visible - VG+ is fair. Jacket photos 1-2: corner and edge wear, faint ring wear, no seam splits - VG. L = beat-jacket VG copy; M = the VG+/VG original as shown; H = a clean-gatefold buyer paying up for a first stereo pressing of a title people actually chase.</p>
+        <h4>Why high confidence</h4>
+        <p>high - label text, catalog number, jacket rights line and gatefold all photographed and read directly. The only unverified thing is the dead wax (no runout shot), which would tell me whether the stamper is an early or late 1968 run; that moves price maybe 15%, not the category.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$61</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/323527873" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=herbie+hancock+speak+like+a+child+bst+84279+liberty+original&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=herbie+hancock+speak+like+a+child+bst+84279+liberty+original&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-1932">
+  <div class="head">
+    <span class="lotno">Lot 1932</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-high">high confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/323527875" target="_blank" rel="noopener">Grant Green - Feelin&#x27; The Spirit - LP - VG</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$38</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$14<small> &middot; 3 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$50 / $75 / $110</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$11<small> &middot; $6 wage + $5</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Grant Green &#x27;Feelin&#x27; The Spirit&#x27;, Blue Note BLP 4132 MONO, 1963 original New York USA. Herbie Hancock, Butch Warren, Billy Higgins, Garvin Masseaux. Currently $14, 3 bids.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>5 of 5 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 LP: label, both sides of the disc, and both sides of the jacket read</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photo 3 label: &#x27;BLUE NOTE RECORDS INC - NEW YORK USA&#x27;, BLP 4132, (BN 4132-A). The NY USA address ran 1962-66 and BLP 4132 was issued 1963, so this is the original mono. Photo 2 back cover: &#x27;For Complete Catalog Write to BLUE NOTE RECORDS INC., 43 West 61st St., New York 23&#x27; - the pre-ZIP &#x27;New York 23&#x27; form, which pins the jacket to the original run, not a 1966+ repress. Recording by Rudy Van Gelder credited. Photo 1 front: laminated, &#x27;THE FINEST IN JAZZ SINCE 1939&#x27; oval - correct for an original. Edge wear, corner rub bottom-right, light seam wear; back has a vertical crease at the left edge and age toning. Photo 4 side 1: acceptable, some haze. Photo 5 side 2: noticeably scuffed across the lower half, clear marks under the light - the house&#x27;s VG is honest, and VG- would not be a stretch. L = VG- disc discovered on arrival; M = VG disc / VG- jacket as shown; H = the disc plays better than it photographs.</p>
+        <h4>Why high confidence</h4>
+        <p>high on identification, medium on condition - the label and the pre-ZIP back-cover address both confirm a 1963 original beyond argument. Side 2&#x27;s scuffing is the real risk: surface marks that show this plainly in a flat photo often mean audible noise, and a noisy copy of a mid-tier Grant Green is a $35 record, not a $75 one. That is what the low end is for.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$52</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/323527875" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=grant+green+feelin+the+spirit+blp+4132+new+york+usa+mono&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=grant+green+feelin+the+spirit+blp+4132+new+york+usa+mono&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-1958">
+  <div class="head">
+    <span class="lotno">Lot 1958</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-high">high confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/323527901" target="_blank" rel="noopener">Tadd Dameron - Fontainebleau - LP - VG+</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$35</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$2<small> &middot; 1 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$45 / $70 / $100</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$11<small> &middot; $6 wage + $4</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Tadd Dameron and his Orchestra &#x27;Fontainebleau&#x27;, Prestige PRLP 7037, 1956 FIRST pressing. Kenny Dorham, Sahib Shihab, Joe Alexander, Cecil Payne, Henry Coker, John Simmons, Shadow Wilson. Currently $2, 1 bid.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>5 of 5 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 LP: label, both sides of the disc, and both sides of the jacket read</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photo 3 label: &#x27;PRESTIGE RECORDS INC. - 446 W. 50th ST., N.Y.C.&#x27; yellow/black fireworks label, PRLP 7037 A, HI FI. The 446 W 50th address is the 1956 first-pressing address; Prestige moved to Bergenfield NJ in 1958, so there is no ambiguity. Photo 2 back: &#x27;For free catalog send to Prestige Records, Inc., 446 West 50th St., New York 19, N. Y.&#x27; - jacket matches the label era. Ira Gitler notes, &#x27;recording by Van Gelder&#x27;. Photos 4-5: both sides glossy, clean, light hairlines only - VG+ is fair and possibly conservative. Photo 1 front: tape along the top edge, heavy soiling and pen marks across the fountain artwork; photo 2 back: browning and edge wear. G jacket, as stated. This is a well-regarded Dameron session that does not come up often. L = the jacket holds it back; M = VG+ disc / G jacket as shown; H = a Dameron or Kenny Dorham collector who wants the 446 W 50th pressing.</p>
+        <h4>Why high confidence</h4>
+        <p>high - both the label and the jacket carry the 446 W 50th address, so the pressing date is settled from two independent places. Disc condition photographs well. Main risk is that a G jacket on a $70 record is the thing buyers message you about, so expect a slower sale than the grade suggests.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$48</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/323527901" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=tadd+dameron+fontainebleau+prlp+7037+446+w+50th+first+pressing&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=tadd+dameron+fontainebleau+prlp+7037+446+w+50th+first+pressing&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-1906">
+  <div class="head">
+    <span class="lotno">Lot 1906</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-high">high confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/323527849" target="_blank" rel="noopener">Curtis Mayfield - Curtis - LP - VG+</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$17</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$3<small> &middot; 2 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $40 / $60</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$9<small> &middot; $6 wage + $2</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Curtis Mayfield &#x27;Curtis&#x27;, Curtom CRS 8005, 1970 ORIGINAL gatefold. &#x27;Move On Up&#x27;, &#x27;(Don&#x27;t Worry) If There&#x27;s A Hell Below&#x27;. Currently $3, 2 bids.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>6 of 6 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 LP: label, both sides of the disc, and both sides of the jacket read</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photo 4 label: yellow Curtom sunburst with the &#x27;WE&#x27;RE A WINNER&#x27; slogan, CRS 8005 / CRS 8005B, &#x27;EXCLUSIVELY DISTRIBUTED BY BUDDAH RECORDS, 1650 BROADWAY, N.Y.C.&#x27; Buddah handled Curtom only for the 1970-71 run, so this is the first pressing, not a later Warner- or RSO-distributed copy. Photo 3 gatefold interior: the full-bleed photo spread, clean, no splits at the hinge, no writing. Photo 1 front: heavy ring wear and surface scuffing across the yellow, corner wear bottom-left; photo 2 back: worn, bottom-edge wear, credits all legible. G+ jacket, as the house says. Photos 5-6 both sides: glossy with light scuffing, no visible scratches - VG+ fair. Spindle wear visible at the centre hole. L = the worn jacket; M = VG+ disc / G+ gatefold as shown; H = a soul buyer who wants the Buddah-era first press specifically.</p>
+        <h4>Why high confidence</h4>
+        <p>high - the Buddah distribution line dates the pressing exactly, and both disc faces photograph clean. This is a record that sells on the title alone; the jacket wear costs maybe 25%.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$24</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/323527849" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=curtis+mayfield+curtis+curtom+crs+8005+buddah+gatefold+original&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=curtis+mayfield+curtis+curtom+crs+8005+buddah+gatefold+original&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-1969">
+  <div class="head">
+    <span class="lotno">Lot 1969</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-high">high confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/323527912" target="_blank" rel="noopener">Marvin Gaye - When I&#x27;m Alone I Cry - LP - VG</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$14</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$3<small> &middot; 2 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$22 / $35 / $55</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$8<small> &middot; $6 wage + $2</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Marvin Gaye &#x27;When I&#x27;m Alone I Cry&#x27;, Tamla TM 251 MONO, 1964 original Detroit pressing. Currently $3, 2 bids. Local-interest record: pressed on W Grand Blvd.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>5 of 5 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 LP: label, both sides of the disc, and both sides of the jacket read</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photo 3 label: yellow Tamla with the red-and-silver globes, TM 251 side 1, (C) 1964 Motown Record Corp., matrix H-1278 / R4RM-3832, and the rim text &#x27;MOTOWN RECORD CORP 2648 W GRAND BLVD, DETROIT 8, MICHIGAN&#x27;. &#x27;Detroit 8&#x27; is the pre-ZIP form, so this is a 1964 original mono, not a late-60s repress. Photo 2 back: &#x27;TAMLA 251&#x27;, (C) 1964 Motown Record Corp. Photo 1 front: a strip of paper loss along the bottom edge with the grey board showing through, plus general soiling and corner wear; photo 2 back: bottom-edge seam damage and a missing chunk at the top-right corner. G jacket, and the house grades it G honestly. Photos 4-5: both sides show scuffing and light marks under the light; VG is fair. L = the jacket damage caps it; M = VG disc / G jacket as shown; H = a Motown collector filling TM 251, which is a less-common Tamla than the hits albums.</p>
+        <h4>Why high confidence</h4>
+        <p>high - label, matrix, copyright year and the pre-ZIP Detroit address all read directly. The jacket is the weak half and I have graded it as the house did. TM 251 is Marvin&#x27;s standards album, so it sells to collectors rather than to casual buyers - slower, but it does sell.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$20</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/323527912" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=marvin+gaye+when+i%27m+alone+i+cry+tamla+tm+251+mono+1964&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=marvin+gaye+when+i%27m+alone+i+cry+tamla+tm+251+mono+1964&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-2102">
+  <div class="head">
+    <span class="lotno">Lot 2102</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-high">high confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/323528045" target="_blank" rel="noopener">The Rolling Stones - Out of Our Heads - LP - VG+</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$14</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$2<small> &middot; 1 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$22 / $35 / $55</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$8<small> &middot; $6 wage + $2</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">The Rolling Stones &#x27;Out of Our Heads&#x27;, London LL 3429 MONO, 1965 US original. Satisfaction, The Last Time, Play With Fire. Currently $2, 1 bid.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>5 of 5 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 LP: label, both sides of the disc, and both sides of the jacket read</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photo 3 label: red London with the boxed script logo, &#x27;LONG PLAYING&#x27;, LL 3429 side one, (ARL 6791), &#x27;Made in U.S.A.&#x27; - the 1965 US mono original. Stereo would be PS 429, and the back cover confirms the pairing: &#x27;(also available in Stereo, PS 429)&#x27;. Photo 1 front: &#x27;MONO LL 3429&#x27; bottom left. The jacket has surface abrasion across the dark areas, a tape or sticker shadow top-right, and creasing into the bottom-right corner; photo 2 back shows seam separation along the bottom edge. VG- jacket, a notch under the house&#x27;s VG. Photos 4-5: both sides glossy with moderate scuffing, no visible scratches - VG+ is defensible. L = the seam split scares buyers; M = VG+ disc / VG- jacket as shown; H = a clean-play US mono copy.</p>
+        <h4>Why high confidence</h4>
+        <p>high - catalogue number, matrix, mono designation and the stereo cross-reference on the back all read from full-size photos. The bottom seam split is the flaw and it is disclosable. US monos of this title are not scarce, which is what keeps the number modest despite the songs on it.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$20</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/323528045" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=rolling+stones+out+of+our+heads+london+ll+3429+mono+us&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=rolling+stones+out+of+our+heads+london+ll+3429+mono+us&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-2001">
+  <div class="head">
+    <span class="lotno">Lot 2001</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-high">high confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/323527944" target="_blank" rel="noopener">Bill Evans Trio - Trio &#x27;65 - LP - VG+</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$10</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$2<small> &middot; 1 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$18 / $28 / $40</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$8<small> &middot; $6 wage + $1</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Bill Evans Trio &#x27;Trio &#x27;65&#x27;, Verve V-8613 MONO, 1965 original MGM-era pressing. Gatefold. Chuck Israels, Larry Bunker. Currently $2, 1 bid.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>6 of 6 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 LP: label, both sides of the disc, and both sides of the jacket read</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photo 4 label: black/silver Verve &#x27;T&#x27; logo, &#x27;V-8613 A (65-VG-114)&#x27;, &#x27;MGM RECORDS - A DIVISION OF METRO-GOLDWYN-MAYER, INC. - Made in U.S.A.&#x27; The MGM rights line is the 1963-67 form, so this is the original 1965 mono, not a later Polydor/PolyGram repress. Photo 3 gatefold interior: Don Nelsen notes, full credits, &#x27;Engineering by Rudy Van Gelder&#x27;, &#x27;Produced by Creed Taylor&#x27; - clean, no writing, no splits. Photo 1 front: glossy and bright, sharp corners, in a poly sleeve - genuinely VG+ or better, the best jacket of anything I looked at in this auction. Photos 5-6: both sides glossy and clean, no visible marks. VG+ fair. The catch is the title, not the copy: Trio &#x27;65 is one of the commonest Evans Verves and clean mono copies are not scarce. L = ordinary copy at market; M = clean gatefold mono as shown; H = an Evans completist.</p>
+        <h4>Why high confidence</h4>
+        <p>high - label rights line, matrix, gatefold credits and both disc faces all read from full-size photos, and the condition is genuinely good. Confidence is high and the value is simply low: this is a common record in nice shape, which is a $28 sale, and after churn there is very little in it.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$14</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/323527944" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=bill+evans+trio+65+verve+v-8613+mono+mgm&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=bill+evans+trio+65+verve+v-8613+mono+mgm&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-1936">
+  <div class="head">
+    <span class="lotno">Lot 1936</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/323527879" target="_blank" rel="noopener">Sonny Stitt &amp; Bud Powell - LP - G+</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$9</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$0<small> &middot; 0 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$30 / $45 / $65</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$8<small> &middot; $6 wage + $1</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">MISMATCHED: the disc is Sonny Stitt &amp; Bud Powell, Prestige PRLP 7024, 446 W 50th NYC first pressing (Van Gelder remaster); the jacket is a different record entirely - &#x27;bud!&#x27; The Amazing Bud Powell Vol. 3, Blue Note BLP 1571. Currently $0, 0 bids.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>5 of 5 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>2 components: PRLP 7024 disc (both labels read) + BLP 1571 jacket (both sides read)</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photo 3 label: &#x27;PRESTIGE RECORDS INC. - 446 W. 50th ST., N.Y.C.&#x27; fireworks label, PRLP 7024 A, &#x27;Remastered by Van Gelder&#x27;. The 446 W 50th address is the 1956 first-pressing address. Photo 1 front and photo 2 back: the jacket is BLUE NOTE 1571, &#x27;THE AMAZING BUD POWELL Vol. 3&#x27;, back address &#x27;BLUE NOTE RECORDS, 47 West 63rd St., New York 23&#x27; - the 1957-62 address, so the jacket is itself an original-era BLP 1571 cover, just not this record&#x27;s. Name &#x27;B. Lawrence&#x27; in blue pen, top left. Photos 3-5: both sides carry dense fine scratching plainly visible across the playing surface - the house&#x27;s G+ is generous if anything. The value here is as two parts, not one record: a BLP 1571 jacket is a $25-40 item on its own to someone restoring a coverless copy, and a G+ PRLP 7024 first-press disc is $15-25 as a play copy. L = sold as one &#x27;as-is mismatched&#x27; listing, which is what I would actually do; M = split into disc and jacket and both sell; H = the jacket finds the right restorer.</p>
+        <h4>Why med confidence</h4>
+        <p>med - the identification is certain on both halves; the uncertainty is entirely commercial. Priced on basis=&#x27;low&#x27; because the honest single listing is the low number, and the M/H cases need two listings, which is two churns against a $45 total. Only worth chasing at a near-zero hammer.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_low</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$13</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/323527879" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=prestige+7024+sonny+stitt+bud+powell+%2F+blue+note+1571+cover+only&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=prestige+7024+sonny+stitt+bud+powell+%2F+blue+note+1571+cover+only&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-1988">
+  <div class="head">
+    <span class="lotno">Lot 1988</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/323527931" target="_blank" rel="noopener">Art Farmer - Art Farmer Quintet - LP - VG+</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$2<small> &middot; 1 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $40 / $60</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$7<small> &middot; $6 wage + $1</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Art Farmer Quintet featuring Gigi Gryce, Prestige PRLP 7017, 1956 FIRST pressing. Duke Jordan, Addison Farmer, Philly Joe Jones. Currently $2, 1 bid.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>5 of 5 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 LP: label, both sides of the disc, and both sides of the jacket read</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photo 3 label: &#x27;PRESTIGE RECORDS INC. - 446 W. 50th ST., N.Y.C.&#x27; fireworks label, PRLP 7017 A - 1956 first pressing address. Photo 2 back: &#x27;PRESTIGE RECORDS, INC., 446 West 50th Street, New York 19, N. Y.&#x27;, Ira Gitler notes, &#x27;engineering by Rudy Van Gelder&#x27;. Jacket matches the label era. Photo 1 front: the jacket is duct-taped across the entire top AND bottom edges in wide silver tape, which obliterates the title lettering and the &#x27;featuring GIGI GRYCE&#x27; line, plus red tape patches down both sides. That is a Poor jacket, not the house&#x27;s G - the artwork is no longer legible. Photo 4 side 1: a distinct scratch arc across the upper-right quadrant crossing multiple bands. Photo 5 side 2: duller surface, general scuffing. The house says VG+; from these photos VG is the most I would claim and I would list it as VG with the scratch disclosed. L = listed honestly as a play copy with a wrecked jacket, which is the realistic sale; M = the scratch turns out inaudible; H = a Gigi Gryce collector takes it for the pressing alone.</p>
+        <h4>Why med confidence</h4>
+        <p>med - the pressing is certain, the condition is where I disagree with the house on both halves. A visible scratch arc plus an illegible taped jacket makes this a $25-40 record, not the $80-150 a clean PRLP 7017 brings. Priced on basis=&#x27;low&#x27; deliberately so the max hammer does not assume the scratch away.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_low</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$9</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/323527931" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=art+farmer+quintet+gigi+gryce+prlp+7017+446+w+50th&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=art+farmer+quintet+gigi+gryce+prlp+7017+446+w+50th&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-volume" id="lot-2119">
+  <div class="head">
+    <span class="lotno">Lot 2119</span>
+    <span class="chip pri">Volume</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/323528062" target="_blank" rel="noopener">Elaine Brown - Elaine Brown Promo - LP - VG+</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$6</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$0<small> &middot; 0 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$25 / $40 / $70</span></div>
+    <div class="num"><span class="lbl">Pays you @ max</span><span class="val">$7<small> &middot; $6 wage + $1</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Elaine Brown, self-titled, Black Forum BF 458L-DJ, 1973 white-label DJ promo, stereo. Black Forum was Motown&#x27;s political/spoken-word imprint; Elaine Brown was chair of the Black Panther Party. Produced by Freddie Perren and Fonce Mizell. Currently $0, 0 bids.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>4 of 4 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 LP, both labels read in full; no jacket appears in any photo</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photos 1-4 labels: white &#x27;BLACK FORUM&#x27; label, BF 458L-DJ, STEREO, &#x27;DJ Copy Not For Sale&#x27;, (C) 1973 Motown Record Corporation, &#x27;A PRODUCT OF MOTOWN RECORD CORP.&#x27; Side 1 and side 2 track lists read in full (No Time, Jonathan, Can&#x27;t Go Back, All The Young And Fine Men, Until We&#x27;re Free / I Know Who You Are, Child In The World, A Little Baby, And We Shall Meet Again). Photos 2-4 both faces: glossy, clean, no visible marks - VG+ fair. Black Forum is a genuinely collected imprint with a small catalogue, and promos of it are scarcer than stock copies. THE CATCH: all four photos show the disc in a plain black inner sleeve and NONE shows a jacket, while the description grades &#x27;Cover: VG+&#x27;. Either the house did not photograph it or there isn&#x27;t one. With a jacket this is a $60-90 record; without one it is $25-35. L = no jacket; M = the split; H = jacket present and VG+ as described.</p>
+        <h4>Why med confidence</h4>
+        <p>med - the pressing, label, promo status and disc condition are all confirmed from four full-size photos. The jacket is the whole uncertainty and it is a 2-3x swing on the final price, so I priced on basis=&#x27;low&#x27; (the no-jacket case) and left the upside in value_high. At a $2 minimum that is a free option either way; if you are at the pickup, look at it before you leave.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_low</b></div>
+        <div class="kv"><span>Rule applied</span><b>volume &mdash; wage inside churn is the return, 10% buffer</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$9</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/323528062" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=elaine+brown+black+forum+bf+458+promo+motown&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=elaine+brown+black+forum+bf+458+promo+motown&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+</section>
+
+<section id="outbid">
+  <h2>Already past our max <span class="count">2</span></h2>
+  <p class="blurb">The room got there first. Listed so you can see what we passed on and why.</p>
+  
+<article class="lot pri-outbid" id="lot-1940">
+  <div class="head">
+    <span class="lotno">Lot 1940</span>
+    <span class="chip pri">Past our max</span>
+    
+    <span class="chip conf conf-high">high confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/323527883" target="_blank" rel="noopener">Joe Henderson - Mode for Joe - LP - VG</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$60</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$70<small> &middot; 6 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$100 / $145 / $200</span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$34<small> &middot; 45% ROI on top of wage</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Joe Henderson &#x27;Mode for Joe&#x27;, Blue Note BLP 4227 MONO, 1966 original New York USA. Lee Morgan, Curtis Fuller, Bobby Hutcherson, Cedar Walton, Ron Carter, Joe Chambers. Currently $70, 6 bids - already the most contested lot I looked at.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>5 of 5 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 LP: label, both sides of the disc, and both sides of the jacket read</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photo 3 label: &#x27;BLUE NOTE RECORDS INC - NEW YORK USA&#x27;, BLP 4227, (BN 4227-A). Issued January 1966, so NY USA is the original mono label. Photo 2 back: &#x27;43 West 61st St., New York, N.Y. 10023&#x27; - the ZIP-coded form, correct for 1966 and distinct from the &#x27;New York 23&#x27; jackets of 1962-64. Van Gelder recording credit. Photo 1 front: laminated, 4227 oval intact - but there is white paper loss / a gouge on the right edge about two-thirds down, plus top-edge wear and corner rub. That is a VG- jacket, below the house&#x27;s stated VG. Photos 4-5: both sides show scuffing and a scratch near the outer edge of side 2; no gouges. VG is fair. This is the strongest title in the auction by demand - the sextet lineup is the reason. L = the jacket damage scares buyers; M = VG disc / VG- jacket as shown; H = a Henderson collector who wants the mono and will upgrade the jacket later.</p>
+        <h4>Why high confidence</h4>
+        <p>high - label, catalog number and the ZIP-era back address all read directly from full-size photos. The jacket damage is the one thing the house understated, and I am pricing the jacket as VG- not VG. Risk on the bid side, not the identification side: six bidders are already here and soft close is 60 seconds, so this one is going to run.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>capital &mdash; 45% ROI floor (medium)</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$110</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/323527883" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=joe+henderson+mode+for+joe+blp+4227+new+york+usa+mono&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=joe+henderson+mode+for+joe+blp+4227+new+york+usa+mono&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+<article class="lot pri-outbid" id="lot-2018">
+  <div class="head">
+    <span class="lotno">Lot 2018</span>
+    <span class="chip pri">Past our max</span>
+    
+    <span class="chip conf conf-med">med confidence</span>
+  </div>
+  <h3><a href="https://hibid.com/lot/323527961" target="_blank" rel="noopener">Miles Davis - Relaxin&#x27; - LP - VG</a></h3>
+  <div class="nums">
+    <div class="num ours"><span class="lbl">Our max</span><span class="val">$45</span></div>
+    <div class="num"><span class="lbl">Your max</span><span class="val">&mdash;</span></div>
+    <div class="num"><span class="lbl">Current</span><span class="val">$60<small> &middot; 7 bids</small></span></div>
+    <div class="num"><span class="lbl">eBay L / M / H</span><span class="val">$80 / $115 / $160</span></div>
+    <div class="num"><span class="lbl">Profit @ max</span><span class="val">$26<small> &middot; 45% ROI on top of wage</small></span></div>
+    <div class="num"><span class="lbl">Plan</span><span class="val plan">1 listing</span></div>
+  </div>
+  <p class="notes">Miles Davis Quintet &#x27;Relaxin&#x27;&#x27;, Prestige PRLP 7129, 446 W 50th NYC first pressing, with Coltrane, Red Garland, Paul Chambers, Philly Joe Jones. Currently $60, 7 bids - the most-bid lot here.</p>
+  
+  
+    <details class="why">
+      <summary>How this number was reached <span class="method">identified from photo</span></summary>
+      <div class="whybody">
+        <h4>What was reviewed</h4>
+        <div class="kv"><span>Title read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Description read</span><b class="ok">&#10003;</b></div><div class="kv"><span>Photos examined</span><b>5 of 5 full-size, opened and examined</b></div><div class="kv"><span>Condition assessed from photo</span><b class="ok">&#10003;</b></div><div class="kv"><span>Items in lot enumerated</span><b>1 LP: label, both sides of the disc, and both sides of the jacket read</b></div><div class="kv"><span>Market data consulted</span><b>none - no eBay sold or Terapeak data consulted</b></div>
+        <h4>Value derivation</h4>
+        <p>Photo 3 label: &#x27;PRESTIGE RECORDS INC. - 446 W. 50th ST., N.Y.C.&#x27; fireworks label, PRLP 7129 A, HIGH FIDELITY - 1958 first pressing address. Label shows spindle wear and a small chip at the centre hole. Photo 1 front: the jacket is duct-taped along ALL FOUR edges in wide silver tape plus older brown tape patches on the face; the title line is taped over. Poor jacket, below the house&#x27;s G. Photos 4-5: both sides show grey hazing and general scuff across wide areas - the discs photograph notably duller than the Dameron or Turrentine in the same sale. The house&#x27;s VG is optimistic; VG- is what I would list. This is a top-tier title on a first-press label, which is why seven people are already on it - but the copy is a listener, not a collector piece. L = a VG-/Poor copy of a famous record still sells, just cheaply; M = as graded; H = someone bids the title and ignores the tape.</p>
+        <h4>Why med confidence</h4>
+        <p>med - the pressing identification is certain, the condition is the doubt, and the bidding is the reason I am not chasing it. It is already at $60 with two days left; the copy is worth ~$115 to me and the ceiling after premium, tax and churn is well under where six other bidders are headed. Identified for the record, not recommended.</p>
+        
+        <div class="kv"><span>Bid basis</span><b>value_mid</b></div>
+        <div class="kv"><span>Rule applied</span><b>capital &mdash; 45% ROI floor (medium)</b></div>
+        <div class="kv"><span>Net after eBay fees &amp; churn</span><b>$85</b></div>
+      </div>
+    </details>
+  <div class="links">
+    <a href="https://hibid.com/lot/323527961" target="_blank" rel="noopener">HiBid</a>
+    <a href="https://www.ebay.com/sch/i.html?_nkw=miles+davis+relaxin+prlp+7129+446+w+50th+first+pressing&amp;LH_Sold=1&amp;LH_Complete=1&amp;_sop=13" target="_blank" rel="noopener">Sold comps</a>
+    <a href="https://www.ebay.com/sh/research?marketplace=EBAY-US&amp;keywords=miles+davis+relaxin+prlp+7129+446+w+50th+first+pressing&amp;dayRange=90&amp;tabName=SOLD" target="_blank" rel="noopener">Terapeak</a>
+  </div>
+</article>
+</section>
+
+
+<p class="foot">Estimates are the agent's from photos and category knowledge, not live eBay comps — use the Sold comps / Terapeak links to validate before bidding. Metal values use spot as of 2026-09-24. Your max = your HiBid watch notes. Generated by lot-eval.</p>
+</div>
+</body></html>
