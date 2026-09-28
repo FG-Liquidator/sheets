@@ -401,9 +401,9 @@
   "miles": 11.9,
   "mode": "pickup",
   "lots": 540,
-  "valued": 0,
-  "lots_to_bid": 0,
-  "has_sheet": false
+  "valued": 6,
+  "lots_to_bid": 3,
+  "has_sheet": true
  },
  {
   "id": 779562,
