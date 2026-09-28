@@ -443,9 +443,9 @@
   "miles": 32.6,
   "mode": "ineligible",
   "lots": 1097,
-  "valued": 0,
+  "valued": 4,
   "lots_to_bid": 0,
-  "has_sheet": false
+  "has_sheet": true
  },
  {
   "id": 780472,
