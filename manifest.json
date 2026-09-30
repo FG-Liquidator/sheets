@@ -126,6 +126,20 @@
   "has_sheet": false
  },
  {
+  "id": 773226,
+  "name": "Fowlerville Estate Online Auction - Stow Rd.",
+  "house": "Estate Auction Experts of Michigan",
+  "city": "Fowlerville, MI",
+  "closes": "2026-10-21T19:00:00",
+  "bp": "18%",
+  "miles": 54.3,
+  "mode": "ineligible",
+  "lots": 0,
+  "valued": 0,
+  "lots_to_bid": 0,
+  "has_sheet": false
+ },
+ {
   "id": 773237,
   "name": "Barn & House South Lyon Online Estate Auction",
   "house": "Estate Auction Experts of Michigan",
@@ -458,7 +472,7 @@
   "mode": "pickup",
   "lots": 540,
   "valued": 6,
-  "lots_to_bid": 3,
+  "lots_to_bid": 2,
   "has_sheet": true
  },
  {
@@ -530,6 +544,20 @@
   "valued": 14,
   "lots_to_bid": 0,
   "has_sheet": true
+ },
+ {
+  "id": 780687,
+  "name": "The Wisconsin Massive Collection of Railroad Memorabilia",
+  "house": "Freeland Auction Services",
+  "city": "Freeland, MI",
+  "closes": "2026-11-07T16:00:00",
+  "bp": "10%",
+  "miles": 84.8,
+  "mode": "ineligible",
+  "lots": 200,
+  "valued": 0,
+  "lots_to_bid": 0,
+  "has_sheet": false
  },
  {
   "id": 780754,
