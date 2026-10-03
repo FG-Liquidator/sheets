@@ -10,6 +10,10 @@ body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.45 "Source 
 .wrap { max-width:900px; margin:0 auto; padding:20px 14px 60px }
 h1 { font-family:"Barlow Condensed", sans-serif; font-size:32px; font-weight:700; margin:0 0 2px }
 .sub { color:var(--ink-2); margin:0 0 20px; font-size:15px } .sub a { color:var(--link) }
+.tabs { margin:0 0 10px; display:flex; gap:6px; flex-wrap:wrap }
+.tabs > * { font-family:"Barlow Condensed",sans-serif; font-size:17px; font-weight:600; padding:4px 13px; border-radius:16px; text-decoration:none; border:1px solid var(--line); color:var(--ink-2) }
+.tabs .on { background:var(--ink); color:var(--bg); border-color:var(--ink) }
+.tabs a:hover { border-color:var(--ours); color:var(--ours) }
 .sec { margin:0 0 18px }
 .sec > summary { cursor:pointer; list-style:none; padding:6px 0; border-bottom:2px solid var(--ink); font-family:"Barlow Condensed",sans-serif; font-size:20px; letter-spacing:.01em }
 .sec > summary::-webkit-details-marker { display:none }
@@ -27,12 +31,12 @@ a.row:hover .name { color:var(--link) }
 @media (max-width:620px) { .row { grid-template-columns:1fr 60px 66px } .when { grid-column:1 / -1; padding-bottom:0; font-size:14px } }
 </style></head><body><div class="wrap">
 <h1>Auction sheets</h1>
-<p class="sub">HiBid auctions in the 48071 funnel. <a href="sales.html">Estate sales</a> ·
-<a href="inventory/">Inventory</a> (sign-in).
-Built Sat Oct 3, 12:40 AM ET.</p>
+<p class="tabs"><b class="on">Auctions</b><a href="sales.html">Estate sales</a><a href="inventory/">Inventory</a></p>
+<p class="sub">HiBid auctions in the 48071 funnel.
+Built Sat Oct 3, 3:12 PM ET.</p>
 <details class="sec" open>
   <summary><b>Needs evaluation</b> <span class="c">9</span><em>open, fetched, not yet valued — this is the worklist</em></summary>
-  <div class="row nosheet"><span class="when">Sun 10/4 7PM · 42h</span>
+  <div class="row nosheet"><span class="when">Sun 10/4 7PM · 27h</span>
   <span class="name">Home &amp; Household Online Auction<small>Patriot Wholesale Direct · <span class="mi">16 mi</span> · BP 18%</small></span>
   <span class="n"><b>—</b><small>to bid</small></span>
   <span class="n"><b>0/191</b><small>valued</small></span></div><div class="row nosheet"><span class="when">Mon 10/5 7PM</span>
@@ -63,10 +67,10 @@ Built Sat Oct 3, 12:40 AM ET.</p>
 </details>
 <details class="sec" open>
   <summary><b>Open — worked</b> <span class="c">6</span><em>evaluated; bid from these</em></summary>
-  <a class="row" href="778992/"><span class="when">Sat 10/3 6PM · 17h</span>
+  <a class="row" href="778992/"><span class="when">Sat 10/3 6PM · 2h</span>
   <span class="name">Vintage Comic Books, Star Wars, Transformers, Records + Mo<small>Back to the Past Collectibles · <span class="mi">14 mi</span> · BP 19%</small></span>
   <span class="n"><b>5</b><small>to bid</small></span>
-  <span class="n"><b>12/277</b><small>valued</small></span></a><a class="row" href="768584/"><span class="when">Sat 10/3 7PM · 18h</span>
+  <span class="n"><b>12/277</b><small>valued</small></span></a><a class="row" href="768584/"><span class="when">Sat 10/3 7PM · 3h</span>
   <span class="name">J&amp;T Comics September 2026 Auction<small>J&amp;T Comics · <span class="mi">11 mi</span> · BP 16%</small></span>
   <span class="n"><b>1</b><small>to bid</small></span>
   <span class="n"><b>5/205</b><small>valued</small></span></a><a class="row" href="780754/"><span class="when">Mon 10/5 7PM</span>
